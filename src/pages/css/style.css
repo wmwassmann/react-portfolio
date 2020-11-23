@@ -74,6 +74,12 @@ footer {
     padding: 10px;
 }
 
+.intro {
+    display: flex;
+    flex-direction: column;
+}
+
+
 
 a:hover {
     color:silver;

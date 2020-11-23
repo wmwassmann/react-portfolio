@@ -10,14 +10,18 @@ function Navbar() {
     
     <ul className="nav justify-content-center">
       <li className="nav-item">
-        <a className="nav-link active" href="about">About</a>
+        <a className="nav-link active" href="/about">About</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="portfolio">Portfolio</a>
+        <a className="nav-link" href="/portfolio">Portfolio</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" id="navnoborder" href="contact">Contact</a>
+        <a className="nav-link" href="/featured">RPG: Adventurer's Academy</a>
       </li>
+      <li className="nav-item">
+        <a className="nav-link" id="navnoborder" href="/contact">Contact</a>
+      </li>
+     
     </ul>
 
 </nav>

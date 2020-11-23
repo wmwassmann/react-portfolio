@@ -31,23 +31,20 @@
 #navnoborder {
     border-right: 0;
 }
-
-/* Container */
+/* 
 .proficiencies {
     display: flex; 
     flex-direction: row;
     margin-top: 30px;
     font-size: 20px;
     
-}
+} */
 
-/* Body */
 body {
     background-color: silver;
 }
 
-/* Footer */
-/* Fix that keeps the footer where it belongs */
+
 #pagecontainer {
     position: relative;
     min-height: 7vh;
@@ -77,17 +74,19 @@ footer {
     padding: 10px;
 }
 
-/* Pseudoclasses */
+
 a:hover {
     color:silver;
 }
 
-/* Images */
+.wmw-photo {
+    margin: 10px 20px 50px;
+}
+
 img {
     margin-right: 15px;
 }
 
-/* IDs */
 #aboutme {
     background-color: white;
     margin-top: 30px;
@@ -112,7 +111,7 @@ p2 {
     padding-top: 10px;
 }
 
-/* Portfolio */
+
 #portfolio {
     background-color: white;
     margin-top: 30px;

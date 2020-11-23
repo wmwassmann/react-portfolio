@@ -1,6 +1,8 @@
 import React, { Component }  from 'react';
 import myphotosmall from './img/IMG_8410.jpg'
 
+
+
 class AboutMe extends Component {
     constructor() {
         super()
@@ -15,9 +17,9 @@ class AboutMe extends Component {
 <main className="container">
 
 <div className="row">
-  <div className="col-md-6" id="aboutme">
+  <div className="col-md-10" id="aboutme">
   <h1>William Wassmann</h1>
-      <img src={myphotosmall} className="img-fluid float-left" alt='personalimage'></img>
+      <img src={myphotosmall} className="img-fluid float-left wmw-photo" alt='personalimage'></img>
   <p2>About Me</p2>
 
   <p>I am a full-stack developer having recently graduated from the University of Washington Web Developer's Bootcamp.</p>
@@ -31,31 +33,6 @@ class AboutMe extends Component {
      expectations. If I have gained the buyer's satisfaction, then I have succeeded as a full-stack developer.
    </p>
 
-</div>
-  <div className="col-md-6" id="aboutme">
-  <h1>Proficiencies</h1>
-      
-
-  <p> 
-    I am proficient in the following languages.
-<div className="proficiencies">
-  <ul className="col-md-6 left">
-    <li>html</li>
-    <li>CSS</li>
-    <li>JavaScript</li>
-    <li>jQuery</li>
-    <li>Node</li>
-  </ul>
-
-  <ul className="col-md-6 right">
-    <li>Ajax</li>
-    <li>Handlebars</li>
-    <li>Constructors</li>
-    <li>Mongoose</li>
-    <li>React</li>    
-  </ul>
-  </div>
-  </p>
 
   </div> 
 </div>

@@ -6,9 +6,9 @@ function Footer() {
 <div id="pagecontainer">
   <div id="contentwrap">
     <footer>
-
-      <p>&copy; William Wassmann</p>
-  
+    <p>
+        <a href="https://github.com/wmwassmann" style={{color: 'white'}}>William Wassmann</a>
+    </p>
       </footer>
 </div>
 

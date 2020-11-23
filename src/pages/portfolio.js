@@ -5,6 +5,8 @@ import weatherdashboard from './img/weather.png'
 import workdayscheduler from './img/planner.png'
 import dndbuddy from './img/dndbuddy.png'
 import mobile from './img/mobile-models.png'
+import teamy from './img/teamy.png'
+import notetaker from './img/note-taker.png';
 
 import RPGAdventurersAcademyLogin from './img/login.png'
 import RPGAdventurersAcademyAudit  from './img/audit.png'
@@ -30,19 +32,27 @@ class Portfolio extends Component {
       <h1>Portfolio</h1>
 
       <a href="https://github.com/wmwassmann/Homework-04-Quiz">
-      <img src={javascriptquiz} className="img-fluid" id='pimg1' alt='code-quiz'/>
+      <img src={javascriptquiz} className="img-fluid" id='pimg1' alt='code-quiz'/>             
       </a>
 
       <a href="https://github.com/wmwassmann/03-Homework">
-      <img src={passwordgenerator} className="img-fluid" id='pimg2' alt='password-generator'/>
+      <img src={passwordgenerator} className="img-fluid" id='pimg2' alt='password-generator'/>      
+      </a>
+
+      <a href="https://github.com/wmwassmann/Homework-05-Calendar">
+      <img src={workdayscheduler} className="img-fluid" id='pimg4' alt='workday-scheduler'/>
       </a>
 
       <a href="https://github.com/wmwassmann/Homework-06-Weatherdash">
       <img src={weatherdashboard} className="img-fluid" id='pimg3' alt='weather-dashboard'/>
       </a>
 
-      <a href="https://github.com/wmwassmann/Homework-05-Calendar">
-      <img src={workdayscheduler} className="img-fluid" id='pimg4' alt='workday-scheduler'/>
+      <a href="https://github.com/wmwassmann/homework-employee-08">
+      <img src={teamy} className="img-fluid" id='pimg4' alt='workday-scheduler'/>
+      </a>
+
+      <a href="https://github.com/wmwassmann/homework-notes-09">
+      <img src={notetaker} className="img-fluid" id='pimg4' alt='workday-scheduler'/>
       </a>
 
       <a href="https://github.com/wmwassmann/dndbuddy-1">

@@ -152,7 +152,7 @@ export class AuditCarousel extends Component {
 const styles = {
     view_port: {
         position: 'relative',             
-        top: '285px',
+        top: '305px',
         left: '50%',
         transform: 'translate(-50%, -50%)',
         width: '1089px',
@@ -170,7 +170,7 @@ const styles = {
         justifyContent: 'space-around',
         position: 'relative',        
         right: '7px',
-        top: '10px'        
+        top: '20px'        
     },
     buttonPrevious: {
         position: 'relative',

@@ -4,6 +4,12 @@
     font-size: 40px;
 }
 
+.portfolio {
+    background-color:  rgb(45, 108, 255);
+    height: 700px;
+    
+}
+
 .button {
     font-family: 'fantasy';
     padding: 0px;

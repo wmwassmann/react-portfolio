@@ -125,7 +125,7 @@ export class AuditCarousel extends Component {
 
     render() {           
         return (
-            <div>
+            <div className='portfolio'>
                     
                     <div className='view-port' style={styles.view_port}>
                         <div ref={ref_id => this.card_container = ref_id} className='card-container portrait' style={styles.card_container}>
@@ -149,7 +149,7 @@ export class AuditCarousel extends Component {
     }
 }
 
-const styles = {
+const styles = {    
     view_port: {
         position: 'relative',             
         top: '305px',

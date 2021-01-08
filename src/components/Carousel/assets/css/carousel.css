@@ -5,6 +5,9 @@
 }
 
 .portfolio {
+    border-color: black;
+    border-style: double;
+    border-radius: 2px;
     background-color:  rgb(45, 108, 255);
     height: 700px;
     

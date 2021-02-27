@@ -17,7 +17,7 @@ class Contact extends Component {
 <main class="container">
 
 <div class="row">
-    <div class="col-md-8" id="aboutme">
+    <div class="col-md-10" id="aboutme">
 
 {/* <!-- Links to contact information --> */}
     <h1>Contact Me</h1>

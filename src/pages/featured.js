@@ -20,7 +20,7 @@ class Featured extends Component {
 <main className="container">      
 
     <div className="row">
-      <div className="col-md-8" id="portfolio">
+      <div className="col-md-10" id="portfolio">
       <h1>RPG: Adventurer's Academy</h1>
 
       <div className='intro'>

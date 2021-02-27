@@ -180,7 +180,8 @@ const styles = {
     buttonNext: {
         position: 'relative',
         width: '90px',
-        right: '10px'                      
+        right: '10px'    
+                          
     }
    
    

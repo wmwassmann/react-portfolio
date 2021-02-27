@@ -1,21 +1,21 @@
 /* Navbar stuff */
 .navbar {
-    background-color: rgb(0, 55, 156);
+    background-color: rgb(190, 190, 190);
     padding: 0;
 }
 
 .navbar-brand {
-    background-color: rgb(0, 55, 156);
+    background-color: rgb(92, 92, 92);
     margin-left: 50px;
     padding: 20px;
 }
 
 .navbar-dark {
-    background-color: rgb(0, 55, 156);
+    background-color: rgb(187, 187, 187);
 }
 
 .bg {
-    background-color: rgb(45, 108, 255);
+    background-color: rgb(175, 178, 185);
 }
 .nav-link {
     color:white;
@@ -41,7 +41,12 @@
 } */
 
 body {
-    background-color: rgb(235, 235, 235);
+    background: linear-gradient(180deg, rgba(83, 83, 83, 0.88) 0%, #929292 100%);
+   
+    background-size: cover;
+    height: 920px;
+    padding-top: 35px;
+    background-repeat: no-repeat;
 }
 
 
@@ -68,9 +73,9 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
-    background-color: rgb(45, 108, 255);
+    background-color: rgb(48, 48, 48);
     color: rgb(216, 216, 216);
-    border-top: 8px solid rgb(23, 253, 73);
+    border-top: 8px solid rgb(177, 177, 177);
     padding: 10px;
 }
 
@@ -94,7 +99,7 @@ img {
 }
 
 #aboutme {
-    background-color: white;
+    background-color: rgb(185, 185, 185);
     margin-top: 30px;
 }
 

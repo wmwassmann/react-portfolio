@@ -16,7 +16,7 @@ class Portfolio extends Component {
 // <!-- Portfolio with thumbnails linking to deployments/repositories; projects pending to display for now-->
 
             
-<main className="container col-md-10">
+<main className="container col-md-8">
               <Carousel /> 
     {/* <!-- Projects section --> */}  
 </main>

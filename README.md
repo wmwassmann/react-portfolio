@@ -22,6 +22,7 @@ This Portfolio uses:
 - [CSS](https://www.w3schools.com/css/)
 - [Jquery](https://jquery.com/)
 - [Bootstrap](https://getbootstrap.com/)
+- [Material-UI](https://material-ui.com/)
 
 ## Author
 

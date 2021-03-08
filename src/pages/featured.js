@@ -4,6 +4,10 @@ import RPGAdventurersAcademyAudit  from './img/audit.png'
 import RpgMain from './img/login.png'
 import RpgAudit from './img/audit.png'
 
+
+
+
+
 class Featured extends Component {
     constructor() {
         super()
@@ -19,18 +23,22 @@ class Featured extends Component {
             
 <main className="container">      
 
-    <div className="row">
-      <div className="col-md-10" id="portfolio">
+
+      <div className="row">
+      <div className="col-md-10" id="featured-app">
       <h1>RPG: Adventurer's Academy</h1>
 
       <div className='intro'>
       <div className='photoline'>
         <img src={RpgMain} className="img-fluid float-left rpg1" alt='rpg-1'></img>
         <img src={RpgAudit} className="img-fluid float-left rpg2" alt='rpg-2'></img>
+  
       </div>
+      
           <p> All three projects of my web development bootcamp were a combined effort of myself with four fantastic Web Developers. 
           We are the proud creators of <a href="https://github.com/rickyfuk/dnd-buddy-3.0">The RPG: Adventurer's Academy</a>
           </p>
+     
       </div>
             
             <ul>
@@ -74,6 +82,7 @@ class Featured extends Component {
 
       </div>
     </div>
+    
 
     {/* <!-- This empty row/column extends the white box size at the bottom --> */}
     <div className="row">

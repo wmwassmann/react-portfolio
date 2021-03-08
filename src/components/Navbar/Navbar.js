@@ -16,7 +16,7 @@ function Navbar() {
         <a className="nav-link" href="/portfolio">Portfolio</a>
       </li>
       <li className="nav-item">
-        <a className="nav-link" href="/featured">RPG: Adventurer's Academy</a>
+        <a className="nav-link" href="/0">RPG: Adventurer's Academy</a>
       </li>
       <li className="nav-item">
         <a className="nav-link" id="navnoborder" href="/contact">Contact</a>

@@ -5,12 +5,13 @@
     
 }
 
-.portfolio {
+.portfolio-window {
+    padding-top: 120px;
     border-color: rgb(139, 139, 139);
     border-style: double;
     border-radius: 10px;
     background-color:  rgb(90, 90, 90);
-    height: 700px;
+    height: 820px;
     
 }
 

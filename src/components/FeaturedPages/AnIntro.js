@@ -30,15 +30,16 @@ class AboutMe extends Component {
                                 Continue
                             </Link>
                         </div>
-
+                        <div className='text-body'>
                         <Typography variant="h4">
-                            <div className='text-body'>
+                            
 
                                 <Typed strings={["All three projects of my web development bootcamp were a combined effort of myself with four fantastic Web Developers."]} typeSpeed={40} />
 
 
-                            </div>
+                           
                         </Typography>
+                        </div>
                     </div>
                 
                 </div>

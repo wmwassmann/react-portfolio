@@ -15,6 +15,7 @@ import notetaker from './assets/img/note-taker.png';
 
 
 export class AuditCarousel extends Component {
+
   
     constructor(props) {
         super(props)
@@ -92,38 +93,67 @@ export class AuditCarousel extends Component {
     } 
 
 
+    
 
-
-    handle_link = (e) => {
+    handle_link = (e) => {        
         if (this.state.current_card === 1) {
-        window.location.href='https://github.com/wmwassmann/Homework-04-Quiz';
+        window.location.href='https://github.com/wmwassmann/Homework-04-Quiz';        
         e.preventDefault()        
     } else if (this.state.current_card === 2) {
         window.location.href='https://github.com/wmwassmann/03-Homework';
-        e.preventDefault()       
+        e.preventDefault()               
     } else if (this.state.current_card === 3) {
-        window.location.href='https://github.com/wmwassmann/Homework-05-Calendar';
-        e.preventDefault()        
-    } else if (this.state.current_card === 4) {
         window.location.href='https://github.com/wmwassmann/Homework-06-Weatherdash';
         e.preventDefault()      
+    } else if (this.state.current_card === 4) {
+        window.location.href='https://github.com/wmwassmann/Homework-05-Calendar';
+        e.preventDefault()  
     } else if (this.state.current_card === 5) {
-        window.location.href='https://github.com/wmwassmann/homework-employee-08';
-        e.preventDefault()       
-    } else if (this.state.current_card === 6) {
-        window.location.href='https://github.com/wmwassmann/homework-notes-09'
-        e.preventDefault()        
-    } else if (this.state.current_card === 7) {
         window.location.href='https://github.com/wmwassmann/dndbuddy-1'
         e.preventDefault()        
-    } else if (this.state.current_card === 8) {
+    } else if (this.state.current_card === 6) {
         window.location.href='https://github.com/wmwassmann/dnd-buddy-2.0'
-        e.preventDefault()        
-    }
-       
+        e.preventDefault()
+    } else if (this.state.current_card === 7) {
+            window.location.href='https://github.com/wmwassmann/homework-employee-08';
+            e.preventDefault()         
+    } else if (this.state.current_card === 8) {
+        window.location.href='https://github.com/wmwassmann/homework-notes-09'
+        e.preventDefault() 
+    } 
     }
 
-    render() {           
+    render() {
+        let repoLink = 'Multiple Choice Quiz'; 
+        
+        if (this.state.current_card === 1) {
+            repoLink = 'Multiple Choice Quiz';
+            
+        } else if (this.state.current_card === 2) {
+            repoLink = 'Password Generator';
+                  
+        } else if (this.state.current_card === 3) {
+            repoLink = 'Weather Tracker';
+                  
+        } else if (this.state.current_card === 4) {
+            repoLink = 'Scheduler';
+                
+        } else if (this.state.current_card === 5) {
+            repoLink = 'DnD-Buddy v1.0';
+                  
+        } else if (this.state.current_card === 6) {
+            repoLink = 'Dnd-Buddy v2.0';
+                   
+        } else if (this.state.current_card === 7) {
+            repoLink = 'Team Builder';
+                   
+        } else if (this.state.current_card === 8) {
+            repoLink = 'Note Taker'; 
+          
+            // to account for the zero index which is card 8 snaps too upon arrival for a split second to reset the loop
+        } else if (this.state.current_card === 0) {
+            repoLink ='Note Taker';
+        }
         return (
             <div className='portfolio-window'>
                     
@@ -141,7 +171,7 @@ export class AuditCarousel extends Component {
                     </div>    
                 <div className='modalbar' style={styles.navBar}>                
                     <button className='button' style={styles.buttonPrevious} onClick={this.handle_previous}>Prev</button>
-                    <button className='button' style={styles} onClick={this.handle_link}>Visit Repository</button>                             
+                    <button className='button' style={styles.repoLink} onClick={this.handle_link}>{repoLink}</button>                             
                     <button className='button' style={styles.buttonNext} onClick={this.handle_next}>Next</button>
                 </div>            
             </div>
@@ -157,7 +187,8 @@ const styles = {
         transform: 'translate(-50%, -50%)',
         width: '1089px',
         height: '593px',
-        overflow: 'hidden'                  
+        overflow: 'hidden',  
+        borderRadius: '1%',                
         
     },
     card_container: {
@@ -182,6 +213,9 @@ const styles = {
         width: '90px',
         right: '10px'    
                           
+    }, 
+    repoLink: {
+        width: '500px'
     }
    
    

@@ -95,7 +95,7 @@ export class AuditCarousel extends Component {
 
     
 
-    handle_link = (e) => {        
+    handleDeployLink = (e) => {        
         if (this.state.current_card === 1) {
         window.location.href='https://github.com/wmwassmann/Homework-04-Quiz';        
         e.preventDefault()        
@@ -123,6 +123,34 @@ export class AuditCarousel extends Component {
     } 
     }
 
+    
+    handleRepoLink = (e) => {        
+        if (this.state.current_card === 1) {
+        window.location.href='https://github.com/wmwassmann/Homework-04-Quiz';        
+        e.preventDefault()        
+    } else if (this.state.current_card === 2) {
+        window.location.href='https://github.com/wmwassmann/03-Homework';
+        e.preventDefault()               
+    } else if (this.state.current_card === 3) {
+        window.location.href='https://github.com/wmwassmann/Homework-06-Weatherdash';
+        e.preventDefault()      
+    } else if (this.state.current_card === 4) {
+        window.location.href='https://github.com/wmwassmann/Homework-05-Calendar';
+        e.preventDefault()  
+    } else if (this.state.current_card === 5) {
+        window.location.href='https://github.com/wmwassmann/dndbuddy-1'
+        e.preventDefault()        
+    } else if (this.state.current_card === 6) {
+        window.location.href='https://github.com/wmwassmann/dnd-buddy-2.0'
+        e.preventDefault()
+    } else if (this.state.current_card === 7) {
+        window.location.href='https://github.com/wmwassmann/homework-employee-08';
+        e.preventDefault()         
+    } else if (this.state.current_card === 8) {
+        window.location.href='https://github.com/wmwassmann/homework-notes-09'
+        e.preventDefault() 
+    } 
+    }
     render() {
         let repoLink = 'Multiple Choice Quiz'; 
         
@@ -156,7 +184,7 @@ export class AuditCarousel extends Component {
         }
         return (
             <div className='portfolio-window'>
-                    
+                <div className='repoDisplay' style={styles.repoDisplay}>{repoLink}</div> 
                     <div className='view-port' style={styles.view_port}>
                         <div ref={ref_id => this.card_container = ref_id} className='card-container portrait' style={styles.card_container}>
                             < Card card_number={javascriptquiz} />                                                    
@@ -169,9 +197,11 @@ export class AuditCarousel extends Component {
                             < Card card_number={notetaker}/>                                                   
                         </div>
                     </div>    
+                     
                 <div className='modalbar' style={styles.navBar}>                
-                    <button className='button' style={styles.buttonPrevious} onClick={this.handle_previous}>Prev</button>
-                    <button className='button' style={styles.repoLink} onClick={this.handle_link}>{repoLink}</button>                             
+                    <button className='button' style={styles.buttonPrevious} onClick={this.handle_previous}>Prev</button>                         
+                    <button className='button' style={styles.repoLink} onClick={this.handleRepoLink}>Repo Link</button>
+                    <button className='button' style={styles.deployedLink} onClick={this.handleDeployLink}>Deployed Link</button>  
                     <button className='button' style={styles.buttonNext} onClick={this.handle_next}>Next</button>
                 </div>            
             </div>
@@ -214,8 +244,15 @@ const styles = {
         right: '10px'    
                           
     }, 
-    repoLink: {
+    repoDisplay: {
         width: '500px'
+    },
+
+    repoLink: {
+        width: '200px'
+    },
+    deployedLink: {
+        width: '200px'
     }
    
    

@@ -13,6 +13,7 @@ import TheBuddies from './components/FeaturedPages/TheBuddies';
 import TheMission from './components/FeaturedPages/TheMission';
 import TheTools from './components/FeaturedPages/TheTools';
 import WhatsNext from './components/FeaturedPages/WhatsNext';
+import DevProfiles from './components/FeaturedPages/DevProfiles/DevProfiles';
 
 
 
@@ -36,6 +37,7 @@ function App() {
         <Route exact path='/2' component={TheMission} />
         <Route exact path='/3' component={TheTools} />
         <Route exact path='/4' component={WhatsNext} />
+        <Route exact path='/profiles' component={DevProfiles} />
  
       </div>
       <Footer />

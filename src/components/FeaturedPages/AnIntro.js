@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
-import myphotosmall from './../../pages/img/login.png'
+import rpgaa from './../../pages/img/rpgaa/demo.png'
 import './css/style.css'
-import { Typography } from '@material-ui/core';
-import Typed from "react-typed";
+
 
 
 
@@ -14,35 +13,39 @@ class AboutMe extends Component {
 
         }
     }
+    handleLink = (e) => {
+        window.location.href='https://github.com/rickyfuk/dnd-buddy-3.0'
+        e.preventDefault();
+    }
 
     render() {
+
 
         return (
             <main className="container">
 
                 <div className="row">
                     <div className="col-md-10" id="aboutme">
-                        <h1>Featured Project</h1>
-                    
-                        <img src={myphotosmall} className="img-fluid float-left wmw-photo" alt='personalimage'></img>
-                            <div className='next-button'>
+                        <h1>Introduction</h1>
+
+                        <img src={rpgaa} className="img-fluid float-left wmw-photo" alt='personalimage'></img>
+                        <div className='text-body'>
+                            <h5>
+                                All three projects of my web development bootcamp were a combined effort of myself with four fantastic Web Developers.
+                            </h5>
+                        </div>
+                        
+                    </div>        
+                    <div className='buttons-container'> 
+                    <div className='next-button'>
                             <Link to={'/1'}>
                                 Continue
                             </Link>
-                        </div>
-                        <div className='text-body'>
-                        <Typography variant="h4">
-                            
-
-                                <Typed strings={["All three projects of my web development bootcamp were a combined effort of myself with four fantastic Web Developers."]} typeSpeed={40} />
-
-
-                           
-                        </Typography>
-                        </div>
-                    </div>
-                
+                    </div>  
+                    </div>                     
                 </div>
+               
+
 
                 {/* <!-- This empty row/column extends the white box size at the bottom --> */}
                 <div className="row">
@@ -50,8 +53,6 @@ class AboutMe extends Component {
                     </div>
 
                 </div>
-
-
 
 
             </main>

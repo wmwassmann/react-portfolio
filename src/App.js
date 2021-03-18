@@ -13,7 +13,7 @@ import TheBuddies from './components/FeaturedPages/TheBuddies';
 import TheMission from './components/FeaturedPages/TheMission';
 import TheTools from './components/FeaturedPages/TheTools';
 import WhatsNext from './components/FeaturedPages/WhatsNext';
-import DevProfiles from './components/FeaturedPages/DevProfiles/DevProfiles';
+import DevProfiles from './pages/DevProfiles';
 
 
 

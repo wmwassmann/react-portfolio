@@ -99,18 +99,3 @@
     
 }
 
-.selected {
-    position:relative;    
-    top: 300px; 
-    right: 500px;   
-    height: 240px;  
-    width: 300px;
-    padding: 100px;
-    background-color: rgb(100, 100, 100);      
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );   
-    
-}

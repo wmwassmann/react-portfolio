@@ -27,10 +27,7 @@
 
 
 
-.button-container {
-    display: flex;
-    flex-direction: row;   
-}
+
 
 .button-links {
     display: flex;
@@ -47,4 +44,6 @@
     width: 60px;
     height: 60px;    
 }
+
+
 

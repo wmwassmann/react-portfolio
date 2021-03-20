@@ -253,12 +253,20 @@ img {
 .button-group {
     display: flex;
     flex-direction: row;
+    
 }
 
 .button {
     max-width: 200px;
     height: 200px;
     margin: 13px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row; 
+    margin-left: 10px;
+    
 }
 
 
@@ -284,6 +292,21 @@ img {
     
 }
 
+#button-linkedin {
+    background:url('../img/linkedin.png') no-repeat;     
+    background-position: center;
+    background-size: contain;
+}
+
+#button-github {
+    background:url('../img/github.png') no-repeat;     
+    background-position: center;
+    background-size: contain;
+}
+
+
+
+
 .david-button {
     transition: transform 700ms ease-in-out;
 }
@@ -296,9 +319,27 @@ img {
     transition: transform 700ms ease-in-out;
 }
 
-.karl-button {
+.karl-button {     
     transition: transform 700ms ease-in-out;
 }
+
+.push-left-david {
+    transition: transform 700ms ease-in-out;
+}
+
+.push-left-alex {
+    transition: transform 700ms ease-in-out;
+}
+
+.push-left-ricky {
+    transition: transform 700ms ease-in-out;
+}
+
+.push-left-karl {   
+    transition: transform 700ms ease-in-out;
+}
+
+
 
 .david .david-button {    
     animation: selected-dev-david 700ms ease-in forwards;  
@@ -318,19 +359,99 @@ img {
 
 .david .david-return {
     animation: return-dev-david 700ms ease-in forwards; 
+    animation-delay: 0.7s;
 }
 
 .alex .alex-return {
     animation: return-dev-alex 700ms ease-in forwards; 
+    animation-delay: 0.7s;
 }
 
 .ricky .ricky-return {
     animation: return-dev-ricky 700ms ease-in forwards; 
+    animation-delay: 0.7s;
+    
 }
 
 .karl .karl-return {
-    animation: return-dev-karl 700ms ease-in forwards; 
+    animation: return-dev-karl 700ms ease-in forwards;   
+    animation-delay: 0.7s;
 }
+
+.david .fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.david .fade-in {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s, opacity 0.5s linear;
+}
+
+.alex .fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.alex .fade-in {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s, opacity 0.5s linear;
+}
+
+.ricky .fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.ricky .fade-in {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s, opacity 0.5s linear;
+}
+
+.karl .fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.karl .fade-in {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s, opacity 0.5s linear;
+}
+
+
+
+
+
+
+.david .push-left-david {
+    animation: push-left-david 700ms ease-in forwards;
+}
+
+.alex .push-left-alex {
+    animation: push-left-alex 700ms ease-in forwards;
+}
+
+.ricky .push-left-ricky {
+    animation: push-left-ricky 700ms ease-in forwards;
+}
+
+
+.karl .push-left-karl {
+    animation: push-left-karl 700ms ease-in forwards;  
+     
+}
+
+
+
+
 
 
 @keyframes selected-dev-david {
@@ -339,19 +460,30 @@ img {
     } 
 
     100% {
-        transform: translateY(140%) translateX(170%);
+        transform: translateY(140%) translateX(170%) scale(1.4);
+        -webkit-animation: scale(1.4);
     }
 }
 
-@keyframes return-dev-david {
-    0% {
-        transform: translateY(140%) translateX(170%);
-    } 
+@keyframes return-dev-david {  
 
     100% {
         transform: translateY(0%) translateX(0%);
     }
 }
+
+@keyframes push-left-david {
+    0% {
+        transform: translateY(140%) translateX(170%) scale(1.4);
+        -webkit-animation: scale(1.4);
+    } 
+
+    100% {
+        transform: translateY(140%) translateX(-67%) scale(1.4);
+        -webkit-animation: scale(1.4);
+    }
+}
+
 
 
 
@@ -363,19 +495,30 @@ img {
     } 
 
     100% {
-        transform: translateY(150%) translateX(60%);
+        transform: translateY(140%) translateX(60%) scale(1.4);
+        -webkit-animation: scale(1.4);
     }
 }
 
 @keyframes return-dev-alex {
-    0% {
-        transform: translateY(150%) translateX(60%);
-    } 
-
+  
     100% {        
         transform: translateY(0%) translateX(0%);
     }
 }
+
+@keyframes push-left-alex {
+    0% {
+        transform: translateY(140%) translateX(60%) scale(1.4);
+        -webkit-animation: scale(1.4);
+    } 
+
+    100% {
+        transform: translateY(140%) translateX(-184%) scale(1.4);
+        -webkit-animation: scale(1.4);
+    }
+}
+
 
 
 
@@ -387,19 +530,32 @@ img {
     } 
 
     100% {
-        transform: translateY(150%) translateX(-60%);
+        transform: translateY(140%) translateX(-60%) scale(1.4);
+        -webkit-animation: scale(1.4);
     }
 }
 
 @keyframes return-dev-ricky {
-    0% {
-        transform: translateY(150%) translateX(-60%);
-    } 
 
     100% {
         transform: translateY(0) translateX(0%);
     }
 }
+
+
+@keyframes push-left-ricky {
+    0% {
+        transform: translateY(140%) translateX(-60%) scale(1.4);
+        -webkit-animation: scale(1.4);
+    } 
+
+    100% {
+        transform: translateY(140%) translateX(-300%) scale(1.4);
+        -webkit-animation: scale(1.4);
+    }
+}
+
+
 
 
 
@@ -409,17 +565,28 @@ img {
     } 
 
     100% {
-        transform: translateY(140%) translateX(-170%);
+        transform: translateY(140%) translateX(-170%) scale(1.4);
+        -webkit-animation: scale(1.4);
     }
 }
 
 @keyframes return-dev-karl {
+  
+    100% {
+        transform: translateY(0%) translateX(0%);
+    }
+}
+
+
+@keyframes push-left-karl {
     0% {
-        transform: translateY(140%) translateX(-170%);
+        transform: translateY(140%) translateX(-170%) scale(1.4);
+        -webkit-animation: scale(1.4);
     } 
 
     100% {
-        transform: translateY(0%) translateX(0%);
+        transform: translateY(140%) translateX(-416%) scale(1.4);
+        -webkit-animation: scale(1.4);
     }
 }
 

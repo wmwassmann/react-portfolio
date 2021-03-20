@@ -22,7 +22,7 @@ class AboutMe extends Component {
 
 
         return (
-            <main className="container-main">
+            <main className="container">
 
                 <div className="row">
                     <div className="col-md-10" id="aboutme">

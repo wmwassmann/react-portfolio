@@ -256,6 +256,8 @@ img {
 }
 
 .button {
+    max-width: 200px;
+    height: 200px;
     margin: 13px;
 }
 
@@ -298,20 +300,36 @@ img {
     transition: transform 700ms ease-in-out;
 }
 
-.david:hover .david-button {    
-    animation: selected-dev-david 700ms ease-in-out forwards;  
+.david .david-button {    
+    animation: selected-dev-david 700ms ease-in forwards;  
 }
 
-.alex:hover .alex-button {    
-    animation: selected-dev-alex 700ms ease-in-out forwards;  
+.alex .alex-button {    
+    animation: selected-dev-alex 700ms ease-in forwards;  
 }
 
-.ricky:hover .ricky-button {    
-    animation: selected-dev-ricky 700ms ease-in-out forwards;  
+.ricky .ricky-button {    
+    animation: selected-dev-ricky 700ms ease-in forwards;  
 }
 
-.karl:hover .karl-button {    
-    animation: selected-dev-karl 700ms ease-in-out forwards;  
+.karl .karl-button {    
+    animation: selected-dev-karl 700ms ease-in forwards;      
+}
+
+.david .david-return {
+    animation: return-dev-david 700ms ease-in forwards; 
+}
+
+.alex .alex-return {
+    animation: return-dev-alex 700ms ease-in forwards; 
+}
+
+.ricky .ricky-return {
+    animation: return-dev-ricky 700ms ease-in forwards; 
+}
+
+.karl .karl-return {
+    animation: return-dev-karl 700ms ease-in forwards; 
 }
 
 
@@ -325,6 +343,20 @@ img {
     }
 }
 
+@keyframes return-dev-david {
+    0% {
+        transform: translateY(140%) translateX(170%);
+    } 
+
+    100% {
+        transform: translateY(0%) translateX(0%);
+    }
+}
+
+
+
+
+
 @keyframes selected-dev-alex{
     0% {
         transform: translateY(0);
@@ -335,6 +367,20 @@ img {
     }
 }
 
+@keyframes return-dev-alex {
+    0% {
+        transform: translateY(150%) translateX(60%);
+    } 
+
+    100% {        
+        transform: translateY(0%) translateX(0%);
+    }
+}
+
+
+
+
+
 @keyframes selected-dev-ricky {
     0% {
         transform: translateY(0);
@@ -344,6 +390,17 @@ img {
         transform: translateY(150%) translateX(-60%);
     }
 }
+
+@keyframes return-dev-ricky {
+    0% {
+        transform: translateY(150%) translateX(-60%);
+    } 
+
+    100% {
+        transform: translateY(0) translateX(0%);
+    }
+}
+
 
 
 @keyframes selected-dev-karl {
@@ -356,9 +413,15 @@ img {
     }
 }
 
+@keyframes return-dev-karl {
+    0% {
+        transform: translateY(140%) translateX(-170%);
+    } 
 
-
-
+    100% {
+        transform: translateY(0%) translateX(0%);
+    }
+}
 
 
 

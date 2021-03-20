@@ -1,7 +1,7 @@
 import React from 'react'
 import { Component } from 'react';
 import LinkedIn from './img/linkedin.png'
-import GitHub from './img/github.webp'
+import GitHub from './img/github.png'
 import alex from '../../../pages/img/Alex.jpg'
 import './css/style.css'
 

@@ -2,7 +2,7 @@
 import React from 'react'
 import { Component } from 'react';
 import LinkedIn from './img/linkedin.png'
-import GitHub from './img/github.webp'
+import GitHub from './img/github.png'
 import karl from '../../../pages/img/Karl.jpg'
 import './css/style.css'
 

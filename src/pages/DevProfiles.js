@@ -8,6 +8,7 @@ import david from './img/David.jpg'
 import alex from './img/Alex.jpg'
 import ricky from './img/Ricky.jpg'
 import karl from './img/Karl.jpg'
+import { text } from '@fortawesome/fontawesome-svg-core';
 
 
 
@@ -40,97 +41,110 @@ export class DevProfiles extends React.Component {
 
         if (this.state.isToggleOnAny === true) {
 
-          // SELECTOR CONDITIONAL  ==============================================================================================================================
+            // SELECTOR CONDITIONAL  ==============================================================================================================================
 
-          if (this.state.isToggleOnDavid === true) {
-            const returnBtn = document.getElementById('david-button')
-            returnBtn.classList.add('david-return')
-
-            this.setState({
-                isToggleOnDavid: false
-            })    
-
-        } else if (this.state.isToggleOnAlex === true) {
-
-            const returnBtn = document.getElementById('alex-button')
-            const resetBtn = document.getElementById('alex-name')
-            returnBtn.classList.add('fade-out')
-
-            setTimeout(() => {
-                
-                resetBtn.innerHTML = 'Alex Madrigal'
-                returnBtn.classList.add('alex-return')
-                returnBtn.classList.remove('push-left-alex')
+            if (this.state.isToggleOnDavid === true) {
+                const returnBtn = document.getElementById('david-button')
+                returnBtn.classList.add('david-return')
 
                 this.setState({
-                    isToggleOnAlex: false
+                    isToggleOnDavid: false
                 })
-            }, 500)
 
-            setTimeout(() => {
-                returnBtn.classList.add('fade-in')
-                returnBtn.classList.remove('fade-out')
+            } else if (this.state.isToggleOnAlex === true) {
+
+                const returnBtn = document.getElementById('alex-button')
+                const resetBtn = document.getElementById('alex-name')
+                const closeText = document.getElementById('dev-text-content')
+                closeText.classList.remove('unwrap')
+                closeText.classList.add('wrap')
+                returnBtn.classList.add('fade-out')
+
                 setTimeout(() => {
-                    returnBtn.classList.remove('fade-in')
-                }, 100)
-            }, 800)
-           
 
-        } else if (this.state.isToggleOnRicky === true) {
-            const returnBtn = document.getElementById('ricky-button')
-            const resetBtn = document.getElementById('ricky-name')
-            returnBtn.classList.add('fade-out')
+                    resetBtn.innerHTML = 'Alex Madrigal'
+                    returnBtn.classList.add('alex-return')
+                    returnBtn.classList.remove('push-left-alex')
+                    closeText.classList.remove('wrap')
 
-            setTimeout(() => {
-                
-                resetBtn.innerHTML = 'Chung Hei Fuk'
-                returnBtn.classList.add('ricky-return')
-                returnBtn.classList.remove('push-left-ricky')
+                    this.setState({
+                        isToggleOnAlex: false
+                    })
+                }, 500)
 
-                this.setState({
-                    isToggleOnRicky: false
-                })
-            }, 500)
-
-            setTimeout(() => {
-                returnBtn.classList.add('fade-in')
-                returnBtn.classList.remove('fade-out')
                 setTimeout(() => {
-                    returnBtn.classList.remove('fade-in')
-                }, 100)
-            }, 800)
-           
+                    returnBtn.classList.add('fade-in')
+                    returnBtn.classList.remove('fade-out')
+                    setTimeout(() => {
+                        returnBtn.classList.remove('fade-in')
+                    }, 100)
+                }, 800)
 
-        } else if (this.state.isToggleOnKarl === true) {
 
-                    
-            const returnBtn = document.getElementById('karl-button')
-            const resetBtn = document.getElementById('karl-name')
-            returnBtn.classList.add('fade-out')
+            } else if (this.state.isToggleOnRicky === true) {
 
-            setTimeout(() => {
-                
-                resetBtn.innerHTML = 'Karl Behrens'
-                returnBtn.classList.add('karl-return')
-                returnBtn.classList.remove('push-left-karl')
+                const returnBtn = document.getElementById('ricky-button')
+                const resetBtn = document.getElementById('ricky-name')
+                const closeText = document.getElementById('dev-text-content')
+                closeText.classList.remove('unwrap')
+                closeText.classList.add('wrap')
+                returnBtn.classList.add('fade-out')
 
-                this.setState({
-                    isToggleOnKarl: false
-                })
-            }, 500)
-
-            setTimeout(() => {
-                returnBtn.classList.add('fade-in')
-                returnBtn.classList.remove('fade-out')
                 setTimeout(() => {
-                    returnBtn.classList.remove('fade-in')
-                }, 100)
-            }, 800)
+
+                    resetBtn.innerHTML = 'Chung Hei Fuk'
+                    returnBtn.classList.add('ricky-return')
+                    returnBtn.classList.remove('push-left-ricky')
+                    closeText.classList.remove('wrap')
+
+                    this.setState({
+                        isToggleOnRicky: false
+                    })
+                }, 500)
+
+                setTimeout(() => {
+                    returnBtn.classList.add('fade-in')
+                    returnBtn.classList.remove('fade-out')
+                    setTimeout(() => {
+                        returnBtn.classList.remove('fade-in')
+                    }, 100)
+                }, 800)
 
 
-        }
+            } else if (this.state.isToggleOnKarl === true) {
 
-        // SELECTOR CONDITIONAL END ==============================================================================================================================
+
+                const returnBtn = document.getElementById('karl-button')
+                const resetBtn = document.getElementById('karl-name')
+                const closeText = document.getElementById('dev-text-content')
+                closeText.classList.remove('unwrap')
+                closeText.classList.add('wrap')
+                returnBtn.classList.add('fade-out')
+
+                setTimeout(() => {
+
+                    resetBtn.innerHTML = 'Karl Behrens'
+                    returnBtn.classList.add('karl-return')
+                    returnBtn.classList.remove('push-left-karl')
+                    closeText.classList.remove('wrap')
+
+                    this.setState({
+                        isToggleOnKarl: false
+                    })
+                }, 500)
+
+                setTimeout(() => {
+                    returnBtn.classList.add('fade-in')
+                    returnBtn.classList.remove('fade-out')
+                    setTimeout(() => {
+                        returnBtn.classList.remove('fade-in')
+                    }, 100)
+                }, 800)
+
+
+            }
+
+            // SELECTOR CONDITIONAL END ==============================================================================================================================
 
             const handleBtn = document.getElementById('david-button')
             handleBtn.classList.add('david-button')
@@ -150,11 +164,13 @@ export class DevProfiles extends React.Component {
                 localStorage.setItem('devSelected', 'David')
 
                 const phaseShift = document.getElementById('david-name')
+                const textMain = document.getElementById('dev-text-content')
+                const pushLeft = document.getElementById('david-button')
+
                 const buttonContainer = document.createElement('div')
                 const linkedInBtn = document.createElement('button')
                 const githubBtn = document.createElement('button')
 
-                const pushLeft = document.getElementById('david-button')
 
                 phaseShift.innerHTML = ''
                 linkedInBtn.id = 'button-linkedin'
@@ -163,8 +179,8 @@ export class DevProfiles extends React.Component {
                 buttonContainer.classList.add('button-container')
                 linkedInBtn.classList.add('button-links')
                 githubBtn.classList.add('button-links')
-
                 pushLeft.classList.add('push-left-david')
+                textMain.classList.add('unwrap')
 
 
                 linkedInBtn.addEventListener('click', function () {
@@ -204,11 +220,13 @@ export class DevProfiles extends React.Component {
                 localStorage.setItem('devSelected', 'David')
 
                 const phaseShift = document.getElementById('david-name')
+                const textMain = document.getElementById('dev-text-content')
+                const pushLeft = document.getElementById('david-button')
+
                 const buttonContainer = document.createElement('div')
                 const linkedInBtn = document.createElement('button')
                 const githubBtn = document.createElement('button')
 
-                const pushLeft = document.getElementById('david-button')
 
 
 
@@ -219,8 +237,8 @@ export class DevProfiles extends React.Component {
                 buttonContainer.classList.add('button-container')
                 linkedInBtn.classList.add('button-links')
                 githubBtn.classList.add('button-links')
-
                 pushLeft.classList.add('push-left-david')
+                textMain.classList.add('unwrap')
 
                 linkedInBtn.addEventListener('click', function () {
                     window.location = 'https://www.linkedin.com/in/karl-e-behrens/'
@@ -251,96 +269,108 @@ export class DevProfiles extends React.Component {
 
         if (this.state.isToggleOnAny === true) {
 
-          // SELECTOR CONDITIONAL  ==============================================================================================================================
+            // SELECTOR CONDITIONAL  ==============================================================================================================================
 
-          if (this.state.isToggleOnDavid === true) {
-            const returnBtn = document.getElementById('david-button')
-            const resetBtn = document.getElementById('david-name')
-            returnBtn.classList.add('fade-out')
+            if (this.state.isToggleOnDavid === true) {
+                const returnBtn = document.getElementById('david-button')
+                const resetBtn = document.getElementById('david-name')
+                const closeText = document.getElementById('dev-text-content')
+                closeText.classList.remove('unwrap')
+                closeText.classList.add('wrap')
+                returnBtn.classList.add('fade-out')
 
-            setTimeout(() => {
-                
-                resetBtn.innerHTML = 'David Deaton'
-                returnBtn.classList.add('david-return')
-                returnBtn.classList.remove('push-left-david')
+                setTimeout(() => {
+
+                    resetBtn.innerHTML = 'David Deaton'
+                    returnBtn.classList.add('david-return')
+                    returnBtn.classList.remove('push-left-david')
+                    closeText.classList.remove('wrap')
+
+                    this.setState({
+                        isToggleOnDavid: false
+                    })
+                }, 500)
+
+                setTimeout(() => {
+                    returnBtn.classList.add('fade-in')
+                    returnBtn.classList.remove('fade-out')
+                    setTimeout(() => {
+                        returnBtn.classList.remove('fade-in')
+                    }, 100)
+                }, 800)
+
+            } else if (this.state.isToggleOnAlex === true) {
+
+                const returnBtn = document.getElementById('alex-button')
+                returnBtn.classList.add('alex-return')
 
                 this.setState({
-                    isToggleOnDavid: false
+                    isToggleOnAlex: false
                 })
-            }, 500)
 
-            setTimeout(() => {
-                returnBtn.classList.add('fade-in')
-                returnBtn.classList.remove('fade-out')
+            } else if (this.state.isToggleOnRicky === true) {
+                const returnBtn = document.getElementById('ricky-button')
+                const resetBtn = document.getElementById('ricky-name')
+                const closeText = document.getElementById('dev-text-content')
+                closeText.classList.remove('unwrap')
+                closeText.classList.add('wrap')
+                returnBtn.classList.add('fade-out')
+
                 setTimeout(() => {
-                    returnBtn.classList.remove('fade-in')
-                }, 100)
-            }, 800)
 
-        } else if (this.state.isToggleOnAlex === true) {
+                    resetBtn.innerHTML = 'Chung Hei Fuk'
+                    returnBtn.classList.add('ricky-return')
+                    returnBtn.classList.remove('push-left-ricky')
+                    closeText.classList.remove('wrap')
 
-            const returnBtn = document.getElementById('alex-button')
-            returnBtn.classList.add('alex-return')
+                    this.setState({
+                        isToggleOnRicky: false
+                    })
+                }, 500)
 
-            this.setState({
-                isToggleOnAlex: false
-            })    
-
-        } else if (this.state.isToggleOnRicky === true) {
-            const returnBtn = document.getElementById('ricky-button')
-            const resetBtn = document.getElementById('ricky-name')
-            returnBtn.classList.add('fade-out')
-
-            setTimeout(() => {
-                
-                resetBtn.innerHTML = 'Chung Hei Fuk'
-                returnBtn.classList.add('ricky-return')
-                returnBtn.classList.remove('push-left-ricky')
-
-                this.setState({
-                    isToggleOnRicky: false
-                })
-            }, 500)
-
-            setTimeout(() => {
-                returnBtn.classList.add('fade-in')
-                returnBtn.classList.remove('fade-out')
                 setTimeout(() => {
-                    returnBtn.classList.remove('fade-in')
-                }, 100)
-            }, 800)
-           
+                    returnBtn.classList.add('fade-in')
+                    returnBtn.classList.remove('fade-out')
+                    setTimeout(() => {
+                        returnBtn.classList.remove('fade-in')
+                    }, 100)
+                }, 800)
 
-        } else if (this.state.isToggleOnKarl === true) {
 
-                    
-            const returnBtn = document.getElementById('karl-button')
-            const resetBtn = document.getElementById('karl-name')
-            returnBtn.classList.add('fade-out')
+            } else if (this.state.isToggleOnKarl === true) {
 
-            setTimeout(() => {
-                
-                resetBtn.innerHTML = 'Karl Behrens'
-                returnBtn.classList.add('karl-return')
-                returnBtn.classList.remove('push-left-karl')
 
-                this.setState({
-                    isToggleOnKarl: false
-                })
-            }, 500)
+                const returnBtn = document.getElementById('karl-button')
+                const resetBtn = document.getElementById('karl-name')
+                const closeText = document.getElementById('dev-text-content')
+                closeText.classList.remove('unwrap')
+                closeText.classList.add('wrap')
+                returnBtn.classList.add('fade-out')
 
-            setTimeout(() => {
-                returnBtn.classList.add('fade-in')
-                returnBtn.classList.remove('fade-out')
                 setTimeout(() => {
-                    returnBtn.classList.remove('fade-in')
-                }, 100)
-            }, 800)
+
+                    resetBtn.innerHTML = 'Karl Behrens'
+                    returnBtn.classList.add('karl-return')
+                    returnBtn.classList.remove('push-left-karl')
+                    closeText.classList.remove('wrap')
+
+                    this.setState({
+                        isToggleOnKarl: false
+                    })
+                }, 500)
+
+                setTimeout(() => {
+                    returnBtn.classList.add('fade-in')
+                    returnBtn.classList.remove('fade-out')
+                    setTimeout(() => {
+                        returnBtn.classList.remove('fade-in')
+                    }, 100)
+                }, 800)
 
 
-        }
+            }
 
-        // SELECTOR CONDITIONAL END ==============================================================================================================================
+            // SELECTOR CONDITIONAL END ==============================================================================================================================
 
             const handleBtn = document.getElementById('alex-button')
             handleBtn.classList.add('alex-button')
@@ -358,11 +388,13 @@ export class DevProfiles extends React.Component {
                 localStorage.setItem('devSelected', 'Alex')
 
                 const phaseShift = document.getElementById('alex-name')
+                const textMain = document.getElementById('dev-text-content')
+                const pushLeft = document.getElementById('alex-button')
+
                 const buttonContainer = document.createElement('div')
                 const linkedInBtn = document.createElement('button')
                 const githubBtn = document.createElement('button')
 
-                const pushLeft = document.getElementById('alex-button')
 
 
                 phaseShift.innerHTML = ''
@@ -372,8 +404,8 @@ export class DevProfiles extends React.Component {
                 buttonContainer.classList.add('button-container')
                 linkedInBtn.classList.add('button-links')
                 githubBtn.classList.add('button-links')
-
                 pushLeft.classList.add('push-left-alex')
+                textMain.classList.add('unwrap')
 
 
                 linkedInBtn.addEventListener('click', function () {
@@ -414,11 +446,13 @@ export class DevProfiles extends React.Component {
                 localStorage.setItem('devSelected', 'Alex')
 
                 const phaseShift = document.getElementById('alex-name')
+                const textMain = document.getElementById('dev-text-content')
+                const pushLeft = document.getElementById('alex-button')
+
                 const buttonContainer = document.createElement('div')
                 const linkedInBtn = document.createElement('button')
                 const githubBtn = document.createElement('button')
 
-                const pushLeft = document.getElementById('alex-button')
 
 
                 phaseShift.innerHTML = ''
@@ -428,8 +462,8 @@ export class DevProfiles extends React.Component {
                 buttonContainer.classList.add('button-container')
                 linkedInBtn.classList.add('button-links')
                 githubBtn.classList.add('button-links')
-
                 pushLeft.classList.add('push-left-alex')
+                textMain.classList.add('unwrap')
 
 
 
@@ -466,18 +500,22 @@ export class DevProfiles extends React.Component {
         if (this.state.isToggleOnAny === true) {
 
 
-           // SELECTOR CONDITIONAL  ==============================================================================================================================
+            // SELECTOR CONDITIONAL  ==============================================================================================================================
 
             if (this.state.isToggleOnDavid === true) {
                 const returnBtn = document.getElementById('david-button')
                 const resetBtn = document.getElementById('david-name')
+                const closeText = document.getElementById('dev-text-content')
+                closeText.classList.remove('unwrap')
+                closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
 
                 setTimeout(() => {
-                    
+
                     resetBtn.innerHTML = 'David Deaton'
                     returnBtn.classList.add('david-return')
                     returnBtn.classList.remove('push-left-david')
+                    closeText.classList.remove('wrap')
 
                     this.setState({
                         isToggleOnDavid: false
@@ -495,13 +533,17 @@ export class DevProfiles extends React.Component {
 
                 const returnBtn = document.getElementById('alex-button')
                 const resetBtn = document.getElementById('alex-name')
+                const closeText = document.getElementById('dev-text-content')
+                closeText.classList.remove('unwrap')
+                closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
 
                 setTimeout(() => {
-                    
+
                     resetBtn.innerHTML = 'Alex Madrigal'
                     returnBtn.classList.add('alex-return')
                     returnBtn.classList.remove('push-left-alex')
+                    closeText.classList.remove('wrap')
 
                     this.setState({
                         isToggleOnAlex: false
@@ -523,19 +565,23 @@ export class DevProfiles extends React.Component {
                 this.setState({
                     isToggleOnRicky: false
                 })
-               
+
 
             } else if (this.state.isToggleOnKarl === true) {
 
                 const returnBtn = document.getElementById('karl-button')
                 const resetBtn = document.getElementById('karl-name')
+                const closeText = document.getElementById('dev-text-content')
+                closeText.classList.remove('unwrap')
+                closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
 
                 setTimeout(() => {
-                    
+
                     resetBtn.innerHTML = 'Karl Behrens'
                     returnBtn.classList.add('karl-return')
                     returnBtn.classList.remove('push-left-karl')
+                    closeText.classList.remove('wrap')
 
                     this.setState({
                         isToggleOnKarl: false
@@ -571,6 +617,8 @@ export class DevProfiles extends React.Component {
                 localStorage.setItem('devSelected', 'Ricky')
 
                 const phaseShift = document.getElementById('ricky-name')
+                const textMain = document.getElementById('dev-text-content')
+
                 const buttonContainer = document.createElement('div')
                 const linkedInBtn = document.createElement('button')
                 const githubBtn = document.createElement('button')
@@ -584,8 +632,8 @@ export class DevProfiles extends React.Component {
                 buttonContainer.classList.add('button-container')
                 linkedInBtn.classList.add('button-links')
                 githubBtn.classList.add('button-links')
-
                 pushLeft.classList.add('push-left-ricky')
+                textMain.classList.add('unwrap')
 
 
                 linkedInBtn.addEventListener('click', function () {
@@ -628,6 +676,8 @@ export class DevProfiles extends React.Component {
 
 
                 const phaseShift = document.getElementById('ricky-name')
+                const textMain = document.getElementById('dev-text-content')
+
                 const buttonContainer = document.createElement('div')
                 const linkedInBtn = document.createElement('button')
                 const githubBtn = document.createElement('button')
@@ -641,8 +691,8 @@ export class DevProfiles extends React.Component {
                 buttonContainer.classList.add('button-container')
                 linkedInBtn.classList.add('button-links')
                 githubBtn.classList.add('button-links')
-
                 pushLeft.classList.add('push-left-ricky')
+                textMain.classList.add('unwrap')
 
 
                 linkedInBtn.addEventListener('click', function () {
@@ -675,18 +725,23 @@ export class DevProfiles extends React.Component {
 
         if (this.state.isToggleOnAny === true) {
 
-             // SELECTOR CONDITIONAL  ==============================================================================================================================
+            // SELECTOR CONDITIONAL  ==============================================================================================================================
 
-             if (this.state.isToggleOnDavid === true) {
+            if (this.state.isToggleOnDavid === true) {
                 const returnBtn = document.getElementById('david-button')
                 const resetBtn = document.getElementById('david-name')
+                const closeText = document.getElementById('dev-text-content')
+                closeText.classList.remove('unwrap')
+                closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
 
+
                 setTimeout(() => {
-                    
+
                     resetBtn.innerHTML = 'David Deaton'
                     returnBtn.classList.add('david-return')
                     returnBtn.classList.remove('push-left-david')
+                    closeText.classList.remove('wrap')
 
                     this.setState({
                         isToggleOnDavid: false
@@ -704,13 +759,17 @@ export class DevProfiles extends React.Component {
 
                 const returnBtn = document.getElementById('alex-button')
                 const resetBtn = document.getElementById('alex-name')
+                const closeText = document.getElementById('dev-text-content')
+                closeText.classList.remove('unwrap')
+                closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
 
                 setTimeout(() => {
-                    
+
                     resetBtn.innerHTML = 'Alex Madrigal'
                     returnBtn.classList.add('alex-return')
                     returnBtn.classList.remove('push-left-alex')
+                    closeText.classList.remove('wrap')
 
                     this.setState({
                         isToggleOnAlex: false
@@ -728,13 +787,17 @@ export class DevProfiles extends React.Component {
             } else if (this.state.isToggleOnRicky === true) {
                 const returnBtn = document.getElementById('ricky-button')
                 const resetBtn = document.getElementById('ricky-name')
+                const closeText = document.getElementById('dev-text-content')
+                closeText.classList.remove('unwrap')
+                closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
 
                 setTimeout(() => {
-                    
+
                     resetBtn.innerHTML = 'Chung Hei Fuk'
                     returnBtn.classList.add('ricky-return')
                     returnBtn.classList.remove('push-left-ricky')
+                    closeText.classList.remove('wrap')
 
                     this.setState({
                         isToggleOnRicky: false
@@ -748,7 +811,7 @@ export class DevProfiles extends React.Component {
                         returnBtn.classList.remove('fade-in')
                     }, 100)
                 }, 800)
-               
+
 
             } else if (this.state.isToggleOnKarl === true) {
 
@@ -757,7 +820,7 @@ export class DevProfiles extends React.Component {
 
                 this.setState({
                     isToggleOnKarl: false
-                })              
+                })
 
 
             }
@@ -781,11 +844,13 @@ export class DevProfiles extends React.Component {
 
 
                 const phaseShift = document.getElementById('karl-name')
+                const pushLeft = document.getElementById('karl-button')
+                const textMain = document.getElementById('dev-text-content')
+
                 const buttonContainer = document.createElement('div')
                 const linkedInBtn = document.createElement('button')
                 const githubBtn = document.createElement('button')
 
-                const pushLeft = document.getElementById('karl-button')
 
                 phaseShift.innerHTML = ''
                 linkedInBtn.id = 'button-linkedin'
@@ -794,8 +859,8 @@ export class DevProfiles extends React.Component {
                 buttonContainer.classList.add('button-container')
                 linkedInBtn.classList.add('button-links')
                 githubBtn.classList.add('button-links')
-
                 pushLeft.classList.add('push-left-karl')
+                textMain.classList.add('unwrap')
 
 
                 linkedInBtn.addEventListener('click', function () {
@@ -836,26 +901,33 @@ export class DevProfiles extends React.Component {
                 e.preventDefault()
                 localStorage.setItem('devSelected', 'Karl')
 
+
                 const phaseShift = document.getElementById('karl-name')
+                const pushLeft = document.getElementById('karl-button')
+                const textMain = document.getElementById('dev-text-content')
+                const devTextPure = document.getElementById('dev-text-pure')
+
+
+
                 const buttonContainer = document.createElement('div')
                 const linkedInBtn = document.createElement('button')
                 const githubBtn = document.createElement('button')
-
-                // possible timeout
-                const pushLeft = document.getElementById('karl-button')
 
 
 
                 phaseShift.innerHTML = ''
                 linkedInBtn.id = 'button-linkedin'
                 githubBtn.id = 'button-github'
+                devTextPure.innerHTML = "<Typography noWrap=\'true\' variant=\"h4\"><Typed strings={[\"William Wassmann\"]} typeSpeed={40} /></Typography>"
+
+
 
                 buttonContainer.classList.add('button-container')
                 linkedInBtn.classList.add('button-links')
                 githubBtn.classList.add('button-links')
-
-                // possible timeout
                 pushLeft.classList.add('push-left-karl')
+                textMain.classList.add('unwrap')
+
 
 
                 linkedInBtn.addEventListener('click', function () {
@@ -866,14 +938,17 @@ export class DevProfiles extends React.Component {
                     window.location = 'https://github.com/behrenskarl'
                 })
 
+
                 phaseShift.append(
-                    buttonContainer
+                    buttonContainer,
+
                 )
 
                 buttonContainer.append(
                     linkedInBtn,
                     githubBtn
                 )
+
 
 
 
@@ -898,21 +973,21 @@ export class DevProfiles extends React.Component {
             <div className='profile-group'>
                 <div className='button-group'>
 
-                    <div className='david'>
+                    <div className='david' id='david'>
                         <button className='button' id='david-button' onClick={this.handleDavid}>
                             <img src={david} className="dev-image" id='david-img' alt='personalimage'></img>
                             <p id='david-name'>David Deaton</p>
                         </button>
                     </div>
 
-                    <div className='alex'>
+                    <div className='alex' id='alex'>
                         <button className='button' id='alex-button' onClick={this.handleAlex}>
                             <img src={alex} className="dev-image" id='alex-img' alt='personalimage'></img>
                             <p id='alex-name'>Alex Madrigal</p>
                         </button>
                     </div>
 
-                    <div className='ricky'>
+                    <div className='ricky' id='ricky'>
                         <button className='button' id='ricky-button' onClick={this.handleRicky}>
                             <img src={ricky} className="dev-image" id='ricky-img' alt='personalimage'></img>
                             <p id='ricky-name'>Chung Hei Fuk</p>
@@ -926,12 +1001,19 @@ export class DevProfiles extends React.Component {
                         </button>
                     </div>
 
-                    {/* <div className='selected' id='selected'>
-                        <DevData />
-                    </div> */}
+
 
                 </div>
 
+                <div className='selected' id='selected'>
+                    <div className='dev-text-content' id='dev-text-content'>
+
+                    </div>
+                </div>
+
+                <div className='dev-pure-text' id='dev-text-pure'>
+                    
+                </div>
 
 
             </div>

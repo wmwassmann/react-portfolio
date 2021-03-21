@@ -220,9 +220,10 @@ img {
 
 
 .profile-group {
-    position:relative;
+    position: relative;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
     top: 100px;
     left: 500px;
     width: 750px;  
@@ -237,6 +238,7 @@ img {
 }
 
 .profile-container {
+    
     font-size: 30px;
     padding: 10px;
     background-color: rgb(100, 100, 100);      
@@ -275,22 +277,43 @@ img {
     max-width: 150px;
     height: 100px;
     padding: 0px;
-    margin: 0px;  
-    
+    margin: 0px;      
 }
 
+
 .selected {
-    position: relative;    
-    top: 300px; 
-    right: 470px;      
-    background-color: rgb(100, 100, 100);      
+    display: flex;
+    flex-wrap: nowrap;
+    z-index: -1; 
+    position: relative;   
+    padding: 0px;
+    height: 0px;
+    width: 0px;
+    right: 400px;
+    top: 258px;
+
+}
+
+.dev-text-content {
+    display: flex;
+    flex-wrap: nowrap;
+    z-index: -1;      
+    padding: 0px;
+    height: 275px;   
+    background: linear-gradient(180deg, rgba(83, 83, 83, 0.88) 0%, #929292 100%);     
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 5px );
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );   
-    
+    border: 0px solid rgba( 255, 255, 255, 0.18 ); 
 }
+
+.dev-pure-text {
+    position: relative;     
+    right: 400px;
+    top: 258px;
+}
+
 
 #button-linkedin {
     background:url('../img/linkedin.png') no-repeat;     
@@ -307,6 +330,11 @@ img {
 
 
 
+
+
+
+
+
 .david-button {
     transition: transform 700ms ease-in-out;
 }
@@ -319,7 +347,11 @@ img {
     transition: transform 700ms ease-in-out;
 }
 
-.karl-button {     
+.karl-button {        
+    transition: transform 700ms ease-in-out;
+}
+
+.dev-text-content {
     transition: transform 700ms ease-in-out;
 }
 
@@ -449,7 +481,46 @@ img {
      
 }
 
+.selected .unwrap {
+    animation: unwrap 700ms ease-in forwards;
+}
 
+.selected .wrap {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+    animation: wrap 700ms ease-in forwards;
+}
+
+
+@keyframes unwrap {
+
+    0% {
+        transform: translateX(0%);
+        padding: 0px;
+    } 
+
+    100% {
+        transform: translateX(-30%);
+        padding-left: 200px;
+        padding-right: 625px;
+    }
+}
+
+@keyframes wrap {
+
+    0% {
+        transform: translateX(-30%);
+        padding-left: 0px;
+        padding-right: 825px;
+    } 
+
+    100% {
+        transform: translateX(-68%);
+        padding-left: 0px;
+        padding-right: 0x;
+    }
+}
 
 
 

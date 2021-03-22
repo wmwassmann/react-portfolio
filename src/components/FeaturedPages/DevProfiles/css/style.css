@@ -15,7 +15,22 @@
     padding: 10px;
 }
 
+.featured-cont {
+    position: relative;
+    left: 450px;
+}
 
+#tools-cont {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 355px;
+}
+
+.tool-buttons {
+    position: relative;
+    left: 410px;
+}
 
 .dev-image-selected {
     border-radius: 10px;
@@ -24,6 +39,11 @@
     padding: 0px;
     margin: 0px;  
     
+}
+
+.tech {
+    position: relative;
+    left: 20px;
 }
 
 

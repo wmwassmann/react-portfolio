@@ -19,9 +19,6 @@ export class AuditCarousel extends Component {
   
     constructor(props) {
         super(props)
-         
-      
-
         this.state = {
             current_card: 1           
         }           
@@ -218,7 +215,7 @@ const styles = {
         width: '1089px',
         height: '593px',
         overflow: 'hidden',  
-        borderRadius: '1%',                
+        borderRadius: '1%'                
         
     },
     card_container: {
@@ -231,7 +228,7 @@ const styles = {
         justifyContent: 'space-around',
         position: 'relative',        
         right: '7px',
-        top: '20px'        
+        top: '8px'        
     },
     buttonPrevious: {
         position: 'relative',
@@ -245,7 +242,9 @@ const styles = {
                           
     }, 
     repoDisplay: {
-        width: '500px'
+        position: 'relative',
+        width: '500px',
+        left: '300px'
     },
 
     repoLink: {

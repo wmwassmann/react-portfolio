@@ -1,5 +1,19 @@
 /* Navbar stuff */
 
+
+
+body {
+    position: relative;
+    z-index: 0;
+    background: linear-gradient(180deg, rgba(206, 73, 73, 0.88) 0%, #131313 100%);       
+    height: 100%;     
+    overflow: hidden;      
+}
+
+.trouble {
+    position: absolute;
+}
+
 .navbar {  
     position: fixed;  
     width: 100%;
@@ -14,6 +28,8 @@
     z-index: 1;
 }
 
+
+
 .navbar-brand {    
     background-color: rgb(92, 92, 92);
     margin-left: 50px;
@@ -21,6 +37,7 @@
 }
 
 .navbar-dark {
+    margin-top: 25px;
     background-color: rgb(187, 187, 187);
 }
 
@@ -41,28 +58,9 @@
 #navnoborder {
     border-right: 0;
 }
-/* 
-.proficiencies {
-    display: flex; 
-    flex-direction: row;
-    margin-top: 30px;
-    font-size: 20px;
-    
-} */
 
-body {
-    background: linear-gradient(180deg, rgba(83, 83, 83, 0.88) 0%, #929292 100%);       
-    height: 900px;
-    padding-top: 25px;     
-}
-
-
-#pagecontainer {
-    position: relative;
-    min-height: 7vh;
-}
   
- #contentwrap {
+#contentwrap {
     padding-bottom: 2.5rem;    
 }
   
@@ -113,6 +111,11 @@ img {
     -webkit-backdrop-filter: blur( 5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+#aboutme-container {
+    position: relative;
+    left: 450px;
 }
 
 #aboutme h1 {
@@ -178,6 +181,11 @@ img {
     background-color: black;
     
 }
+
+.container {
+    background: transparent;
+}
+
 .row {
     display: flex;
     flex-direction: column;    
@@ -252,12 +260,16 @@ img {
     margin: 30px;
 }
 
+#carousel-container {
+    position: relative;
+    left: 400px;
+}
 
-.button {
+/* .button {
     max-width: 200px;
     height: 200px;
     margin: 13px;
-}
+} */
 
 .button-container {
     display: flex;
@@ -305,6 +317,9 @@ img {
 
 
 .dev-button {
+    max-width: 200px;
+    height: 200px;
+    margin: 13px;
     position: relative;
     z-index: 2;
     background-image: -webkit-linear-gradient(

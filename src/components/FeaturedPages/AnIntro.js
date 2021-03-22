@@ -24,7 +24,7 @@ class AboutMe extends Component {
         return (
             <main className="container">
 
-                <div className="row">
+                <div className="row featured-cont">
                     <div className="col-md-10" id="aboutme">
                         <h1>Introduction</h1>
 

@@ -1,4 +1,7 @@
 import React, { Component }  from 'react';
+import './css/style.css';
+
+
 
 class Contact extends Component {
     constructor() {
@@ -14,10 +17,10 @@ class Contact extends Component {
 
 // <!-- Contact info -->
 
-<main class="container">
+<main className="container">
 
-<div class="row">
-    <div class="col-md-10" id="aboutme">
+<div className="row">
+    <div className="col-md-10" id="aboutme">
 
 {/* <!-- Links to contact information --> */}
     <h1>Contact Me</h1>
@@ -25,7 +28,7 @@ class Contact extends Component {
       <ul>
 
         {/* <!-- E-mail --> */}
-        <li>E-mail: <a href="mailto:wmwassmann@hotmail.com">wmwassmann@hotmail.com</a>
+        <li className='email'>E-mail: <a href="mailto:wmwassmann@hotmail.com">wmwassmann@hotmail.com</a>
         </li>
 
         {/* <!-- Phone --> */}

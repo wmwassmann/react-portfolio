@@ -3,6 +3,7 @@ import RPGAdventurersAcademyLogin from './img/login.png'
 import RPGAdventurersAcademyAudit  from './img/audit.png'
 import RpgMain from './img/login.png'
 import RpgAudit from './img/audit.png'
+import './css/style.css'
 
 
 

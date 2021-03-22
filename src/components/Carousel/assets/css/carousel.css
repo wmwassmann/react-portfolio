@@ -6,7 +6,9 @@
 }
 
 .portfolio-window {
-    padding-top: 80px;
+    position: relative;
+    top: 20px;
+    padding: 80px 30px 30px;
     border-color: rgb(139, 139, 139);
     border-style: double;
     border-radius: 10px;

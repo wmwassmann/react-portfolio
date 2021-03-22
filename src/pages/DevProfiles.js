@@ -1069,11 +1069,11 @@ export class DevProfiles extends React.Component {
 
                     </div>
                 </div>
-                <div className="mask">
+                
                     <div className='dev-pure-text' id='dev-pure-text'>
                         <DevData />
                     </div>
-                </div>
+               
 
 
             </div>

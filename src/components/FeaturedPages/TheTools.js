@@ -14,65 +14,64 @@ class AboutMe extends Component {
         }
     }
 
-    handle_link = (e) => {             
-        window.location.href='https://github.com/rickyfuk/dnd-buddy-3.0';  
-        e.preventDefault();            
+    handle_link = (e) => {
+        window.location.href = 'https://github.com/rickyfuk/dnd-buddy-3.0';
+        e.preventDefault();
     }
-   
-    render() { 
-   
+
+    render() {
+
         return (
             <main className="container">
-
-                <div className="row">
+                <div className="row" id='tools-cont'>
                     <div className="col-md-10" id="aboutme">
                         <h1>Tools</h1>
 
                         <img src={myphotosmall} className="img-fluid float-left wmw-photo" alt='personalimage'></img>
-                       
-                         
-                       
+
+
+
                         <div className='text-body'>
                             <h4 className='tech'>
                                 <p>
                                     RPG: Adventurer's Academy uses following technology:
                                 </p>
                                 <div>
-                                <ul>
-                                    <li>
-                                        Javascript
+                                    <ul>
+                                        <li>
+                                            Javascript
                                     </li>
-                                    <li>
-                                        jQuery
+                                        <li>
+                                            jQuery
                                     </li>
-                                    <li>
-                                        React
+                                        <li>
+                                            React
                                     </li>
-                                    <li>
-                                        MongoDB
+                                        <li>
+                                            MongoDB
                                     </li>
-                                    <li>
-                                        MySQL
+                                        <li>
+                                            MySQL
                                     </li>
-                                    <li>
-                                        Node.js
+                                        <li>
+                                            Node.js
                                     </li>
-                                </ul>
+                                    </ul>
                                 </div>
                             </h4>
                         </div>
-                        
+
                     </div>
-                    <div className='buttons-container'>                     
+                    <div className='buttons-container tool-buttons'>
                         <button className='secondary-button' onClick={this.handle_link}>
                             Repository
-                        </button>                    
-                    <div className='next-button'>
+                        </button>
+                        <div className='next-button'>
                             <Link to={'/4'}>
-                                    Continue
+                                Continue
                             </Link>
-                    </div>
-                 
+                        </div>
+
                     </div>
                 </div>
 

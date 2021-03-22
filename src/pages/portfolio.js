@@ -1,4 +1,4 @@
-import React, { Component }  from 'react';
+import React, { Component } from 'react';
 import Carousel from '../components/Carousel/Carousel.js'
 
 
@@ -11,18 +11,15 @@ class Portfolio extends Component {
     }
 
     render() {
-        
-            return (
-// <!-- Portfolio with thumbnails linking to deployments/repositories; projects pending to display for now-->
 
+        return (        
             
-<main className="container col-md-8">
-              <Carousel /> 
-    {/* <!-- Projects section --> */}  
-</main>
+            <main className='carousel-container' id='carousel-container'>
+                <Carousel />
+            </main>
 
-            );
-        }
+        );
     }
+}
 
 export default Portfolio;

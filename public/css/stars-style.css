@@ -1,6 +1,6 @@
 
 
-html {    
+html {   
    
     height: 100%;     
     overflow: hidden;
@@ -496,8 +496,8 @@ box-shadow: 779px 1331px #fff, 324px 42px #fff, 303px 586px #fff,
 }
 
 #stars3 {
-    width: 2px;
-    height: 2px;
+    width: 2.2px;
+    height: 2.2px;
     background: transparent;
     animation: animStar 300s linear infinite;
     box-shadow: 387px 1878px #fff, 760px 1564px #fff, 1487px 999px #fff,

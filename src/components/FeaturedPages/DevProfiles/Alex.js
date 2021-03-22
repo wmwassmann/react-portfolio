@@ -17,7 +17,7 @@ export class Alex extends Component {
 
         return (
 
-            <div className='selected-container'>
+            <div className='selected-container hide-text' id='selected-container'>
                 Hello I'm Alex
             </div>
         )

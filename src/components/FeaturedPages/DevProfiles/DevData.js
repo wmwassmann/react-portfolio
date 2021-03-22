@@ -6,7 +6,7 @@ import Karl from './Karl'
 
 
 function DevData() { 
-
+   
 
     let value = localStorage.getItem('devSelected')    
     switch (value) {

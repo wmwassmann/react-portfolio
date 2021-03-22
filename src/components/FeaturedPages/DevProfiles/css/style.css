@@ -1,7 +1,8 @@
 
 .selected-container {       
     background-color: rgb(185, 185, 185);
-    width: 200px;
+    width: 800px;
+    height: 200px;
     margin: 0px;
     padding: 0px;
     border-radius: 10px;
@@ -45,5 +46,48 @@
     height: 60px;    
 }
 
+.dev-pure-text {
+    position: relative;     
+    right: 1300px;
+    top: 325px;   
+    clip-path: circle(100% at 120% 50%);
+}
+
+.slide-mask {
+    animation: slide-mask 700ms ease-in forwards;
+}
+
+.hide-text {
+    visibility: hidden;
+}
 
 
+
+.reveal-text {    
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s, opacity 0.5s linear;  
+    animation: reveal-text-scroll 700ms ease-in forwards;
+    
+}
+
+
+@keyframes reveal-text-scroll {
+    0% {
+        transform: translateX(0%)
+    } 
+
+    100% {
+        transform: translateX(83%);
+    }
+}
+
+@keyframes slide-mask {
+    0% {
+        clip-path: circle(0% at 120% 50%);
+    } 
+
+    100% {
+        clip-path: circle(100% at 120% 50%);
+    }
+}

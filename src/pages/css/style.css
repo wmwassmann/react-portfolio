@@ -252,11 +252,6 @@ img {
     margin: 30px;
 }
 
-.button-group {
-    display: flex;
-    flex-direction: row;
-    
-}
 
 .button {
     max-width: 200px;
@@ -294,10 +289,10 @@ img {
 
 }
 
-.dev-text-content {
-    display: flex;
-    flex-wrap: nowrap;
-    z-index: -1;      
+
+.dev-text-content {   
+    position: relative;
+    z-index: 0;      
     padding: 0px;
     height: 275px;   
     background: linear-gradient(180deg, rgba(83, 83, 83, 0.88) 0%, #929292 100%);     
@@ -308,12 +303,16 @@ img {
     border: 0px solid rgba( 255, 255, 255, 0.18 ); 
 }
 
-.dev-pure-text {
-    position: relative;     
-    right: 400px;
-    top: 258px;
-}
 
+.dev-button {
+    position: relative;
+    z-index: 2;
+    background-image: -webkit-linear-gradient(
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    
+}
 
 #button-linkedin {
     background:url('../img/linkedin.png') no-repeat;     
@@ -348,10 +347,6 @@ img {
 }
 
 .karl-button {        
-    transition: transform 700ms ease-in-out;
-}
-
-.dev-text-content {
     transition: transform 700ms ease-in-out;
 }
 

@@ -42,12 +42,14 @@ export class ButtonAlex extends React.Component {
                 const closeText = document.getElementById('dev-text-content')
                 const vanish = document.getElementById('selected-container-david')
                 const removeMask = document.getElementById('dev-pure-text-alex')
-                vanish.classList.remove('reveal-text')
+
+                vanish.classList.remove('reveal-text')                
                 removeMask.classList.remove('slide-mask')
                 closeText.classList.remove('unwrap')
+
                 closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
-        
+                vanish.classList.add('hide-text')
 
                 setTimeout(() => {
 
@@ -59,6 +61,7 @@ export class ButtonAlex extends React.Component {
                     this.setState({
                         isToggleOnDavid: false
                     })
+
                 }, 500)
 
                 setTimeout(() => {
@@ -68,25 +71,35 @@ export class ButtonAlex extends React.Component {
                         returnBtn.classList.remove('fade-in')
                     }, 100)
                 }, 800)
-
+ 
             } else if (localStorage.getItem('devSelected') === 'Alex') {
-
+                                 
+                localStorage.setItem('devSelected', '')
                 const returnBtn = document.getElementById('alex-button')
-                returnBtn.classList.add('alex-return')
+                returnBtn.classList.add('alex-button')
+                returnBtn.classList.remove('alex-return')
 
                 this.setState({
                     isToggleOnAlex: false
                 })
 
             } else if (localStorage.getItem('devSelected') === 'Ricky') {
+
+
+                localStorage.setItem('devSelected', '')
                 const returnBtn = document.getElementById('ricky-button')
                 const resetBtn = document.getElementById('ricky-name')
                 const closeText = document.getElementById('dev-text-content')
-                const vanish = document.getElementById('selected-container') && document.getElementById('dev-pure-text-alex')
-                vanish.classList.remove('reveal-text', 'slide-mask')
+                const vanish = document.getElementById('selected-container-ricky')
+                const removeMask = document.getElementById('dev-pure-text-alex')
+               
+                vanish.classList.remove('reveal-text')
+                removeMask.classList.remove('slide-mask');
                 closeText.classList.remove('unwrap')
+
                 closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
+                vanish.classList.add('hide-text')
 
                 setTimeout(() => {
 
@@ -110,14 +123,19 @@ export class ButtonAlex extends React.Component {
 
 
             } else if (localStorage.getItem('devSelected') === 'Karl') {
-
+                localStorage.setItem('devSelected', '')
 
                 const returnBtn = document.getElementById('karl-button')
                 const resetBtn = document.getElementById('karl-name')
                 const closeText = document.getElementById('dev-text-content')
-                const vanish = document.getElementById('selected-container') && document.getElementById('dev-pure-text-alex')
-                vanish.classList.remove('reveal-text', 'slide-mask')
+                const vanish = document.getElementById('selected-container-karl')
+                const removeMask = document.getElementById('dev-pure-text-alex')
+
+                vanish.classList.remove('reveal-text')
+                removeMask.classList.remove('slide-mask');
                 closeText.classList.remove('unwrap')
+
+                vanish.classList.add('hide-text')
                 closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
 
@@ -153,11 +171,13 @@ export class ButtonAlex extends React.Component {
             this.setState({
                 isToggleOnAny: true,
                 isToggleOnAlex: true
-            })
-            
-            setTimeout(() => {
 
-                console.log('Alex')
+
+            })
+            localStorage.setItem('anyDev', 'Yes')
+            localStorage.setItem('devSelected', 'Alex')
+            setTimeout(() => {
+              
                 e.preventDefault()
                 localStorage.setItem('devSelected', 'Alex')
 
@@ -187,12 +207,13 @@ export class ButtonAlex extends React.Component {
                 textReveal.classList.add('reveal-text')
                 textReveal.classList.remove('hide-text')
 
+
                 linkedInBtn.addEventListener('click', function () {
-                    window.location = 'https://www.linkedin.com/in/karl-e-behrens/'
+                    window.location = 'https://www.linkedin.com/in/alex-madrigal-b5b8461a9/'
                 })
 
                 githubBtn.addEventListener('click', function () {
-                    window.location = 'https://github.com/behrenskarl'
+                    window.location = 'https://github.com/jam-madrigal'
                 })
 
                 phaseShift.append(
@@ -203,7 +224,6 @@ export class ButtonAlex extends React.Component {
                     linkedInBtn,
                     githubBtn
                 )
-
             }, 700)
 
 
@@ -221,7 +241,7 @@ export class ButtonAlex extends React.Component {
             localStorage.setItem('anyDev', 'Yes')
             localStorage.setItem('devSelected', 'Alex')
             setTimeout(() => {
-                console.log('Alex')
+            
                 e.preventDefault()
                 localStorage.setItem('devSelected', 'Alex')
 
@@ -253,11 +273,11 @@ export class ButtonAlex extends React.Component {
 
 
                 linkedInBtn.addEventListener('click', function () {
-                    window.location = 'https://www.linkedin.com/in/karl-e-behrens/'
+                    window.location = 'https://www.linkedin.com/in/alex-madrigal-b5b8461a9/'
                 })
 
                 githubBtn.addEventListener('click', function () {
-                    window.location = 'https://github.com/behrenskarl'
+                    window.location = 'https://github.com/jam-madrigal'
                 })
 
                 phaseShift.append(

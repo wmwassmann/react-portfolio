@@ -1,13 +1,19 @@
 
 .selected-container {      
     position: relative;
+    text-align: justify;
+    bottom: 35px;
     left: 660px;
     background-color: rgb(185, 185, 185);
     width: 800px;
-    height: 200px;
+    height: 240px;
     margin: 0px;
-    padding: 0px;
+    padding: 22px;
     border-radius: 10px;
+}
+
+p2 {
+    font-size: 20px;
 }
 
 .img-button-container {

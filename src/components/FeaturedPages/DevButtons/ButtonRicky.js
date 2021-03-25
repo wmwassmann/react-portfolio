@@ -31,8 +31,11 @@ export class ButtonRicky extends React.Component {
                 const returnBtn = document.getElementById('david-button')
                 const resetBtn = document.getElementById('david-name')
                 const closeText = document.getElementById('dev-text-content')
-                const vanish = document.getElementById('selected-container') && document.getElementById('dev-pure-text-ricky')
-                vanish.classList.remove('reveal-text', 'slide-mask')
+                const vanish = document.getElementById('selected-container-david')
+                const removeMask = document.getElementById('dev-pure-text-ricky')
+                vanish.classList.add('hide-text')
+                vanish.classList.remove('reveal-text')
+                removeMask.classList.remove('slide-mask');
                 closeText.classList.remove('unwrap')
                 closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
@@ -61,8 +64,11 @@ export class ButtonRicky extends React.Component {
                 const returnBtn = document.getElementById('alex-button')
                 const resetBtn = document.getElementById('alex-name')
                 const closeText = document.getElementById('dev-text-content')
-                const vanish = document.getElementById('selected-container') && document.getElementById('dev-pure-text-ricky')
-                vanish.classList.remove('reveal-text', 'slide-mask')
+                const vanish = document.getElementById('selected-container-alex')
+                const removeMask = document.getElementById('dev-pure-text-ricky')
+                vanish.classList.add('hide-text')
+                vanish.classList.remove('reveal-text')
+                removeMask.classList.remove('slide-mask');
                 closeText.classList.remove('unwrap')
                 closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
@@ -101,8 +107,11 @@ export class ButtonRicky extends React.Component {
                 const returnBtn = document.getElementById('karl-button')
                 const resetBtn = document.getElementById('karl-name')
                 const closeText = document.getElementById('dev-text-content')
-                const vanish = document.getElementById('selected-container') && document.getElementById('dev-pure-text-ricky')
-                vanish.classList.remove('reveal-text', 'slide-mask')
+                const vanish = document.getElementById('selected-container-karl')
+                const removeMask = document.getElementById('dev-pure-text-ricky')
+                vanish.classList.add('hide-text')
+                vanish.classList.remove('reveal-text')
+                removeMask.classList.remove('slide-mask');
                 closeText.classList.remove('unwrap')
                 closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
@@ -141,17 +150,19 @@ export class ButtonRicky extends React.Component {
                 isToggleOnRicky: true
 
             })
+            localStorage.setItem('anyDev', 'Yes')        
             localStorage.setItem('devSelected', 'Ricky')
             setTimeout(() => {
 
-                console.log('Ricky')
+              
                 e.preventDefault()
+                localStorage.setItem('anyDev', 'Yes')
                 localStorage.setItem('devSelected', 'Ricky')
 
                 const phaseShift = document.getElementById('ricky-name')
                 const textMain = document.getElementById('dev-text-content')
                 const pushLeft = document.getElementById('ricky-button')
-                const textReveal = document.getElementById('selected-container')
+                const textReveal = document.getElementById('selected-container-ricky')
                 const slideMask = document.getElementById('dev-pure-text-ricky')
 
                 const buttonContainer = document.createElement('div')
@@ -174,11 +185,11 @@ export class ButtonRicky extends React.Component {
                 textReveal.classList.remove('hide-text')
 
                 linkedInBtn.addEventListener('click', function () {
-                    window.location = 'https://www.linkedin.com/in/karl-e-behrens/'
+                    window.location = 'https://www.linkedin.com/in/ricky-fuk/'
                 })
 
                 githubBtn.addEventListener('click', function () {
-                    window.location = 'https://github.com/behrenskarl'
+                    window.location = 'https://github.com/rickyfuk'
                 })
 
                 phaseShift.append(
@@ -209,15 +220,16 @@ export class ButtonRicky extends React.Component {
             localStorage.setItem('devSelected', 'Ricky')
             setTimeout(() => {
 
-                console.log('Ricky')
+             
                 e.preventDefault()
+                localStorage.setItem('anyDev', 'Yes')
                 localStorage.setItem('devSelected', 'Ricky')
 
 
                 const phaseShift = document.getElementById('ricky-name')
                 const textMain = document.getElementById('dev-text-content')
                 const pushLeft = document.getElementById('ricky-button')
-                const textReveal = document.getElementById('selected-container')
+                const textReveal = document.getElementById('selected-container-ricky')
                 const slideMask = document.getElementById('dev-pure-text-ricky')
 
                 const buttonContainer = document.createElement('div')
@@ -242,11 +254,11 @@ export class ButtonRicky extends React.Component {
 
 
                 linkedInBtn.addEventListener('click', function () {
-                    window.location = 'https://www.linkedin.com/in/karl-e-behrens/'
+                    window.location = 'https://www.linkedin.com/in/ricky-fuk/'
                 })
 
                 githubBtn.addEventListener('click', function () {
-                    window.location = 'https://github.com/behrenskarl'
+                    window.location = 'https://github.com/rickyfuk'
                 })
 
                 phaseShift.append(

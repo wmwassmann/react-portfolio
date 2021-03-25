@@ -33,6 +33,7 @@ export class ButtonDavid extends React.Component {
             // SELECTOR CONDITIONAL  ==============================================================================================================================
 
             if (localStorage.getItem('devSelected') === 'David') {
+                localStorage.setItem('devSelected', '')
                 const returnBtn = document.getElementById('david-button')
                 returnBtn.classList.add('david-return')
 
@@ -41,12 +42,15 @@ export class ButtonDavid extends React.Component {
                 })
 
             } else if (localStorage.getItem('devSelected') === 'Alex') {
-
+                localStorage.setItem('devSelected', '')
                 const returnBtn = document.getElementById('alex-button')
                 const resetBtn = document.getElementById('alex-name')
                 const closeText = document.getElementById('dev-text-content')
-                const vanish = document.getElementById('selected-container') && document.getElementById('dev-pure-text-david')
-                vanish.classList.remove('reveal-text', 'slide-mask')
+                const vanish = document.getElementById('selected-container-alex')
+                const removeMask = document.getElementById('dev-pure-text-david')
+                vanish.classList.add('hide-text')
+                vanish.classList.remove('reveal-text')
+                removeMask.classList.remove('slide-mask');
                 closeText.classList.remove('unwrap')
                 closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
@@ -70,15 +74,18 @@ export class ButtonDavid extends React.Component {
                         returnBtn.classList.remove('fade-in')
                     }, 100)
                 }, 800)
-
+                
 
             } else if (localStorage.getItem('devSelected') === 'Ricky') {
-
+                localStorage.setItem('devSelected', '')
                 const returnBtn = document.getElementById('ricky-button')
                 const resetBtn = document.getElementById('ricky-name')
                 const closeText = document.getElementById('dev-text-content')
-                const vanish = document.getElementById('selected-container') && document.getElementById('dev-pure-text-david')
-                vanish.classList.remove('reveal-text', 'slide-mask')
+                const vanish = document.getElementById('selected-container-ricky')
+                const removeMask = document.getElementById('dev-pure-text-david')
+                vanish.classList.add('hide-text')
+                vanish.classList.remove('reveal-text')
+                removeMask.classList.remove('slide-mask');
                 closeText.classList.remove('unwrap')
                 closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
@@ -105,13 +112,16 @@ export class ButtonDavid extends React.Component {
 
 
             } else if (localStorage.getItem('devSelected') === 'Karl') {
-
+                localStorage.setItem('devSelected', '')
 
                 const returnBtn = document.getElementById('karl-button')
                 const resetBtn = document.getElementById('karl-name')
                 const closeText = document.getElementById('dev-text-content')
-                const vanish = document.getElementById('selected-container') && document.getElementById('dev-pure-text-david')
-                vanish.classList.remove('reveal-text', 'slide-mask')
+                const vanish = document.getElementById('selected-container-karl')
+                const removeMask = document.getElementById('dev-pure-text-david')
+                vanish.classList.add('hide-text')
+                vanish.classList.remove('reveal-text')
+                removeMask.classList.remove('slide-mask');
                 closeText.classList.remove('unwrap')
                 closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
@@ -150,11 +160,10 @@ export class ButtonDavid extends React.Component {
                 isToggleOnAny: true,
                 isToggleOnDavid: true
             })
+            localStorage.setItem('anyDev', 'Yes')           
             localStorage.setItem('devSelected', 'David')
 
             setTimeout(() => {
-
-                console.log('David')
                 e.preventDefault()
                 localStorage.setItem('devSelected', 'David')
 
@@ -184,11 +193,11 @@ export class ButtonDavid extends React.Component {
                 textReveal.classList.remove('hide-text')
 
                 linkedInBtn.addEventListener('click', function () {
-                    window.location = 'https://www.linkedin.com/in/karl-e-behrens/'
+                    window.location = 'https://www.linkedin.com/in/david-v-deaton/'
                 })
 
                 githubBtn.addEventListener('click', function () {
-                    window.location = 'https://github.com/behrenskarl'
+                    window.location = 'https://github.com/DavidVDeaton'
                 })
 
                 phaseShift.append(
@@ -214,12 +223,9 @@ export class ButtonDavid extends React.Component {
             })
             localStorage.setItem('anyDev', 'Yes')
             localStorage.setItem('devSelected', 'David')
-            setTimeout(() => {
 
-
-                console.log('David phase')
+            setTimeout(() => {            
                 e.preventDefault()
-
                 localStorage.setItem('devSelected', 'David')
 
                 const phaseShift = document.getElementById('david-name')
@@ -248,11 +254,11 @@ export class ButtonDavid extends React.Component {
                 textReveal.classList.remove('hide-text')
 
                 linkedInBtn.addEventListener('click', function () {
-                    window.location = 'https://www.linkedin.com/in/karl-e-behrens/'
+                    window.location = 'https://www.linkedin.com/in/david-v-deaton/'
                 })
 
                 githubBtn.addEventListener('click', function () {
-                    window.location = 'https://github.com/behrenskarl'
+                    window.location = 'https://github.com/DavidVDeaton'
                 })
 
                 phaseShift.append(

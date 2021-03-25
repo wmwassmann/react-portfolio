@@ -28,11 +28,15 @@ export class ButtonKarl extends React.Component {
             // SELECTOR CONDITIONAL  ==============================================================================================================================
 
             if (localStorage.getItem('devSelected') === 'David') {
+                localStorage.setItem('devSelected', '')
                 const returnBtn = document.getElementById('david-button')
                 const resetBtn = document.getElementById('david-name')
                 const closeText = document.getElementById('dev-text-content')
-                const vanish = document.getElementById('selected-container') && document.getElementById('dev-pure-text-karl')
-                vanish.classList.remove('reveal-text', 'slide-mask')
+                const vanish = document.getElementById('selected-container-david')
+                const removeMask = document.getElementById('dev-pure-text-karl')
+                vanish.classList.add('hide-text')
+                vanish.classList.remove('reveal-text')
+                removeMask.classList.remove('slide-mask');
                 closeText.classList.remove('unwrap')
                 closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
@@ -58,12 +62,15 @@ export class ButtonKarl extends React.Component {
                     }, 100)
                 }, 800)
             } else if (localStorage.getItem('devSelected') === 'Alex') {
-
+                localStorage.setItem('devSelected', '')
                 const returnBtn = document.getElementById('alex-button')
                 const resetBtn = document.getElementById('alex-name')
                 const closeText = document.getElementById('dev-text-content')
-                const vanish = document.getElementById('selected-container') && document.getElementById('dev-pure-text-karl')
-                vanish.classList.remove('reveal-text', 'slide-mask')
+                const vanish = document.getElementById('selected-container-alex')
+                const removeMask = document.getElementById('dev-pure-text-karl')
+                vanish.classList.add('hide-text')
+                vanish.classList.remove('reveal-text')
+                removeMask.classList.remove('slide-mask');
                 closeText.classList.remove('unwrap')
                 closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
@@ -89,11 +96,15 @@ export class ButtonKarl extends React.Component {
                 }, 800)
 
             } else if (localStorage.getItem('devSelected') === 'Ricky') {
+                localStorage.setItem('devSelected', '')
                 const returnBtn = document.getElementById('ricky-button')
                 const resetBtn = document.getElementById('ricky-name')
                 const closeText = document.getElementById('dev-text-content')
-                const vanish = document.getElementById('selected-container') && document.getElementById('dev-pure-text-karl')
-                vanish.classList.remove('reveal-text', 'slide-mask')
+                const vanish = document.getElementById('selected-container-ricky')
+                const removeMask = document.getElementById('dev-pure-text-karl')
+                vanish.classList.add('hide-text')
+                vanish.classList.remove('reveal-text')
+                removeMask.classList.remove('slide-mask');
                 closeText.classList.remove('unwrap')
                 closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
@@ -145,15 +156,16 @@ export class ButtonKarl extends React.Component {
             localStorage.setItem('devSelected', 'Karl')
             setTimeout(() => {
 
-                console.log('Karl')
+        
                 e.preventDefault()
+                localStorage.setItem('anyDev', 'Yes')
                 localStorage.setItem('devSelected', 'Karl')
 
 
                 const phaseShift = document.getElementById('karl-name')
                 const pushLeft = document.getElementById('karl-button')
                 const textMain = document.getElementById('dev-text-content')
-                const textReveal = document.getElementById('selected-container')
+                const textReveal = document.getElementById('selected-container-karl')
                 const slideMask = document.getElementById('dev-pure-text-karl')
 
 
@@ -212,7 +224,7 @@ export class ButtonKarl extends React.Component {
             localStorage.setItem('devSelected', 'Karl')
             setTimeout(() => {
 
-                console.log('Karl')
+           
                 e.preventDefault()
                 localStorage.setItem('devSelected', 'Karl')
 
@@ -220,7 +232,7 @@ export class ButtonKarl extends React.Component {
                 const phaseShift = document.getElementById('karl-name')
                 const pushLeft = document.getElementById('karl-button')
                 const textMain = document.getElementById('dev-text-content')
-                const textReveal = document.getElementById('selected-container')
+                const textReveal = document.getElementById('selected-container-karl')
                 const slideMask = document.getElementById('dev-pure-text-karl')
 
                 const buttonContainer = document.createElement('div')

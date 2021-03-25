@@ -1,5 +1,7 @@
 
-.selected-container {       
+.selected-container {      
+    position: relative;
+    left: 660px;
     background-color: rgb(185, 185, 185);
     width: 800px;
     height: 200px;
@@ -66,11 +68,29 @@
     height: 60px;    
 }
 
-.dev-pure-text {
+.dev-pure-text-david {
     position: relative;     
-    right: 1300px;
-    top: 325px;   
-    clip-path: circle(100% at 120% 50%);
+    right: 1220px;
+    top: 90px;      
+}
+
+
+.dev-pure-text-alex {
+    position: relative;     
+    right: 1405px;
+    top: 90px;      
+}
+
+.dev-pure-text-ricky {
+    position: relative;     
+    right: 1590px;
+    top: 90px;      
+}
+
+.dev-pure-text-karl {
+    position: relative;     
+    right: 1775px;
+    top: 90px;      
 }
 
 .slide-mask {
@@ -104,10 +124,10 @@
 
 @keyframes slide-mask {
     0% {
-        clip-path: circle(0% at 120% 50%);
+        clip-path: circle(0% at 900% 50%);
     } 
 
     100% {
-        clip-path: circle(100% at 120% 50%);
+        clip-path: circle(240% at 900% 50%);
     }
 }

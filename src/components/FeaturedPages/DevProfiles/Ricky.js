@@ -11,7 +11,7 @@ export class Ricky extends Component {
 
     render() {
         return (
-            <div className='selected-container hide-text' id='selected-container'>
+            <div className='selected-container hide-text' id='selected-container-ricky'>
                 Hello I'm Ricky
             </div>
         )

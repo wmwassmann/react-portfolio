@@ -33,9 +33,9 @@ class Contact extends Component {
 
         {/* <!-- Phone --> */}
         <li>Phone: 253-792-1330</li>
-
+{/* Research what to put as far as job projection - ask Kevin Faan */}
         {/* <!-- Resume --> */}
-
+   {/* change Portfolio to hyperlink and rework the routing to be more user friendly for laypeople like mom */}
         <li><a href="https://docs.google.com/document/d/1rbhomGlocMqPsgOYH5hrnwpNH8izUMxPxR_1-2Urt5U/edit">Resume</a>
 
         {/* <!-- LinkedIn --> */}

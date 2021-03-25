@@ -12,7 +12,7 @@ export class Karl extends Component {
 
     render() {
         return (
-            <div className='selected-container hide-text' id='selected-container'>
+            <div className='selected-container hide-text' id='selected-container-karl'>
                 Hello I'm Karl
             </div>
         )

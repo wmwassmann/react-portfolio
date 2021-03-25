@@ -15,7 +15,7 @@ class AboutMe extends Component {
     }
 
     handle_link = (e) => {
-        window.location.href='https://rpgacademy.herokuapp.com/';
+        window.location.href = 'https://rpgacademy.herokuapp.com/';
         e.preventDefault();
     }
 
@@ -29,9 +29,9 @@ class AboutMe extends Component {
                         <h1>The Mission</h1>
 
                         <img src={myphotosmall} className="img-fluid float-left wmw-photo" alt='personalimage'></img>
-                       
-                         
-                       
+
+
+
                         <div className='text-body'>
                             <h4>
                                 Designed to be a fun and interactive learning tool turning complicated character sheets into bite sized chunks allowing for
@@ -41,17 +41,17 @@ class AboutMe extends Component {
                                 able to guild them directly to the numbers they need rather than force them to scan a large and confusing character sheet.
                             </h4>
                         </div>
-                        
+
                     </div>
-                    <div className='buttons-container'> 
+                    <div className='buttons-container'>
                         <button className='secondary-button' onClick={this.handle_link}>
                             Deployed
                         </button>
-                    <div className='next-button'>
+                        <div className='next-button'>
                             <Link to={'/3'}>
-                                    Continue
+                                Continue
                             </Link>
-                    </div>
+                        </div>
                     </div>
                 </div>
 

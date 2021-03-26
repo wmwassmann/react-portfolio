@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import myphotosmall from './../../pages/img/login.png'
 import './css/style.css'
-
+import { AnimatePresence, motion } from 'framer-motion'
 
 
 
@@ -22,13 +22,12 @@ class AboutMe extends Component {
     render() {
 
         return (
-            <main className="container">
+            <div>
 
-                <div className="row featured-cont">
-                    <div className="col-md-10" id="aboutme">
+            <motion.div className="featured-container" initial={{ x: -1500, opacity: 0 }} exit={{ x: 0, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
                         <h1>The Mission</h1>
 
-                        <img src={myphotosmall} className="img-fluid float-left wmw-photo" alt='personalimage'></img>
+                        <img src={myphotosmall} className="img-fluid float-left buddies-photo" alt='personalimage'></img>
 
 
 
@@ -42,7 +41,7 @@ class AboutMe extends Component {
                             </h4>
                         </div>
 
-                    </div>
+                    </motion.div>
                     <div className='buttons-container'>
                         <button className='secondary-button' onClick={this.handle_link}>
                             Deployed
@@ -54,18 +53,12 @@ class AboutMe extends Component {
                         </div>
                     </div>
                 </div>
+              
 
-                {/* <!-- This empty row/column extends the white box size at the bottom --> */}
-                <div className="row">
-                    <div className="col-md-8" style={{ margin: '0', paddingTop: '50px' }}>
-                    </div>
-
-                </div>
+   
 
 
 
-
-            </main>
         );
     }
 }

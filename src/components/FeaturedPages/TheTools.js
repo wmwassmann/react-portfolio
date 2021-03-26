@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
 import myphotosmall from './../../pages/img/login.png'
 import './css/style.css'
-
+import { AnimatePresence, motion } from 'framer-motion'
 
 
 
@@ -22,12 +22,12 @@ class AboutMe extends Component {
     render() {
 
         return (
-            <main className="container">
-                <div className="row" id='tools-cont'>
-                    <div className="col-md-10" id="aboutme">
-                        <h1>Tools</h1>
+            <div>
 
-                        <img src={myphotosmall} className="img-fluid float-left wmw-photo" alt='personalimage'></img>
+            <motion.div className="featured-container" initial={{ x: -1500, opacity: 0 }} exit={{ x: 0, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
+                        <h1>The Tools</h1>
+
+                        <img src={myphotosmall} className="img-fluid float-left buddies-photo" alt='personalimage'></img>
 
 
 
@@ -61,8 +61,8 @@ class AboutMe extends Component {
                             </h4>
                         </div>
 
-                    </div>
-                    <div className='buttons-container tool-buttons'>
+                    </motion.div>
+                    <div className='buttons-container'>
                         <button className='secondary-button' onClick={this.handle_link}>
                             Repository
                         </button>
@@ -75,17 +75,6 @@ class AboutMe extends Component {
                     </div>
                 </div>
 
-                {/* <!-- This empty row/column extends the white box size at the bottom --> */}
-                <div className="row">
-                    <div className="col-md-8" style={{ margin: '0', paddingTop: '50px' }}>
-                    </div>
-
-                </div>
-
-
-
-
-            </main>
         );
     }
 }

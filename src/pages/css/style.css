@@ -2,9 +2,7 @@
 
 
 
-body {
-    position: relative;
-    z-index: 0;
+body {    
     background: linear-gradient(159deg, rgba(206, 73, 73, 0.88) 0%, #131313 100% );       
     height: 100%;     
     overflow: hidden;      
@@ -111,11 +109,9 @@ img {
     -webkit-backdrop-filter: blur( 5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-
-#aboutme-container {
-    position: relative;
-    left: 450px;
+    width: 960px;
+    height: 530px;
+    padding: 15px;
 }
 
 #aboutme h1 {
@@ -227,13 +223,8 @@ img {
 }
 
 
-.profile-group {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-
-    top: 100px;
-    left: 500px;
+.profile-group {  
+   
     width: 750px;  
     height: 240px;  
     background-color: rgb(100, 100, 100);      
@@ -261,7 +252,7 @@ img {
 }
 
 #carousel-container {
-    position: relative;
-    left: 400px;
+    display: flex;
+    align-items: center;
 }
 

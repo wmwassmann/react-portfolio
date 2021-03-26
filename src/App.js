@@ -14,7 +14,7 @@ import TheMission from './components/FeaturedPages/TheMission';
 import TheTools from './components/FeaturedPages/TheTools';
 import WhatsNext from './components/FeaturedPages/WhatsNext';
 import DevProfiles from './components/FeaturedPages/DevButtons/DevProfiles';
-
+import { AnimatePresence } from 'framer-motion'
 
 
 
@@ -22,10 +22,11 @@ import DevProfiles from './components/FeaturedPages/DevButtons/DevProfiles';
 function App() {
   return (
     <Router>
+      <AnimatePresence>
     <Switch>
     <div>
       <Navbar className='nav-bar-main'/>
-      <div className='trouble'>
+      <div className='featured-content'>
 
         {/* routes */}
         <Route exact path='/' component={landingHub}/>        
@@ -43,6 +44,7 @@ function App() {
       <Footer />
     </div>
     </Switch>
+    </AnimatePresence>
   </Router>
 
   );

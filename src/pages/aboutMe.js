@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import myphotosmall from './img/IMG_8410.jpg'
-
+import { AnimatePresence, motion } from 'framer-motion'
 
 
 class AboutMe extends Component {
@@ -14,10 +14,10 @@ class AboutMe extends Component {
   render() {
 
     return (
-      <main className="container" id="aboutme-container">
+      <motion.main className="container" id="aboutme-container" initial={{ x: -1500, opacity: 0 }} exit={{ x: 0, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
 
         <div className="row">
-          <div className="col-md-10" id="aboutme">
+          <div id="aboutme">
             <h1>William Wassmann</h1>
             <img src={myphotosmall} className="img-fluid float-left wmw-photo" alt='personalimage'></img>
             <h3>About Me</h3>
@@ -42,7 +42,7 @@ class AboutMe extends Component {
           </div>
         </div>
 
-      </main>
+      </motion.main>
     );
   }
 }

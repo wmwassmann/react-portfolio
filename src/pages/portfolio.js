@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from '../components/Carousel/Carousel.js'
-
+import { AnimatePresence, motion } from 'framer-motion'
 
 class Portfolio extends Component {
     constructor() {
@@ -13,11 +13,11 @@ class Portfolio extends Component {
     render() {
 
         return (        
-            
-            <main className='carousel-container' id='carousel-container'>
+         
+            <motion.main className='carousel-container' id='carousel-container' initial={{ x: -1500, opacity: 0 }} exit={{ x: 0, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
                 <Carousel />
-            </main>
-
+            </motion.main>
+        
         );
     }
 }

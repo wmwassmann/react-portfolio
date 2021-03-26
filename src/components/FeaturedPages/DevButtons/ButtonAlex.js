@@ -301,7 +301,7 @@ export class ButtonAlex extends React.Component {
                 <div className='alex' id='alex'>
                     <button className='button dev-button' id='alex-button' onClick={this.handleAlex}>
                         <img src={alex} className="dev-image" id='alex-img' alt='personalimage'></img>
-                        <p id='alex-name'>Alex Madrigal</p>
+                        <p id='alex-name'>ALEX MADRIGAL</p>
                     </button>
                 </div>
                

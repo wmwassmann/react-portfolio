@@ -282,7 +282,7 @@ export class ButtonDavid extends React.Component {
                     <div className='david' id='david'>
                         <button className='button dev-button' id='david-button' onClick={this.handleDavid}>
                             <img src={david} className="dev-image" id='david-img' alt='personalimage'></img>
-                            <p id='david-name'>David Deaton</p>
+                            <p id='david-name'>DAVID DEATON</p>
                         </button>
                     </div>
 

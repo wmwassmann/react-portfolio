@@ -1,6 +1,6 @@
 import React, { Component }  from 'react';
 import './css/style.css';
-
+import { AnimatePresence, motion } from 'framer-motion'
 
 
 class Contact extends Component {
@@ -17,7 +17,7 @@ class Contact extends Component {
 
 // <!-- Contact info -->
 
-<main className="container">
+<motion.main className="container" initial={{ x: -1500, opacity: 0 }} exit={{ x: 0, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
 
 <div className="row">
     <div className="col-md-10" id="aboutme">
@@ -55,7 +55,7 @@ class Contact extends Component {
     </div>
 </div>
 
-</main>
+</motion.main>
 
 
             );

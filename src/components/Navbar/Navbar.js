@@ -1,8 +1,11 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom'
+import { AnimatePresence, motion } from 'framer-motion'
 
 
 function Navbar() {
     return(
+    
 <nav className="navbar navbar-dark bg">
   <a className="navbar-brand" href="about">William Wassmann</a>
     
@@ -10,20 +13,20 @@ function Navbar() {
     
     <ul className="nav justify-content-center">
       <li className="nav-item">
-        <a className="nav-link active" href="/about">About</a>
+      <NavLink className="nav-link" to='/about' exact>About</NavLink>
       </li>
-      <li className="nav-item">
-        <a className="nav-link" href="/portfolio">Portfolio</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" href="/0">RPG: Adventurer's Academy</a>
-      </li>
-      <li className="nav-item">
-        <a className="nav-link" id="navnoborder" href="/contact">Contact</a>
-      </li>
-     
-    </ul>
 
+      {/* portfolio button */}
+      <li className="nav-item">
+        <NavLink className="nav-link" to='/portfolio' exact>Portfolio</NavLink>
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to='/0' exact>RPG: Adventurer's Academy</NavLink>        
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to='/contact' exact>Contact</NavLink>    
+      </li>     
+    </ul>
 </nav>
 
     );

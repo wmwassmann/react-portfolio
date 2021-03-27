@@ -2,14 +2,12 @@
 
 
 
-body {    
+body {   
+    position: relative; 
+    z-index: 0;
     background: linear-gradient(159deg, rgba(206, 73, 73, 0.88) 0%, #131313 100% );       
     height: 100%;     
     overflow: hidden;      
-}
-
-.trouble {
-    position: absolute;
 }
 
 .navbar {  
@@ -114,6 +112,7 @@ img {
     padding: 15px;
 }
 
+
 #aboutme h1 {
     border-bottom: solid silver;
     padding-bottom: 10px;
@@ -198,17 +197,7 @@ img {
     margin-right: 190px;
 }
 
-.next-button {    
-    font-size: 30px;
-    padding: 10px;
-    background-color: rgb(100, 100, 100);      
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );    
-    width: 160px;
-}
+
 
 .secondary-button {
     font-size: 30px;
@@ -223,8 +212,9 @@ img {
 }
 
 
-.profile-group {  
-   
+.profile-group { 
+    display: flex;
+    flex-direction: column;  
     width: 750px;  
     height: 240px;  
     background-color: rgb(100, 100, 100);      

@@ -279,7 +279,7 @@ export class ButtonRicky extends React.Component {
         return (
             <div id='ricky-container'>
                 <div className='ricky' id='ricky'>
-                    <button className='button dev-button' id='ricky-button' onClick={this.handleRicky}>
+                    <button className='button dev-button border-pop' id='ricky-button' onClick={this.handleRicky}>
                         <img src={ricky} className="dev-image" id='ricky-img' alt='personalimage'></img>
                         <p id='ricky-name'>CHUNG HEI FUK</p>
                     </button>

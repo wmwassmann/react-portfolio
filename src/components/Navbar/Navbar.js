@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 
 
-function Navbar() {
+export class Navbar extends Component {
+  
+  setLocal = (e) => {
+    localStorage.setItem('featured-page', '0')
+  }
+
+render() {
     return(
     
 <nav className="navbar navbar-dark bg">
@@ -21,7 +27,7 @@ function Navbar() {
         <NavLink className="nav-link" to='/portfolio' exact>Portfolio</NavLink>
       </li>
       <li className="nav-item">
-        <NavLink className="nav-link" to='/0' exact>RPG: Adventurer's Academy</NavLink>        
+        <NavLink className="nav-link" to='/0' onClick={this.setLocal} exact>RPG: Adventurer's Academy</NavLink>        
       </li>
       <li className="nav-item">
         <NavLink className="nav-link" to='/contact' exact>Contact</NavLink>    
@@ -31,5 +37,5 @@ function Navbar() {
 
     );
 }
-
+}
 export default Navbar;

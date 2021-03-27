@@ -2,6 +2,7 @@ import React from 'react'
 import alex from './img/Alex.jpg'
 import DevData from '../DevProfiles/DevData'
 import '../css/style.css'
+import { IconContext } from 'react-icons/lib'
 
 
 export class ButtonAlex extends React.Component {
@@ -299,12 +300,12 @@ export class ButtonAlex extends React.Component {
         return (
             <div id='alex-container'>
                 <div className='alex' id='alex'>
-                    <button className='button dev-button' id='alex-button' onClick={this.handleAlex}>
+                    <button className='button dev-button border-pop' id='alex-button' onClick={this.handleAlex}>
                         <img src={alex} className="dev-image" id='alex-img' alt='personalimage'></img>
                         <p id='alex-name'>ALEX MADRIGAL</p>
                     </button>
                 </div>
-               
+            
                 <div className='dev-pure-text-alex' id='dev-pure-text-alex'>
                     <DevData />
                 </div>

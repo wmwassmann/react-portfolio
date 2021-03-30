@@ -8,17 +8,10 @@ export class CycleButtonLeft extends Component {
 
     clickMe = (e) => {       
 
-        function deployWings() { 
-            setTimeout(() => {
-            const wingslide = document.getElementById('wing-slide-left')
-            wingslide.classList.add('wingslide-left') 
-        }, 2000)
-    }
-
         if (localStorage.getItem('featured-page') === '0') {
             window.location.href = './4'
             localStorage.setItem('featured-page', '4')
-            deployWings() 
+        
         }
         else if (localStorage.getItem('featured-page') === '4') {
             window.location.href = './3'

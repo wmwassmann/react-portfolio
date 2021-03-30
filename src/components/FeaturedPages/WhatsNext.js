@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
-import myphotosmall from './../../pages/img/login.png'
+import myphotosmall from './../../pages/img/rpgaa/welcome.png'
 import './css/style.css'
 import { AnimatePresence, motion } from 'framer-motion'
 
@@ -24,21 +24,30 @@ class AboutMe extends Component {
                 </div>
                 <motion.div className="featured-container" initial={{ x: -1500, opacity: 0 }} exit={{ x: 0, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
                     <h1>The Future</h1>
+                    <div className='featured-content'>
+                    <img src={myphotosmall} className="img-fluid float-left welcome-photo" alt='personalimage'></img>
 
-                    <img src={myphotosmall} className="img-fluid float-left buddies-photo" alt='personalimage'></img>
 
 
-
-                    <div className='text-body'>
-                        <h4>
-                            Designed to be a fun and interactive learning tool turning complicated character sheets into bite sized chunks allowing for
-                            easy consumption. A constant question that arises when playing an RPG with newer players is "where is that number?"
-
-                            With our mobile friendly page selection giving the user simple choices to choose from, such as attack or defense, we are
-                            able to guild them directly to the numbers they need rather than force them to scan a large and confusing character sheet.
-                        </h4>
+                    <div className='future-text'>
+                        <h6>
+                           Currently, our plans are to continue building RPG:AA and eventually push the application into production. 
+                           <br>
+                           </br>
+                           <br>
+                           </br>
+                           Our vision for v4.0 consists of optimizing our <a href='https://rpgacademy.herokuapp.com/create'>Character Creation Mode</a>, 
+                           reworking the CSS our <a href='https://rpgacademy.herokuapp.com/savedcharacters'>Saved Characters</a> section, and starting on our 
+                           <a href='https://rpgacademy.herokuapp.com/dungeonmaster'> Dungeon Master Mode</a>.
+                           <br>
+                           </br>
+                           <br>
+                           </br>
+                           However, our most exciting new feature will be a full rework of the application's user experience. Featuring a simple story 
+                           mode where a fantasy university professor helps their new student navigate the often difficult task of tackling "first time" character creation. 
+                        </h6>
                     </div>
-
+                    </div>
                 </motion.div>
 
                 <div>

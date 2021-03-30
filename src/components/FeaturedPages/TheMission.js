@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import React, { Component } from 'react';
-import myphotosmall from './../../pages/img/login.png'
+import myphotosmall from './../../pages/img/rpgaa/mobile.png'
+import { FaDotCircle } from "react-icons/fa";
+
 import './css/style.css'
 import { AnimatePresence, motion } from 'framer-motion'
 import CycleButtonLeft from './CycleButtons/CycleButtonLeft';
@@ -28,34 +30,37 @@ class AboutMe extends Component {
                     <CycleButtonLeft />
                 </div>
                 <motion.div className="featured-container" initial={{ x: -1500, opacity: 0 }} exit={{ x: 0, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
-                    <h1>The Mission</h1>
-                    <div className='buttons-container'>
-                    <button className='secondary-button' onClick={this.handle_link}>
-                    <img src={myphotosmall} className="img-fluid float-left buddies-photo" alt='personalimage'></img>
-                        Deployed
-                    </button>
-                </div>
-                    
+                    <h1>Our Mission</h1>
+                    <div className='featured-content mission'>
+                        <div className='mission-text'>
+                            <h4>
+                                Designed to be a fun and interactive learning tool turning complicated character sheets into bite sized chunks allowing for
+                                easy consumption. A constant question that arises when playing an RPG with newer players is "where is that number?"
+                            </h4>
+                            <hr></hr>
+                            <h4>
+                                With our mobile friendly page selection giving the user simple choices to choose from, such as attack or defense, we are
+                                able to guild them directly to the numbers they need rather than force them to scan a large and confusing character sheet.
+                            </h4>
+                            <hr></hr>
+                            <h4>
+                                Click the mobile device to view our deployed page.   
+                            </h4>
+                            <button className='deployed-featured' onClick={this.handle_link}>
+                                <img src={myphotosmall} className="img-fluid float-left mobile-photo" alt='personalimage'></img>
+                                <FaDotCircle className='dot'/>
+                            </button>
+                        </div>
 
 
-
-                    <div className='text-body'>
-                        <h4>
-                            Designed to be a fun and interactive learning tool turning complicated character sheets into bite sized chunks allowing for
-                            easy consumption. A constant question that arises when playing an RPG with newer players is "where is that number?"
-
-                            With our mobile friendly page selection giving the user simple choices to choose from, such as attack or defense, we are
-                            able to guild them directly to the numbers they need rather than force them to scan a large and confusing character sheet.
-                        </h4>
-                        
                     </div>
 
-                </motion.div>              
+                </motion.div>
                 <div>
                     <CycleButtonRight />
                 </div>
 
-               
+
             </div>
 
 

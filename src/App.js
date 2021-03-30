@@ -26,7 +26,7 @@ function App() {
     <Switch>
     <div>
       <Navbar className='nav-bar-main'/>
-      <div className='featured-content'>
+      <div className='featured-modules'>
 
         {/* routes */}
         <Route exact path='/' component={landingHub}/>        

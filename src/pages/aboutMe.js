@@ -18,10 +18,10 @@ class AboutMe extends Component {
 
         <div className="row">
           <div id="aboutme">
-            <h1>William Wassmann</h1>
+            <h1><strong>WILLIAM WASSMANN</strong></h1>
             <img src={myphotosmall} className="img-fluid float-left wmw-photo" alt='personalimage'></img>
-            <h3>About Me</h3>
-
+            <h3 className='about-me'><strong>About Me</strong></h3>            
+          <article>
             <p>I am a full-stack developer who recently graduated from the University of Washington's Web Development Bootcamp.</p>
             <p>
               Through this course I discovered that the coding world is a constantly evolving beast, and there will always be more to learn.  I am eager to improve my web-development skills.
@@ -31,8 +31,9 @@ class AboutMe extends Component {
               expectations.
               </p>
             <p>
-              Welcome to my portfolio, which I view as my playground and a place to showcase my skills.
+              Welcome to my portfolio, which I view as my playground and a space to showcase my skills.
               </p>
+          </article>
           </div>
         </div>
 

@@ -89,37 +89,6 @@ export class AuditCarousel extends Component {
         
     } 
 
-
-    
-
-    handleDeployLink = (e) => {        
-        if (this.state.current_card === 1) {
-        window.location.href='https://github.com/wmwassmann/Homework-04-Quiz';        
-        e.preventDefault()        
-    } else if (this.state.current_card === 2) {
-        window.location.href='https://github.com/wmwassmann/03-Homework';
-        e.preventDefault()               
-    } else if (this.state.current_card === 3) {
-        window.location.href='https://github.com/wmwassmann/Homework-06-Weatherdash';
-        e.preventDefault()      
-    } else if (this.state.current_card === 4) {
-        window.location.href='https://github.com/wmwassmann/Homework-05-Calendar';
-        e.preventDefault()  
-    } else if (this.state.current_card === 5) {
-        window.location.href='https://github.com/wmwassmann/dndbuddy-1'
-        e.preventDefault()        
-    } else if (this.state.current_card === 6) {
-        window.location.href='https://github.com/wmwassmann/dnd-buddy-2.0'
-        e.preventDefault()
-    } else if (this.state.current_card === 7) {
-            window.location.href='https://github.com/wmwassmann/homework-employee-08';
-            e.preventDefault()         
-    } else if (this.state.current_card === 8) {
-        window.location.href='https://github.com/wmwassmann/homework-notes-09'
-        e.preventDefault() 
-    } 
-    }
-
     
     handleRepoLink = (e) => {        
         if (this.state.current_card === 1) {
@@ -148,6 +117,37 @@ export class AuditCarousel extends Component {
         e.preventDefault() 
     } 
     }
+
+
+    
+    handleDeployLink = (e) => {        
+        if (this.state.current_card === 1) {
+        window.location.href='https://wmwassmann.github.io/Homework-04-Quiz/';        
+        e.preventDefault()        
+    } else if (this.state.current_card === 2) {
+        window.location.href='https://wmwassmann.github.io/03-Homework/';
+        e.preventDefault()               
+    } else if (this.state.current_card === 3) {
+        window.location.href='https://wmwassmann.github.io/Homework-06-Weatherdash/';
+        e.preventDefault()      
+    } else if (this.state.current_card === 4) {
+        window.location.href='https://wmwassmann.github.io/Homework-05-Calendar/';
+        e.preventDefault()  
+    } else if (this.state.current_card === 5) {
+        window.location.href='https://wmwassmann.github.io/dndbuddy-1/'
+        e.preventDefault()        
+    } else if (this.state.current_card === 6) {
+        window.location.href='https://github.com/wmwassmann/dnd-buddy-2.0'
+        e.preventDefault()
+    } else if (this.state.current_card === 7) {
+            window.location.href='https://github.com/wmwassmann/homework-employee-08';
+            e.preventDefault()         
+    } else if (this.state.current_card === 8) {
+        window.location.href='https://homework-notetaker-09.herokuapp.com/'
+        e.preventDefault() 
+    } 
+    }
+
     render() {
         let repoLink = 'Multiple Choice Quiz'; 
         
@@ -238,7 +238,7 @@ const styles = {
     buttonNext: {
         position: 'relative',
         width: '90px',
-        right: '10px'    
+        right: '10px'  
                           
     }, 
     repoDisplay: {

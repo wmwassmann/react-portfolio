@@ -21,7 +21,7 @@ class AboutMe extends Component {
             <h1><strong>WILLIAM WASSMANN</strong></h1>
             <img src={myphotosmall} className="img-fluid float-left wmw-photo" alt='personalimage'></img>
             <h3 className='about-me'><strong>About Me</strong></h3>            
-          <article>
+          <article className='about-me-text'>
             <p>I am a full-stack developer who recently graduated from the University of Washington's Web Development Bootcamp.</p>
             <p>
               Through this course I discovered that the coding world is a constantly evolving beast, and there will always be more to learn.  I am eager to improve my web-development skills.

@@ -1,9 +1,9 @@
 import React from 'react';
 import '../css/style.css'
-import ButtonDavid from './ButtonDavid'
-import ButtonAlex from './ButtonAlex'
-import ButtonRicky from './ButtonRicky';
-import ButtonKarl from './ButtonKarl'
+import ButtonDavid from './ButtonDavid/ButtonDavid'
+import ButtonAlex from './ButtonAlex/ButtonAlex'
+import ButtonRicky from './ButtonRicky/ButtonRicky';
+import ButtonKarl from './ButtonKarl/ButtonKarl'
 
 
 

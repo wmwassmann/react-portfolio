@@ -1,21 +1,17 @@
 import React from 'react'
-import alex from './img/Alex.jpg'
-import DevData from '../DevProfiles/DevData'
-import '../css/style.css'
-import { IconContext } from 'react-icons/lib'
+import david from './../img/David.jpg'
+import DevData from '../../DevProfiles/DevData';
+import '../../css/style.css'
 
 
-export class ButtonAlex extends React.Component {
-
+export class ButtonDavid extends React.Component {
 
     constructor(props) {
         super(props)
         localStorage.setItem('devSelected', '')
         localStorage.setItem('anyDev', 'No')
-   
-   
         this.state = {
-            
+           
             isToggleOnAny: false,
             isToggleOnDavid: false,
             isToggleOnAlex: false,
@@ -25,44 +21,49 @@ export class ButtonAlex extends React.Component {
         }
 
     }
+   
 
-    
 
 
-    handleAlex = (e) => {
+    handleDavid = (e) => {             
       
-       
-        if (localStorage.getItem('anyDev') === 'Yes')  {
-            
+        if (localStorage.getItem('anyDev') === 'Yes') {
+
             // SELECTOR CONDITIONAL  ==============================================================================================================================
 
-            if (localStorage.getItem('devSelected') === 'David')  { 
+            if (localStorage.getItem('devSelected') === 'David') {
                 localStorage.setItem('devSelected', '')
                 const returnBtn = document.getElementById('david-button')
-                const resetBtn = document.getElementById('david-name')
+                returnBtn.classList.add('david-return')
+
+                this.setState({
+                    isToggleOnDavid: false
+                })
+
+            } else if (localStorage.getItem('devSelected') === 'Alex') {
+                localStorage.setItem('devSelected', '')
+                const returnBtn = document.getElementById('alex-button')
+                const resetBtn = document.getElementById('alex-name')
                 const closeText = document.getElementById('dev-text-content')
-                const vanish = document.getElementById('selected-container-david')
-                const removeMask = document.getElementById('dev-pure-text-alex')
-
-                vanish.classList.remove('reveal-text')                
-                removeMask.classList.remove('slide-mask')
+                const vanish = document.getElementById('selected-container-alex')
+                const removeMask = document.getElementById('dev-pure-text-david')
+                vanish.classList.add('hide-text')
+                vanish.classList.remove('reveal-text')
+                removeMask.classList.remove('slide-mask');
                 closeText.classList.remove('unwrap')
-
                 closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
-                vanish.classList.add('hide-text')
 
                 setTimeout(() => {
 
-                    resetBtn.innerHTML = 'David Deaton'
-                    returnBtn.classList.add('david-return')
-                    returnBtn.classList.remove('push-left-david')
+                    resetBtn.innerHTML = 'Alex Madrigal'
+                    returnBtn.classList.add('alex-return')
+                    returnBtn.classList.remove('push-left-alex')
                     closeText.classList.remove('wrap')
 
                     this.setState({
-                        isToggleOnDavid: false
+                        isToggleOnAlex: false
                     })
-
                 }, 500)
 
                 setTimeout(() => {
@@ -72,35 +73,21 @@ export class ButtonAlex extends React.Component {
                         returnBtn.classList.remove('fade-in')
                     }, 100)
                 }, 800)
- 
-            } else if (localStorage.getItem('devSelected') === 'Alex') {
-                                 
-                localStorage.setItem('devSelected', '')
-                const returnBtn = document.getElementById('alex-button')
-                returnBtn.classList.add('alex-button')
-                returnBtn.classList.remove('alex-return')
-
-                this.setState({
-                    isToggleOnAlex: false
-                })
+                
 
             } else if (localStorage.getItem('devSelected') === 'Ricky') {
-
-
                 localStorage.setItem('devSelected', '')
                 const returnBtn = document.getElementById('ricky-button')
                 const resetBtn = document.getElementById('ricky-name')
                 const closeText = document.getElementById('dev-text-content')
                 const vanish = document.getElementById('selected-container-ricky')
-                const removeMask = document.getElementById('dev-pure-text-alex')
-               
+                const removeMask = document.getElementById('dev-pure-text-david')
+                vanish.classList.add('hide-text')
                 vanish.classList.remove('reveal-text')
                 removeMask.classList.remove('slide-mask');
                 closeText.classList.remove('unwrap')
-
                 closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
-                vanish.classList.add('hide-text')
 
                 setTimeout(() => {
 
@@ -130,13 +117,11 @@ export class ButtonAlex extends React.Component {
                 const resetBtn = document.getElementById('karl-name')
                 const closeText = document.getElementById('dev-text-content')
                 const vanish = document.getElementById('selected-container-karl')
-                const removeMask = document.getElementById('dev-pure-text-alex')
-
+                const removeMask = document.getElementById('dev-pure-text-david')
+                vanish.classList.add('hide-text')
                 vanish.classList.remove('reveal-text')
                 removeMask.classList.remove('slide-mask');
                 closeText.classList.remove('unwrap')
-
-                vanish.classList.add('hide-text')
                 closeText.classList.add('wrap')
                 returnBtn.classList.add('fade-out')
 
@@ -165,33 +150,31 @@ export class ButtonAlex extends React.Component {
 
             // SELECTOR CONDITIONAL END ==============================================================================================================================
 
-            const handleBtn = document.getElementById('alex-button')
-            handleBtn.classList.add('alex-button')
-            handleBtn.classList.remove('alex-return')
+            const handleBtn = document.getElementById('david-button')
+            handleBtn.classList.add('david-button')
+            handleBtn.classList.remove('david-return')
+
 
             this.setState({
                 isToggleOnAny: true,
-                isToggleOnAlex: true
-
-
+                isToggleOnDavid: true
             })
-            localStorage.setItem('anyDev', 'Yes')
-            localStorage.setItem('devSelected', 'Alex')
-            setTimeout(() => {
-              
-                e.preventDefault()
-                localStorage.setItem('devSelected', 'Alex')
+            localStorage.setItem('anyDev', 'Yes')           
+            localStorage.setItem('devSelected', 'David')
 
-                const phaseShift = document.getElementById('alex-name')
+            setTimeout(() => {
+                e.preventDefault()
+                localStorage.setItem('devSelected', 'David')
+
+                const phaseShift = document.getElementById('david-name')
                 const textMain = document.getElementById('dev-text-content')
-                const pushLeft = document.getElementById('alex-button')
-                const textReveal = document.getElementById('selected-container-alex')
-                const slideMask = document.getElementById('dev-pure-text-alex')
+                const pushLeft = document.getElementById('david-button')
+                const textReveal = document.getElementById('selected-container-david')
+                const slideMask = document.getElementById('dev-pure-text-david')
 
                 const buttonContainer = document.createElement('div')
                 const linkedInBtn = document.createElement('button')
                 const githubBtn = document.createElement('button')
-
 
 
                 phaseShift.innerHTML = ''
@@ -201,20 +184,19 @@ export class ButtonAlex extends React.Component {
                 buttonContainer.classList.add('button-container')
                 linkedInBtn.classList.add('button-links')
                 githubBtn.classList.add('button-links')
-                pushLeft.classList.add('push-left-alex')
+                pushLeft.classList.add('push-left-david')
                 textMain.classList.add('unwrap')
                 slideMask.classList.add('slide-mask')
 
                 textReveal.classList.add('reveal-text')
                 textReveal.classList.remove('hide-text')
 
-
                 linkedInBtn.addEventListener('click', function () {
-                    window.location = 'https://www.linkedin.com/in/alex-madrigal-b5b8461a9/'
+                    window.location = 'https://www.linkedin.com/in/david-v-deaton/'
                 })
 
                 githubBtn.addEventListener('click', function () {
-                    window.location = 'https://github.com/jam-madrigal'
+                    window.location = 'https://github.com/DavidVDeaton'
                 })
 
                 phaseShift.append(
@@ -225,37 +207,35 @@ export class ButtonAlex extends React.Component {
                     linkedInBtn,
                     githubBtn
                 )
+
             }, 700)
 
 
         } else if (localStorage.getItem('anyDev') === 'No') {
 
-            const handleBtn = document.getElementById('alex-button')
-            handleBtn.classList.add('alex-button')
+            const handleBtn = document.getElementById('david-button')
+            handleBtn.classList.add('david-button')
 
             this.setState({
                 isToggleOnAny: true,
-                isToggleOnAlex: true
-
-
+                isToggleOnDavid: true
             })
             localStorage.setItem('anyDev', 'Yes')
-            localStorage.setItem('devSelected', 'Alex')
-            setTimeout(() => {
-            
-                e.preventDefault()
-                localStorage.setItem('devSelected', 'Alex')
+            localStorage.setItem('devSelected', 'David')
 
-                const phaseShift = document.getElementById('alex-name')
+            setTimeout(() => {            
+                e.preventDefault()
+                localStorage.setItem('devSelected', 'David')
+
+                const phaseShift = document.getElementById('david-name')
                 const textMain = document.getElementById('dev-text-content')
-                const pushLeft = document.getElementById('alex-button')
-                const textReveal = document.getElementById('selected-container-alex')
-                const slideMask = document.getElementById('dev-pure-text-alex')
+                const pushLeft = document.getElementById('david-button')
+                const textReveal = document.getElementById('selected-container-david')
+                const slideMask = document.getElementById('dev-pure-text-david')
 
                 const buttonContainer = document.createElement('div')
                 const linkedInBtn = document.createElement('button')
                 const githubBtn = document.createElement('button')
-
 
 
                 phaseShift.innerHTML = ''
@@ -265,20 +245,19 @@ export class ButtonAlex extends React.Component {
                 buttonContainer.classList.add('button-container')
                 linkedInBtn.classList.add('button-links')
                 githubBtn.classList.add('button-links')
-                pushLeft.classList.add('push-left-alex')
+                pushLeft.classList.add('push-left-david')
                 textMain.classList.add('unwrap')
                 slideMask.classList.add('slide-mask')
 
                 textReveal.classList.add('reveal-text')
                 textReveal.classList.remove('hide-text')
 
-
                 linkedInBtn.addEventListener('click', function () {
-                    window.location = 'https://www.linkedin.com/in/alex-madrigal-b5b8461a9/'
+                    window.location = 'https://www.linkedin.com/in/david-v-deaton/'
                 })
 
                 githubBtn.addEventListener('click', function () {
-                    window.location = 'https://github.com/jam-madrigal'
+                    window.location = 'https://github.com/DavidVDeaton'
                 })
 
                 phaseShift.append(
@@ -289,30 +268,35 @@ export class ButtonAlex extends React.Component {
                     linkedInBtn,
                     githubBtn
                 )
+
             }, 700)
         }
 
     }
 
+
     render() {
-        
-
         return (
-            <div id='alex-container'>
-                <div className='alex' id='alex'>
-                    <button className='button dev-button border-pop' id='alex-button' onClick={this.handleAlex}>
-                        <img src={alex} className="dev-image" id='alex-img' alt='personalimage'></img>
-                        <p id='alex-name'>ALEX MADRIGAL</p>
-                    </button>
-                </div>
-            
-                <div className='dev-pure-text-alex' id='dev-pure-text-alex'>
-                    <DevData />
-                </div>
-            </div>
+                <div id='david-container'>               
+                    <div className='david' id='david'>
+                        <button className='button dev-button border-pop' id='david-button' onClick={this.handleDavid}>
+                            <img src={david} className="dev-image" id='david-img' alt='personalimage'></img>
+                            <p id='david-name'>DAVID DEATON</p>
+                        </button>
+                    </div>
 
-        )
+                    <div className='dev-pure-text-david' id='dev-pure-text-david'>
+                        <DevData />
+                    </div>
+
+               
+                </div>
+           
+          
+
+                    
+    )
     }
 }
 
-export default ButtonAlex
+export default ButtonDavid

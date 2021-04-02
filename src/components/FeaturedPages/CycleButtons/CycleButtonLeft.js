@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
+
 import { FaChevronLeft } from "react-icons/fa";
 import '../css/style.css';
 

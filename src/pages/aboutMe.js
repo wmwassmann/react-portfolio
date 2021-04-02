@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import myphotosmall from './img/IMG_8410.jpg'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 
 class AboutMe extends Component {

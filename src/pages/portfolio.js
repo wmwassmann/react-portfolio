@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Carousel from '../components/Carousel/Carousel.js'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 class Portfolio extends Component {
     constructor() {

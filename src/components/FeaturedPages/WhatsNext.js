@@ -1,8 +1,8 @@
-import { Link } from 'react-router-dom';
+
 import React, { Component } from 'react';
 import myphotosmall from './../../pages/img/rpgaa/welcome.png'
 import './css/style.css'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 import CycleButtonLeft from './CycleButtons/CycleButtonLeft';
 import CycleButtonRight from './CycleButtons/CycleButtonRight';

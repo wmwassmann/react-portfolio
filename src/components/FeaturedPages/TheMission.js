@@ -9,12 +9,6 @@ import CycleButtonRight from './CycleButtons/CycleButtonRight';
 
 
 class AboutMe extends Component {
-    constructor() {
-        super()
-        this.state = {
-
-        }
-    }
 
     handle_link = (e) => {
         window.location.href = 'https://rpgacademy.herokuapp.com/';

@@ -8,13 +8,7 @@ import CycleButtonLeft from './CycleButtons/CycleButtonLeft';
 import CycleButtonRight from './CycleButtons/CycleButtonRight';
 
 class AboutMe extends Component {
-    constructor() {
-        super()
-        this.state = {
-
-        }
-    }
-
+  
     render() {
 
         return (

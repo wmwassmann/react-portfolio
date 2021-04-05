@@ -223,6 +223,9 @@ export class ButtonDavid extends React.Component {
             localStorage.setItem('anyDev', 'Yes')
             localStorage.setItem('devSelected', 'David')
 
+            // EASTER 4/4 CONTINUE FROM HERE! PLUG AND CHUG TO VICTORY!!!!!!
+
+
             setTimeout(() => {            
                 e.preventDefault()
                 localStorage.setItem('devSelected', 'David')

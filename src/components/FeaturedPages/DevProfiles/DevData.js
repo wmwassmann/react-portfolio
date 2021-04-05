@@ -33,7 +33,7 @@ function DevData() {
 
     return (        
         <div>
-            <h4 className='devName'>{value}</h4>
+            {/* <h4 className='devName'>{value}</h4> */}
         </div>
         
     )

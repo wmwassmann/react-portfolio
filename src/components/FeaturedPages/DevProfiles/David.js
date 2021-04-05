@@ -10,7 +10,7 @@ export class David extends Component {
 
     render() {
         return (
-            <div className='selected-container hide-text' id='selected-container-david'>
+            <div className='selected-container hide-text' id='david-selected-container'>
                 <h3>DAVID DEATON</h3>
                 <p2>
                     David is a force of nature with JavaScript and CSS. He has shown me that no problem is too difficult and can be solved through patience, 

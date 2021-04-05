@@ -354,6 +354,153 @@ h6 {
     margin: 30px;
 }
 
+
+
+.selected-container {      
+    position: relative;
+    text-align: justify;
+    top: 50px;
+    right: 450px;
+    background-color: rgb(185, 185, 185);
+    width: 800px;
+    height: 240px;
+    margin: 0px;
+    padding: 22px;
+    border-radius: 10px;
+}
+
+p2 {
+    font-size: 20px;
+}
+
+.img-button-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.featured-cont {
+    position: relative;
+    left: 450px;
+}
+
+#tools-cont {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    left: 355px;
+}
+
+.tool-buttons {
+    position: relative;
+    left: 410px;
+}
+
+.dev-image-selected {
+    border-radius: 10px;
+    max-width: 250px;
+    height: 150px;
+    padding: 0px;
+    margin: 0px;  
+    
+}
+
+.tech {
+    position: relative;
+    left: 20px;
+}
+
+
+
+
+
+.button-links {
+    display: flex;
+    align-items: center;    
+    width: 50px;
+    height: 50px;
+    margin: 10px;    
+    border-radius: 10px;    
+}
+
+.button-icon { 
+    position: relative; 
+    right: 12px;  
+    width: 60px;
+    height: 60px;    
+}
+
+.dev-pure-text-david {
+    position: relative;     
+    right: 1220px;
+    top: 90px;      
+}
+
+
+.dev-pure-text-alex {
+    position: relative;     
+    right: 1405px;
+    top: 90px;      
+}
+
+.dev-pure-text-ricky {
+    position: relative;     
+    right: 1590px;
+    top: 90px;      
+}
+
+.dev-pure-text-karl {
+    position: relative;     
+    right: 1775px;
+    top: 90px;      
+}
+
+/* .slide-mask {
+    animation: slide-mask 700ms ease-in forwards;
+} */
+
+.hide-text {
+    visibility: hidden;
+}
+
+.dev-container {
+    width: 187px;
+}
+
+
+.david-reveal-text {    
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s, opacity 0.5s linear;  
+    animation: david-reveal-text-scroll 700ms ease-in forwards;
+    
+}
+
+.alex-reveal-text {    
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s, opacity 0.5s linear;  
+    animation: alex-reveal-text-scroll 700ms ease-in forwards;
+    
+}
+
+.ricky-reveal-text {    
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s, opacity 0.5s linear;  
+    animation: ricky-reveal-text-scroll 700ms ease-in forwards;
+    
+}
+
+.karl-reveal-text {    
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s, opacity 0.5s linear;  
+    animation: karl-reveal-text-scroll 700ms ease-in forwards;
+    
+}
+
 #david-name {
     font-size: 19px;
 }
@@ -494,19 +641,19 @@ h6 {
 
 
 
-.push-left-david {
+.david-push-left {
     transition: transform 700ms ease-in-out;
 }
 
-.push-left-alex {
+.alex-push-left {
     transition: transform 700ms ease-in-out;
 }
 
-.push-left-ricky {
+.ricky-push-left {
     transition: transform 700ms ease-in-out;
 }
 
-.push-left-karl {   
+.karl-push-left {   
     transition: transform 700ms ease-in-out;
 }
 
@@ -601,21 +748,21 @@ h6 {
 
 
 
-.david .push-left-david {
-    animation: push-left-david 700ms ease-in forwards;
+.david .david-push-left {
+    animation: david-push-left 700ms ease-in forwards;
 }
 
-.alex .push-left-alex {
-    animation: push-left-alex 700ms ease-in forwards;
+.alex .alex-push-left {
+    animation: alex-push-left 700ms ease-in forwards;
 }
 
-.ricky .push-left-ricky {
-    animation: push-left-ricky 700ms ease-in forwards;
+.ricky .ricky-push-left {
+    animation: ricky-push-left 700ms ease-in forwards;
 }
 
 
-.karl .push-left-karl {
-    animation: push-left-karl 700ms ease-in forwards;  
+.karl .karl-push-left {
+    animation: karl-push-left 700ms ease-in forwards;  
      
 }
 
@@ -686,7 +833,7 @@ h6 {
     }
 }
 
-@keyframes push-left-david {
+@keyframes david-push-left {
     0% {
         transform: translateY(140%) translateX(170%) scale(1.4);
         -webkit-animation: scale(1.4);
@@ -697,7 +844,6 @@ h6 {
         -webkit-animation: scale(1.4);
     }
 }
-
 
 
 
@@ -721,7 +867,7 @@ h6 {
     }
 }
 
-@keyframes push-left-alex {
+@keyframes alex-push-left {
     0% {
         transform: translateY(140%) translateX(60%) scale(1.4);
         -webkit-animation: scale(1.4);
@@ -757,7 +903,7 @@ h6 {
 }
 
 
-@keyframes push-left-ricky {
+@keyframes ricky-push-left {
     0% {
         transform: translateY(140%) translateX(-60%) scale(1.4);
         -webkit-animation: scale(1.4);
@@ -792,7 +938,7 @@ h6 {
 }
 
 
-@keyframes push-left-karl {
+@keyframes karl-push-left {
     0% {
         transform: translateY(140%) translateX(-170%) scale(1.4);
         -webkit-animation: scale(1.4);
@@ -815,6 +961,57 @@ h6 {
 } */
 
 
+
+@keyframes david-reveal-text-scroll {
+    0% {
+        transform: translateX(0%)
+    } 
+
+    100% {
+        transform: translateX(70%);
+    }
+}
+
+
+@keyframes alex-reveal-text-scroll {
+    0% {
+        transform: translateX(-20%)
+    } 
+
+    100% {
+        transform: translateX(46%);
+    }
+}
+
+@keyframes ricky-reveal-text-scroll {
+    0% {
+        transform: translateX(-40%)
+    } 
+
+    100% {
+        transform: translateX(22.5%);
+    }
+}
+
+@keyframes karl-reveal-text-scroll {
+    0% {
+        transform: translateX(-60%)
+    } 
+
+    100% {
+        transform: translateX(-0.5%);
+    }
+}
+
+@keyframes slide-mask {
+    0% {
+        clip-path: circle(0% at 900% 50%);
+    } 
+
+    100% {
+        clip-path: circle(240% at 900% 50%);
+    }
+}
 
 
 @media only screen and (max-width: 768px)  {

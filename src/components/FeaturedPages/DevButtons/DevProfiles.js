@@ -21,28 +21,28 @@ export class DevProfiles extends React.Component {
                     name: 'David Deaton ', 
                     selected: false, 
                     source: david,
-                    tag: 'david-',
+                    tag: 'david',
                     bio: 'David is a force of nature with JavaScript and CSS. He has shown me that no problem is too difficult and can be solved through patience, resilience, and a logical approach. When presented with a challenge, David is the first to take initiative in learning language or method to get the job done. It was his innovation with CSS animation (specifically dice rolling) that inspired me to learn how to animate this very page.'
                 },
                 {                    
                     name: 'Alex Madrigal ', 
                     selected: false, 
                     source: alex,
-                    tag: 'alex-',
+                    tag: 'alex',
                     bio: 'Alex contributed his extensive front-end skills and enthusiasm to RPG: Adventurer\'s academy. His greatest strength lies in his ability to visualize and conceptualize a project\'s aesthetic in story-board fashion. He will go above and beyond frequently working late hours bring that vision to life through front-end JavaScript and from-scratch CSS.'
                 },  
                 {                    
                     name: 'Chung Hei Fuk ', 
                     selected: false, 
                     source: ricky,
-                    tag: 'ricky-',
+                    tag: 'ricky',
                     bio:'If our group ran into a bug, Ricky had an answer. Even if it took dozens of trial and error runs no problem was too difficult for Ricky. His sheer work ethic, logical process, and resourcefulness with JavaScript inspired us to press on through the most difficult of times. Along with phenomial JavaScript skills, he is an expert in back-end applications such as MongoDB, Sequelize, and Handlebars.'
                 },
                 {                    
                     name: 'Karl Behrens ', 
                     selected: false, 
                     source: karl,
-                    tag: 'karl-',
+                    tag: 'karl',
                     bio: 'Karl has proven himself to be a valuable think tank in the collaborative process. In developing the RPG: Adventurer\'s Academy, He and I bounced numerous ideas off of one another to bring the project to life. His backend skills are equally fantastic, working with MySQL databases and Passport for authentication for user login systems.'
                 },
                 

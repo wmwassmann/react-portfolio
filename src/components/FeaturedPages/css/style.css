@@ -456,9 +456,9 @@ p2 {
     top: 90px;      
 }
 
-/* .slide-mask {
+.slide-mask {
     animation: slide-mask 700ms ease-in forwards;
-} */
+}
 
 .hide-text {
     visibility: hidden;

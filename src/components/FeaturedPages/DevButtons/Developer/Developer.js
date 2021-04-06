@@ -19,49 +19,8 @@ export default class Developer extends Component {
 
 
 
-    handle_selected = (e) => {
-        e.preventDefault()
-        const developerName = (this.props.name)
-        const developerTag = (this.props.tag)
-        const developerInLocal = localStorage.getItem('devSelected')
-        const anySelected = localStorage.getItem('anySelected')
-
-        if (anySelected === 'true') {
-            localStorage.setItem('devSelected', '')
-            localStorage.setItem('anySelected', 'true')            
-            console.log(developerInLocal)
-            console.log('finish')
-            
-            const developerReturn = document.getElementById(`${developerInLocal}-button`)
-            const resetBtn = document.getElementById(`${developerInLocal}-name`)
-            const closeText = document.getElementById('dev-text-content')
-            const vanish = document.getElementById(`${developerInLocal}-selected-container`)
-            const removeMask = document.getElementById(`${developerInLocal}-dev-pure-text`)
-
-
-
-            vanish.classList.remove('reveal-text')                
-            removeMask.classList.remove('slide-mask')
-            closeText.classList.remove('unwrap')
-
-            closeText.classList.add('wrap')        
-            vanish.classList.add('hide-text')
-            developerReturn.classList.add('fade-out')
-
-        return;
-        
-
-
-
-
-
-
-
-
-
-
-    } else if (anySelected === 'false')  {
-
+    push_selected = () => {
+        const developerTag = (this.props.tag)        
         localStorage.setItem('anySelected', 'true')
 
         setTimeout(() => {        
@@ -121,9 +80,71 @@ export default class Developer extends Component {
             )
         }, 1500)
 
+    } 
+
+
+
+
+
+    handle_selected = (e) => {
+        e.preventDefault()
+        const developerName = (this.props.name)
+        const developerTag = (this.props.tag)
+        const developerInLocal = localStorage.getItem('devSelected')
+        const anySelected = localStorage.getItem('anySelected')
+
+        if (anySelected === 'true') {
+            localStorage.setItem('devSelected', '')
+            localStorage.setItem('anySelected', 'true')            
+            console.log(developerInLocal)
+            console.log('finish')
+            
+            const developerReturn = document.getElementById(`${developerInLocal}-button`)
+            const resetBtn = document.getElementById(`${developerInLocal}-name`)
+            const closeText = document.getElementById('dev-text-content')
+            const vanish = document.getElementById(`${developerInLocal}-selected-container`)
+            const removeMask = document.getElementById(`${developerInLocal}-dev-pure-text`)
+
+
+
+            vanish.classList.remove('reveal-text')                
+            removeMask.classList.remove('slide-mask')
+            closeText.classList.remove('unwrap')
+
+            closeText.classList.add('wrap')        
+            vanish.classList.add('hide-text')
+            developerReturn.classList.add('fade-out')
+
+            setTimeout(() => {
+
+                resetBtn.innerHTML = developerName
+                developerReturn.classList.add(`${developerInLocal}-return`)
+                developerReturn.classList.remove(`${developerInLocal}-push-left`)
+                closeText.classList.remove('wrap')
+
+                this.setState({
+                    isToggleOnDavid: false
+                })
+
+            }, 500)
+
+            setTimeout(() => {
+                developerReturn.classList.add('fade-in')
+                developerReturn.classList.remove('fade-out')
+                setTimeout(() => {
+                    developerReturn.classList.remove('fade-in')
+                }, 100)
+            }, 800)
+            this.push_selected()
+        return;  
+
+    } else if (anySelected === 'false')  {
+        this.push_selected()
+    }
+
+
 
         this.props.selected_developer(this.props.name)
-    }
     }
     render() {
         const developerName = (this.props.name)

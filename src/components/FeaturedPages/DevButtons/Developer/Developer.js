@@ -7,6 +7,9 @@ export default class Developer extends Component {
 
     constructor(props) {
         super(props);
+        
+        localStorage.setItem('devSelected', '')
+        localStorage.setItem('anySelected', 'false')
         this.state = {
             anySelected: false
 
@@ -18,34 +21,67 @@ export default class Developer extends Component {
 
     handle_selected = (e) => {
         e.preventDefault()
+        const developerName = (this.props.name)
+        const developerTag = (this.props.tag)
+        const developerInLocal = localStorage.getItem('devSelected')
+        const anySelected = localStorage.getItem('anySelected')
 
-        if (localStorage.getItem('devSelected') !== (this.props.name)) {
-            console.log('devSelected Local Storage does not equal', (this.props.name))
-            this.setState({ anySelected: false })
-        }
+        if (anySelected === 'true') {
+            localStorage.setItem('devSelected', '')
+            localStorage.setItem('anySelected', 'true')            
+            console.log(developerInLocal)
+            console.log('finish')
+            
+            const developerReturn = document.getElementById(`${developerInLocal}-button`)
+            const resetBtn = document.getElementById(`${developerInLocal}-name`)
+            const closeText = document.getElementById('dev-text-content')
+            const vanish = document.getElementById(`${developerInLocal}-selected-container`)
+            const removeMask = document.getElementById(`${developerInLocal}-dev-pure-text`)
 
-        if (this.state.anySelected === true) {
-            this.setState({ anySelected: false })
-            console.log('any selected = false')
-        }
+
+
+            vanish.classList.remove('reveal-text')                
+            removeMask.classList.remove('slide-mask')
+            closeText.classList.remove('unwrap')
+
+            closeText.classList.add('wrap')        
+            vanish.classList.add('hide-text')
+            developerReturn.classList.add('fade-out')
+
+        return;
+        
+
+
+
+
+
+
+
+
+
+
+    } else if (anySelected === 'false')  {
+
+        localStorage.setItem('anySelected', 'true')
+
+        setTimeout(() => {        
+     
+            setTimeout(() => {
+                localStorage.setItem('devSelected', (developerTag))
+                this.setState({ anySelected: true })         
+                const sendDev = document.getElementById(`${developerTag}-button`)
+                sendDev.classList.add(`${developerTag}-button`)
+
+            }, 500)
+
+        }, 1000)
 
         setTimeout(() => {
-            localStorage.setItem('devSelected', (this.props.name))
-            this.setState({ anySelected: true })
-            console.log('devSelected Local Storage', (this.props.name))
-            console.log('any selected = true')
-
-            const sendDev = document.getElementById(`${this.props.tag}-button`)
-            sendDev.classList.add(`${this.props.tag}-button`)
-
-        }, 500)
-
-        setTimeout(() => {
-            const phaseShift = document.getElementById(`${this.props.tag}-name`)
+            const phaseShift = document.getElementById(`${developerTag}-name`)
             const textMain = document.getElementById('dev-text-content')
-            const pushLeft = document.getElementById(`${this.props.tag}-button`)
-            const textReveal = document.getElementById(`${this.props.tag}-selected-container`)
-            const slideMask = document.getElementById(`${this.props.tag}-dev-pure-text`)
+            const pushLeft = document.getElementById(`${developerTag}-button`)
+            const textReveal = document.getElementById(`${developerTag}-selected-container`)
+            const slideMask = document.getElementById(`${developerTag}-dev-pure-text`)
 
             const buttonContainer = document.createElement('div')
             const linkedInBtn = document.createElement('button')
@@ -59,11 +95,11 @@ export default class Developer extends Component {
             buttonContainer.classList.add('button-container')
             linkedInBtn.classList.add('button-links')
             githubBtn.classList.add('button-links')
-            pushLeft.classList.add(`${this.props.tag}-push-left`)
+            pushLeft.classList.add(`${developerTag}-push-left`)
             textMain.classList.add('unwrap')
             slideMask.classList.add('slide-mask')
 
-            textReveal.classList.add(`${this.props.tag}-reveal-text`)
+            textReveal.classList.add(`${developerTag}-reveal-text`)
             textReveal.classList.remove('hide-text')
 
 
@@ -83,27 +119,31 @@ export default class Developer extends Component {
                 linkedInBtn,
                 githubBtn
             )
-        }, 1000)
+        }, 1500)
 
 
         this.props.selected_developer(this.props.name)
     }
-
+    }
     render() {
+        const developerName = (this.props.name)
+        const developerSource = (this.props.source)
+        const developerTag = (this.props.tag)
+
         return (
             <div className='dev-container'>
-                <div className={this.props.tag}>
-                    <button className='button dev-button border-pop' id={`${this.props.tag}-button`} onClick={this.handle_selected}>
-                        <img src={this.props.source} className="dev-image" id={`${this.props.tag}-img`} alt='personalimage'></img>
-                        <div id={`${this.props.tag}-name`}>
-                            {this.props.name}
+                <div className={developerTag}>
+                    <button className='button dev-button border-pop' id={`${developerTag}-button`} onClick={this.handle_selected}>
+                        <img src={developerSource} className="dev-image" id={`${developerTag}-img`} alt='personalimage'></img>
+                        <div id={`${developerTag}-name`}>
+                            {developerName}
                         </div>
                     </button>
                 </div>
-                <div className={`${this.props.tag}-dev-pure-text`} id={`${this.props.tag}-dev-pure-text`}>
-                    <div className='selected-container hide-text' id={`${this.props.tag}-selected-container`}>
+                <div className={`${developerTag}-dev-pure-text`} id={`${developerTag}-dev-pure-text`}>
+                    <div className='selected-container hide-text' id={`${developerTag}-selected-container`}>
 
-                    </div>                
+                    </div>
                 </div>
             </div>
         )

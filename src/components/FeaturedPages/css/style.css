@@ -472,9 +472,25 @@ p2 {
     animation: karl-slide-mask 700ms ease-in forwards;
 }
 
-.hide-text {
+.david-hide-text {
     visibility: hidden;
 }
+
+.alex-hide-text {
+    visibility: hidden;
+}
+
+
+.ricky-hide-text {
+    visibility: hidden;
+}
+
+
+.karl-hide-text {
+    visibility: hidden;
+}
+
+
 
 .dev-container {
     width: 187px;
@@ -1018,31 +1034,31 @@ p2 {
 
 @keyframes alex-slide-mask {
     0% {
-        clip-path: circle(0% at 200% 75%);
+        clip-path: circle(0% at 120% 75%);
     } 
 
     100% {
-        clip-path: circle(500% at 600% 75%);
+        clip-path: circle(500% at 500% 75%);
     }
 }
 
 @keyframes ricky-slide-mask {
     0% {
-        clip-path: circle(0% at 200% 75%);
+        clip-path: circle(0% at 10% 75%);
     } 
 
     100% {
-        clip-path: circle(500% at 600% 75%);
+        clip-path: circle(500% at 400% 75%);
     }
 }
 
 @keyframes karl-slide-mask {
     0% {
-        clip-path: circle(0% at 200% 75%);
+        clip-path: circle(0% at -100% 75%);
     } 
 
     100% {
-        clip-path: circle(500% at 600% 75%);
+        clip-path: circle(500% at 200% 75%);
     }
 }
 

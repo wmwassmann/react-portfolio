@@ -23,14 +23,12 @@ export default class Developer extends Component {
 
         const developerTag = (this.props.tag)
 
-        
+
 
         this.setState({ anySelected: true })
-        
+
         const sendDev = document.getElementById(`${developerTag}-button`)
         sendDev.classList.add(`${developerTag}-button`)
-
-
 
 
         setTimeout(() => {
@@ -60,7 +58,7 @@ export default class Developer extends Component {
             slideMask.classList.add(`${developerInLocal}-slide-mask`)
 
             textReveal.classList.add(`${developerTag}-reveal-text`)
-            textReveal.classList.remove('hide-text')
+            textReveal.classList.remove(`${developerInLocal}-hide-text`)
 
 
             linkedInBtn.addEventListener('click', function () {
@@ -94,7 +92,7 @@ export default class Developer extends Component {
         const anySelected = localStorage.getItem('anySelected')
 
         if (anySelected === 'true') {
-               
+
 
             const developerReturn = document.getElementById(`${developerInLocal}-button`)
             const resetBtn = document.getElementById(`${developerInLocal}-name`)
@@ -104,12 +102,12 @@ export default class Developer extends Component {
 
 
 
-            vanish.classList.remove('reveal-text')
+            vanish.classList.remove(`${developerInLocal}-reveal-text`)
             removeMask.classList.remove(`${developerInLocal}-slide-mask`)
             closeText.classList.remove('unwrap')
 
             closeText.classList.add('wrap')
-            vanish.classList.add('hide-text')
+            vanish.classList.add(`${developerInLocal}-hide-text`)
             developerReturn.classList.add('fade-out')
 
             setTimeout(() => {
@@ -134,7 +132,7 @@ export default class Developer extends Component {
             }, 800)
 
             this.push_selected()
-            
+
             return;
 
         } else if (anySelected === 'false') {
@@ -161,7 +159,7 @@ export default class Developer extends Component {
                     </button>
                 </div>
                 <div className={`${developerTag}-dev-pure-text`} id={`${developerTag}-dev-pure-text`}>
-                    <div className='selected-container hide-text' id={`${developerTag}-selected-container`}>
+                    <div className={`${developerTag}-hide-text selected-container`} id={`${developerTag}-selected-container`}>
 
                     </div>
                 </div>

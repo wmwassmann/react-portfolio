@@ -7,7 +7,7 @@ export default class Developer extends Component {
 
     constructor(props) {
         super(props);
-        
+
         localStorage.setItem('devSelected', '')
         localStorage.setItem('anySelected', 'false')
         this.state = {
@@ -20,22 +20,23 @@ export default class Developer extends Component {
 
 
     push_selected = () => {
-        const developerTag = (this.props.tag)        
-        localStorage.setItem('anySelected', 'true')
 
-        setTimeout(() => {        
-     
-            setTimeout(() => {
-                localStorage.setItem('devSelected', (developerTag))
-                this.setState({ anySelected: true })         
-                const sendDev = document.getElementById(`${developerTag}-button`)
-                sendDev.classList.add(`${developerTag}-button`)
+        const developerTag = (this.props.tag)
 
-            }, 500)
+        
 
-        }, 1000)
+        this.setState({ anySelected: true })
+        
+        const sendDev = document.getElementById(`${developerTag}-button`)
+        sendDev.classList.add(`${developerTag}-button`)
+
+
+
 
         setTimeout(() => {
+            localStorage.setItem('anySelected', 'true')
+            localStorage.setItem('devSelected', (developerTag))
+            const developerInLocal = localStorage.getItem('devSelected')
             const phaseShift = document.getElementById(`${developerTag}-name`)
             const textMain = document.getElementById('dev-text-content')
             const pushLeft = document.getElementById(`${developerTag}-button`)
@@ -56,7 +57,7 @@ export default class Developer extends Component {
             githubBtn.classList.add('button-links')
             pushLeft.classList.add(`${developerTag}-push-left`)
             textMain.classList.add('unwrap')
-            slideMask.classList.add('slide-mask')
+            slideMask.classList.add(`${developerInLocal}-slide-mask`)
 
             textReveal.classList.add(`${developerTag}-reveal-text`)
             textReveal.classList.remove('hide-text')
@@ -78,9 +79,9 @@ export default class Developer extends Component {
                 linkedInBtn,
                 githubBtn
             )
-        }, 1500)
+        }, 700)
 
-    } 
+    }
 
 
 
@@ -89,16 +90,12 @@ export default class Developer extends Component {
     handle_selected = (e) => {
         e.preventDefault()
         const developerName = (this.props.name)
-        const developerTag = (this.props.tag)
         const developerInLocal = localStorage.getItem('devSelected')
         const anySelected = localStorage.getItem('anySelected')
 
         if (anySelected === 'true') {
-            localStorage.setItem('devSelected', '')
-            localStorage.setItem('anySelected', 'true')            
-            console.log(developerInLocal)
-            console.log('finish')
-            
+               
+
             const developerReturn = document.getElementById(`${developerInLocal}-button`)
             const resetBtn = document.getElementById(`${developerInLocal}-name`)
             const closeText = document.getElementById('dev-text-content')
@@ -107,16 +104,16 @@ export default class Developer extends Component {
 
 
 
-            vanish.classList.remove('reveal-text')                
-            removeMask.classList.remove('slide-mask')
+            vanish.classList.remove('reveal-text')
+            removeMask.classList.remove(`${developerInLocal}-slide-mask`)
             closeText.classList.remove('unwrap')
 
-            closeText.classList.add('wrap')        
+            closeText.classList.add('wrap')
             vanish.classList.add('hide-text')
             developerReturn.classList.add('fade-out')
 
             setTimeout(() => {
-
+                localStorage.setItem('devSelected', '')
                 resetBtn.innerHTML = developerName
                 developerReturn.classList.add(`${developerInLocal}-return`)
                 developerReturn.classList.remove(`${developerInLocal}-push-left`)
@@ -135,12 +132,14 @@ export default class Developer extends Component {
                     developerReturn.classList.remove('fade-in')
                 }, 100)
             }, 800)
-            this.push_selected()
-        return;  
 
-    } else if (anySelected === 'false')  {
-        this.push_selected()
-    }
+            this.push_selected()
+            
+            return;
+
+        } else if (anySelected === 'false') {
+            this.push_selected()
+        }
 
 
 

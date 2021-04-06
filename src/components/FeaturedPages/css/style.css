@@ -456,8 +456,20 @@ p2 {
     top: 90px;      
 }
 
-.slide-mask {
-    animation: slide-mask 700ms ease-in forwards;
+.david-slide-mask {
+    animation: david-slide-mask 700ms ease-in forwards;
+}
+
+.alex-slide-mask {
+    animation: alex-slide-mask 700ms ease-in forwards;
+}
+
+.ricky-slide-mask {
+    animation: ricky-slide-mask 700ms ease-in forwards;
+}
+
+.karl-slide-mask {
+    animation: karl-slide-mask 700ms ease-in forwards;
 }
 
 .hide-text {
@@ -950,15 +962,6 @@ p2 {
     }
 }
 
-/* @keyframes wingslide-left {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-250%);
-    }
-} */
 
 
 
@@ -1003,13 +1006,43 @@ p2 {
     }
 }
 
-@keyframes slide-mask {
+@keyframes david-slide-mask {
     0% {
-        clip-path: circle(0% at 900% 50%);
+        clip-path: circle(0% at 200% 75%);
     } 
 
     100% {
-        clip-path: circle(240% at 900% 50%);
+        clip-path: circle(500% at 600% 75%);
+    }
+}
+
+@keyframes alex-slide-mask {
+    0% {
+        clip-path: circle(0% at 200% 75%);
+    } 
+
+    100% {
+        clip-path: circle(500% at 600% 75%);
+    }
+}
+
+@keyframes ricky-slide-mask {
+    0% {
+        clip-path: circle(0% at 200% 75%);
+    } 
+
+    100% {
+        clip-path: circle(500% at 600% 75%);
+    }
+}
+
+@keyframes karl-slide-mask {
+    0% {
+        clip-path: circle(0% at 200% 75%);
+    } 
+
+    100% {
+        clip-path: circle(500% at 600% 75%);
     }
 }
 

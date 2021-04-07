@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react'
 import './../../css/style.css'
 // import DevData from './../../DevProfiles/DevData'
@@ -11,19 +12,83 @@ export default class Developer extends Component {
         localStorage.setItem('devSelected', '')
         localStorage.setItem('anySelected', 'false')
         this.state = {
-            anySelected: false
-
+            anySelected: false,
+            isToggleOnDavid: false,
+            isToggleOnAlex: false,
+            isToggleOnRicky: false,
+            isToggleOnKarl: false,
         }
     }
 
+    handle_selected = (e) => {
 
+
+
+        e.preventDefault()
+        const developerName = (this.props.name)
+        const developerInLocal = localStorage.getItem('devSelected')
+        const anySelected = localStorage.getItem('anySelected')
+
+
+        if (anySelected === 'true') {
+
+         
+
+            const developerReturn = document.getElementById(`${developerInLocal}-button`)
+            const resetBtn = document.getElementById(`${developerInLocal}-name`)
+            const closeText = document.getElementById('dev-text-content')
+            const vanish = document.getElementById(`${developerInLocal}-selected-container`)
+            const removeMask = document.getElementById(`${developerInLocal}-dev-pure-text`)
+
+
+
+            vanish.classList.remove(`${developerInLocal}-reveal-text`)
+            removeMask.classList.remove(`${developerInLocal}-slide-mask`)
+            closeText.classList.remove('unwrap')
+
+            closeText.classList.add('wrap')
+            vanish.classList.add(`${developerInLocal}-hide-text`)
+            developerReturn.classList.add('fade-out')
+
+            setTimeout(() => {
+                localStorage.setItem('devSelected', '')
+
+                resetBtn.innerHTML = developerName
+                developerReturn.classList.add(`${developerInLocal}-return`)
+                developerReturn.classList.remove(`${developerInLocal}-push-left`)
+                closeText.classList.remove('wrap')
+
+
+            }, 500)
+
+            setTimeout(() => {
+                developerReturn.classList.add('fade-in')
+                developerReturn.classList.remove('fade-out')
+                setTimeout(() => {
+                    developerReturn.classList.remove('fade-in')
+                    developerReturn.classList.remove(`${developerInLocal}-return`)
+                    developerReturn.classList.remove(`${developerInLocal}-button`)
+                }, 100)
+            }, 1000)
+
+            this.push_selected()
+
+
+            return;
+
+        } else if (anySelected === 'false') {
+            this.push_selected()
+        }
+        this.props.loop_devs(this.props.name)
+        this.props.selected_developer(this.props.name)
+    }
 
 
     push_selected = () => {
 
+        const developerGithub = (this.props.github)
+        const developerLinkedIn = (this.props.linkedin)
         const developerTag = (this.props.tag)
-
-
 
         this.setState({ anySelected: true })
 
@@ -31,9 +96,13 @@ export default class Developer extends Component {
         sendDev.classList.add(`${developerTag}-button`)
 
 
+
         setTimeout(() => {
             localStorage.setItem('anySelected', 'true')
             localStorage.setItem('devSelected', (developerTag))
+    
+
+
             const developerInLocal = localStorage.getItem('devSelected')
             const phaseShift = document.getElementById(`${developerTag}-name`)
             const textMain = document.getElementById('dev-text-content')
@@ -62,11 +131,11 @@ export default class Developer extends Component {
 
 
             linkedInBtn.addEventListener('click', function () {
-                window.location = 'https://www.linkedin.com/in/david-v-deaton/'
+                window.location = developerLinkedIn
             })
 
             githubBtn.addEventListener('click', function () {
-                window.location = 'https://github.com/DavidVDeaton'
+                window.location = developerGithub
             })
 
             phaseShift.append(
@@ -78,71 +147,8 @@ export default class Developer extends Component {
                 githubBtn
             )
         }, 700)
-
     }
 
-
-
-
-
-    handle_selected = (e) => {
-        e.preventDefault()
-        const developerName = (this.props.name)
-        const developerInLocal = localStorage.getItem('devSelected')
-        const anySelected = localStorage.getItem('anySelected')
-
-        if (anySelected === 'true') {
-
-
-            const developerReturn = document.getElementById(`${developerInLocal}-button`)
-            const resetBtn = document.getElementById(`${developerInLocal}-name`)
-            const closeText = document.getElementById('dev-text-content')
-            const vanish = document.getElementById(`${developerInLocal}-selected-container`)
-            const removeMask = document.getElementById(`${developerInLocal}-dev-pure-text`)
-
-
-
-            vanish.classList.remove(`${developerInLocal}-reveal-text`)
-            removeMask.classList.remove(`${developerInLocal}-slide-mask`)
-            closeText.classList.remove('unwrap')
-
-            closeText.classList.add('wrap')
-            vanish.classList.add(`${developerInLocal}-hide-text`)
-            developerReturn.classList.add('fade-out')
-
-            setTimeout(() => {
-                localStorage.setItem('devSelected', '')
-                resetBtn.innerHTML = developerName
-                developerReturn.classList.add(`${developerInLocal}-return`)
-                developerReturn.classList.remove(`${developerInLocal}-push-left`)
-                closeText.classList.remove('wrap')
-
-                this.setState({
-                    isToggleOnDavid: false
-                })
-
-            }, 500)
-
-            setTimeout(() => {
-                developerReturn.classList.add('fade-in')
-                developerReturn.classList.remove('fade-out')
-                setTimeout(() => {
-                    developerReturn.classList.remove('fade-in')
-                }, 100)
-            }, 800)
-
-            this.push_selected()
-
-            return;
-
-        } else if (anySelected === 'false') {
-            this.push_selected()
-        }
-
-
-
-        this.props.selected_developer(this.props.name)
-    }
     render() {
         const developerName = (this.props.name)
         const developerSource = (this.props.source)
@@ -151,7 +157,7 @@ export default class Developer extends Component {
         return (
             <div className='dev-container'>
                 <div className={developerTag}>
-                    <button className='button dev-button border-pop' id={`${developerTag}-button`} onClick={this.handle_selected}>
+                    <button className='button dev-button border-pop' id={`${developerTag}-button`} onClick={this.handle_selected} disabled=''>
                         <img src={developerSource} className="dev-image" id={`${developerTag}-img`} alt='personalimage'></img>
                         <div id={`${developerTag}-name`}>
                             {developerName}
@@ -160,7 +166,9 @@ export default class Developer extends Component {
                 </div>
                 <div className={`${developerTag}-dev-pure-text`} id={`${developerTag}-dev-pure-text`}>
                     <div className={`${developerTag}-hide-text selected-container`} id={`${developerTag}-selected-container`}>
-
+                   
+                            {this.props.bio}
+                     
                     </div>
                 </div>
             </div>

@@ -47,6 +47,7 @@
     width: 940px;
 }
 
+
 .teammates {
     display: flex;
     flex-direction: column;
@@ -652,15 +653,19 @@ p2 {
 
 
 #button-linkedin {
+    z-index: 10;
     background:url('../DevButtons/img/linkedin.png') no-repeat;     
     background-position: center;
     background-size: contain;
+    cursor: pointer;
 }
 
 #button-github {
+    z-index: 10;
     background:url('../DevButtons/img/github.png') no-repeat;     
     background-position: center;
     background-size: contain;
+    cursor: pointer;
 }
 
 

@@ -657,6 +657,7 @@ p2 {
     background:url('../DevButtons/img/linkedin.png') no-repeat;     
     background-position: center;
     background-size: contain;
+    pointer-events: auto;
     cursor: pointer;
 }
 
@@ -666,6 +667,7 @@ p2 {
     background-position: center;
     background-size: contain;
     cursor: pointer;
+    pointer-events: auto;
 }
 
 
@@ -675,18 +677,22 @@ p2 {
 
 
 .david-push-left {
+    pointer-events: none;
     transition: transform 700ms ease-in-out;
 }
 
 .alex-push-left {
+    pointer-events: none;
     transition: transform 700ms ease-in-out;
 }
 
 .ricky-push-left {
+    pointer-events: none;
     transition: transform 700ms ease-in-out;
 }
 
 .karl-push-left {   
+    pointer-events: none;
     transition: transform 700ms ease-in-out;
 }
 

@@ -22,8 +22,6 @@ export default class Developer extends Component {
 
     handle_selected = (e) => {
 
-
-
         e.preventDefault()
         const developerName = (this.props.name)
         const developerInLocal = localStorage.getItem('devSelected')
@@ -32,7 +30,7 @@ export default class Developer extends Component {
 
         if (anySelected === 'true') {
 
-         
+
 
             const developerReturn = document.getElementById(`${developerInLocal}-button`)
             const resetBtn = document.getElementById(`${developerInLocal}-name`)
@@ -79,7 +77,7 @@ export default class Developer extends Component {
         } else if (anySelected === 'false') {
             this.push_selected()
         }
-        this.props.loop_devs(this.props.name)
+
         this.props.selected_developer(this.props.name)
     }
 
@@ -100,7 +98,7 @@ export default class Developer extends Component {
         setTimeout(() => {
             localStorage.setItem('anySelected', 'true')
             localStorage.setItem('devSelected', (developerTag))
-    
+
 
 
             const developerInLocal = localStorage.getItem('devSelected')
@@ -146,7 +144,7 @@ export default class Developer extends Component {
                 linkedInBtn,
                 githubBtn
             )
-        }, 700)
+        }, 900)
     }
 
     render() {
@@ -157,18 +155,23 @@ export default class Developer extends Component {
         return (
             <div className='dev-container'>
                 <div className={developerTag}>
-                    <button className='button dev-button border-pop' id={`${developerTag}-button`} onClick={this.handle_selected} disabled=''>
+
+
+
+                    <button className='button dev-button border-pop' id={`${developerTag}-button`} onClick={this.handle_selected}>
                         <img src={developerSource} className="dev-image" id={`${developerTag}-img`} alt='personalimage'></img>
                         <div id={`${developerTag}-name`}>
                             {developerName}
                         </div>
                     </button>
+
+
                 </div>
                 <div className={`${developerTag}-dev-pure-text`} id={`${developerTag}-dev-pure-text`}>
                     <div className={`${developerTag}-hide-text selected-container`} id={`${developerTag}-selected-container`}>
-                   
-                            {this.props.bio}
-                     
+
+                        {this.props.bio}
+
                     </div>
                 </div>
             </div>

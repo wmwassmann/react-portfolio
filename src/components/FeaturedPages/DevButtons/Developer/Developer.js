@@ -33,7 +33,7 @@ export default class Developer extends Component {
 
 
             const developerReturn = document.getElementById(`${developerInLocal}-button`)
-            const resetBtn = document.getElementById(`${developerInLocal}-name`)
+
             const closeText = document.getElementById('dev-text-content')
             const vanish = document.getElementById(`${developerInLocal}-selected-container`)
             const removeMask = document.getElementById(`${developerInLocal}-dev-pure-text`)
@@ -49,9 +49,20 @@ export default class Developer extends Component {
             developerReturn.classList.add('fade-out')
 
             setTimeout(() => {
+
+                // const buttonLinks = document.querySelector('.button-links')
+                
+                // buttonLinks.classList.remove('button-linkedin')
+                // buttonLinks.classList.remove('button-github')
+
+                const removeButtonLinks = document.getElementById('button-id')
+                removeButtonLinks.remove()
+
                 localStorage.setItem('devSelected', '')
 
-                resetBtn.innerHTML = developerName
+
+
+
                 developerReturn.classList.add(`${developerInLocal}-return`)
                 developerReturn.classList.remove(`${developerInLocal}-push-left`)
                 closeText.classList.remove('wrap')
@@ -113,9 +124,10 @@ export default class Developer extends Component {
             const githubBtn = document.createElement('button')
 
 
-            phaseShift.innerHTML = ''
-            linkedInBtn.id = 'button-linkedin'
-            githubBtn.id = 'button-github'
+            // phaseShift.innerHTML = ''
+            buttonContainer.id = ('button-id')
+            linkedInBtn.classList.add('button-linkedin')
+            githubBtn.classList.add('button-github')
 
             buttonContainer.classList.add('button-container')
             linkedInBtn.classList.add('button-links')
@@ -127,7 +139,6 @@ export default class Developer extends Component {
             textReveal.classList.add(`${developerTag}-reveal-text`)
             textReveal.classList.remove(`${developerInLocal}-hide-text`)
 
-
             linkedInBtn.addEventListener('click', function () {
                 window.location = developerLinkedIn
             })
@@ -135,6 +146,7 @@ export default class Developer extends Component {
             githubBtn.addEventListener('click', function () {
                 window.location = developerGithub
             })
+       
 
             phaseShift.append(
                 buttonContainer
@@ -144,7 +156,7 @@ export default class Developer extends Component {
                 linkedInBtn,
                 githubBtn
             )
-        }, 900)
+        }, 800)
     }
 
     render() {
@@ -155,8 +167,6 @@ export default class Developer extends Component {
         return (
             <div className='dev-container'>
                 <div className={developerTag}>
-
-
 
                     <button className='button dev-button border-pop' id={`${developerTag}-button`} onClick={this.handle_selected}>
                         <img src={developerSource} className="dev-image" id={`${developerTag}-img`} alt='personalimage'></img>
@@ -169,9 +179,9 @@ export default class Developer extends Component {
                 </div>
                 <div className={`${developerTag}-dev-pure-text`} id={`${developerTag}-dev-pure-text`}>
                     <div className={`${developerTag}-hide-text selected-container`} id={`${developerTag}-selected-container`}>
-
+                        <p2>
                         {this.props.bio}
-
+                        </p2>
                     </div>
                 </div>
             </div>

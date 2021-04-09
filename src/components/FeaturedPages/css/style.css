@@ -652,7 +652,7 @@ p2 {
 
 
 
-#button-linkedin {
+.button-linkedin {
     z-index: 10;
     background:url('../DevButtons/img/linkedin.png') no-repeat;     
     background-position: center;
@@ -661,7 +661,7 @@ p2 {
     cursor: pointer;
 }
 
-#button-github {
+.button-github {
     z-index: 10;
     background:url('../DevButtons/img/github.png') no-repeat;     
     background-position: center;

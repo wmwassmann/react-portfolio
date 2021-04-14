@@ -20,8 +20,8 @@ function Card(props) {
 
 const styles = {
     card: {        
-        width: '1089px',
-        height: '593px',       
+        width: '800px',
+        height: '490px',       
         boxSizing: 'border-box',
         fontSize: '2.5em',
         color: 'white'

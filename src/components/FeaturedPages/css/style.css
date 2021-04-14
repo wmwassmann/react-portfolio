@@ -95,8 +95,7 @@ h5 {
     top: 4px;
     left: 8px;
     border-radius: 1%;
-    border: solid rgb(29, 29, 29) 1.9px;
-  
+    border: solid rgb(29, 29, 29) 1.9px;  
     
 }
 
@@ -595,17 +594,6 @@ p2 {
 
 
 
-
-.dev-image {
-    border-radius: 10px;
-    max-width: 150px;
-    height: 100px;
-    padding-top: 0px;
-    margin: 0px;  
-    
-}
-
-
 .button-container {
     display: flex;
     flex-direction: row; 
@@ -617,7 +605,7 @@ p2 {
 .dev-image {
     border-radius: 10px;
     max-width: 150px;
-    height: 100px;
+    height: 90px;
     padding: 0px;
     margin: 0px;      
 }

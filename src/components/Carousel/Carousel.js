@@ -35,7 +35,7 @@ export class AuditCarousel extends Component {
         this.card_container.append(first_card_clone);
 
         this.card_container.style.transitionDuration = '0.5s';
-        this.card_container.style.transform = `translate(-${1089}px)`    
+        this.card_container.style.transform = `translate(-${800}px)`    
       
      
     }  
@@ -50,12 +50,12 @@ export class AuditCarousel extends Component {
             
             this.setState({current_card: new_current_card}, () => {
                 this.card_container.style.transitionDuration = '0.5s';
-                this.card_container.style.transform = `translate(-${1089 * this.state.current_card}px)`;
+                this.card_container.style.transform = `translate(-${800 * this.state.current_card}px)`;
 
                 if (this.state.current_card === this.card_container.children.length - 1) {
                     setTimeout(() => {
                         this.card_container.style.transitionDuration = '0.0s';
-                        this.card_container.style.transform = `translate(-${1089}px)`
+                        this.card_container.style.transform = `translate(-${800}px)`
                         this.setState({ current_card: 1 });
                     }, 502)                     
                 }
@@ -71,12 +71,12 @@ export class AuditCarousel extends Component {
             
             this.setState({current_card: new_current_card}, () => {
                 this.card_container.style.transitionDuration = '0.5s';
-                this.card_container.style.transform = `translate(-${1089 * this.state.current_card}px)`;
+                this.card_container.style.transform = `translate(-${800 * this.state.current_card}px)`;
 
                 if (this.state.current_card === 0) {
                     setTimeout(() => {
                         this.card_container.style.transitionDuration = '0.0s';
-                        this.card_container.style.transform = `translate(-${1089 * (this.card_container.children.length - 2)}px)`;
+                        this.card_container.style.transform = `translate(-${800 * (this.card_container.children.length - 2)}px)`;
                         this.setState({ current_card: this.card_container.children.length - 2 });
                     }, 502)                     
                 }
@@ -196,10 +196,10 @@ export class AuditCarousel extends Component {
                     </div>    
                      
                 <div className='modalbar' style={styles.navBar}>                
-                    <button className='button' style={styles.buttonPrevious} onClick={this.handle_previous}>Prev</button>                         
-                    <button className='button' style={styles.repoLink} onClick={this.handleRepoLink}>Repo Link</button>
-                    <button className='button' style={styles.deployedLink} onClick={this.handleDeployLink}>Deployed Link</button>  
-                    <button className='button' style={styles.buttonNext} onClick={this.handle_next}>Next</button>
+                    <button className='button carousel-button border-pop' style={styles.buttonPrevious} onClick={this.handle_previous}>Prev</button>                         
+                    <button className='button carousel-button border-pop' style={styles.repoLink} onClick={this.handleRepoLink}>Repo Link</button>
+                    <button className='button carousel-button border-pop' style={styles.deployedLink} onClick={this.handleDeployLink}>Deployed Link</button>  
+                    <button className='button carousel-button border-pop' style={styles.buttonNext} onClick={this.handle_next}>Next</button>
                 </div>            
             </div>
         )
@@ -209,11 +209,11 @@ export class AuditCarousel extends Component {
 const styles = {    
     view_port: {
         position: 'relative',             
-        top: '305px',
+        top: '185px',
         left: '50%',
         transform: 'translate(-50%, -50%)',
-        width: '1089px',
-        height: '593px',
+        width: '800px',
+        height: '490px',
         overflow: 'hidden',  
         borderRadius: '1%'                
         
@@ -228,7 +228,7 @@ const styles = {
         justifyContent: 'space-around',
         position: 'relative',        
         right: '7px',
-        top: '8px'        
+        bottom: '55px'        
     },
     buttonPrevious: {
         position: 'relative',
@@ -244,7 +244,8 @@ const styles = {
     repoDisplay: {
         position: 'relative',
         width: '500px',
-        left: '300px'
+        left: '180px',
+        bottom: '70px'
     },
 
     repoLink: {

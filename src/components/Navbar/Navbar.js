@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
+import './css/style.css'
 
 
 
@@ -19,7 +20,7 @@ render() {
     
     <ul className="nav justify-content-center">
       <li className="nav-item">
-      <NavLink className="nav-link" to='/about' exact>About</NavLink>
+      <NavLink className="nav-link border-pop" to='/about' exact>About</NavLink>
       </li>
 
       {/* portfolio button */}

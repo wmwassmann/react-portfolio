@@ -156,7 +156,7 @@ export default class Developer extends Component {
                 linkedInBtn,
                 githubBtn
             )
-        }, 800)
+        }, 900)
     }
 
     render() {

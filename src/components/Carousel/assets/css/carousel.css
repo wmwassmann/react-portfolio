@@ -5,17 +5,60 @@
     
 }
 
-.portfolio-window {
 
+
+.carousel-button.border-pop::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;  
+    z-index: -1;
+    border: var(--border-size) solid var(--background-color);
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.carousel-button.border-pop:hover::before {
+    content: '';
+    position: absolute;
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);  
+    z-index: -1;
+    border: var(--border-size) solid var(--background-color);
+    border-radius: 5px;
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 5px );
+}
+
+.carousel-button.border-pop:focus::before {
+    content: '';
+    position: absolute;
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);  
+    z-index: -1;
+    border: var(--border-size) solid var(--background-color);
+
+}
+
+
+.portfolio-window {
     position: relative;
-    top: 20px;
+    top: 135px;
     padding: 80px 30px 30px;
     border-color: rgb(139, 139, 139);
     border-style: double;
     border-radius: 10px;
     background-color:  rgb(90, 90, 90);
-    height: 800px;
-    width: 1200px;
+    height: 650px;
+    width: 950px;
     
 }
 

@@ -170,7 +170,7 @@ export default class Developer extends Component {
 
                     <button className='button dev-button border-pop' id={`${developerTag}-button`} onClick={this.handle_selected}>
                         <img src={developerSource} className="dev-image" id={`${developerTag}-img`} alt='personalimage'></img>
-                        <div id={`${developerTag}-name`}>
+                        <div className='developer-name' id={`${developerTag}-name`}>
                             {developerName}
                         </div>
                     </button>

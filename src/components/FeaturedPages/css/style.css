@@ -472,23 +472,10 @@ p2 {
     animation: karl-slide-mask 700ms ease-in forwards;
 }
 
-.david-hide-text {
+.david-hide-text, .alex-hide-text, .ricky-hide-text, .karl-hide-text {
     visibility: hidden;
 }
 
-.alex-hide-text {
-    visibility: hidden;
-}
-
-
-.ricky-hide-text {
-    visibility: hidden;
-}
-
-
-.karl-hide-text {
-    visibility: hidden;
-}
 
 
 
@@ -497,51 +484,31 @@ p2 {
 }
 
 
-.david-reveal-text {    
+.david-reveal-text, .alex-reveal-text, .ricky-reveal-text, .karl-reveal-text {    
     visibility: visible;
     opacity: 1;
     transition: opacity 0.5s, opacity 0.5s linear;  
-    animation: david-reveal-text-scroll 700ms ease-in forwards;
     
+    
+}
+
+.david-reveal-text {
+    animation: david-reveal-text-scroll 700ms ease-in forwards;
 }
 
 .alex-reveal-text {    
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.5s, opacity 0.5s linear;  
-    animation: alex-reveal-text-scroll 700ms ease-in forwards;
-    
+    animation: alex-reveal-text-scroll 700ms ease-in forwards;    
 }
 
 .ricky-reveal-text {    
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.5s, opacity 0.5s linear;  
-    animation: ricky-reveal-text-scroll 700ms ease-in forwards;
-    
+    animation: ricky-reveal-text-scroll 700ms ease-in forwards;    
 }
 
-.karl-reveal-text {    
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.5s, opacity 0.5s linear;  
-    animation: karl-reveal-text-scroll 700ms ease-in forwards;
-    
+.karl-reveal-text { 
+    animation: karl-reveal-text-scroll 700ms ease-in forwards;    
 }
 
-#david-name {
-    font-size: 19px;
-}
-
-#alex-name {    
-    font-size: 19px;
-}
-
-#ricky-name {    
-    font-size: 19px;
-}
-
-#karl-name { 
+.developer-name {
     font-size: 19px;
 }
 
@@ -722,55 +689,17 @@ p2 {
     animation-delay: 0.7s;
 }
 
-.david .fade-out {
+.david .fade-out , .alex .fade-out , .ricky .fade-out , .karl .fade-out {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 0.5s, opacity 0.5s linear;
 }
 
-.david .fade-in {
+.david .fade-in, .alex .fade-in, .ricky .fade-in, .karl .fade-in {
     visibility: visible;
     opacity: 1;
     transition: opacity 0.5s, opacity 0.5s linear;
 }
-
-.alex .fade-out {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s 0.5s, opacity 0.5s linear;
-}
-
-.alex .fade-in {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.5s, opacity 0.5s linear;
-}
-
-.ricky .fade-out {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s 0.5s, opacity 0.5s linear;
-}
-
-.ricky .fade-in {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.5s, opacity 0.5s linear;
-}
-
-.karl .fade-out {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s 0.5s, opacity 0.5s linear;
-}
-
-.karl .fade-in {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.5s, opacity 0.5s linear;
-}
-
-
 
 
 

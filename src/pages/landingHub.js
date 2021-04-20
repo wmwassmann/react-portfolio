@@ -1,7 +1,7 @@
 import React from 'react'
 import { Typography } from '@material-ui/core';
-
 import Typed from "react-typed";
+import './css/style.css'
 
 export default function landingHub() {
 
@@ -10,9 +10,9 @@ export default function landingHub() {
     
     return (
         
-        <div>
-            <Typography variant="h4">
-              <Typed strings={["William Wassmann"]} typeSpeed={40} />
+        <div className='typed-intro'>
+            <Typography variant="h2">
+              <Typed strings={["Hello, and welcome to my playground!"]} typeSpeed={40} />
           </Typography>
         </div>
     )

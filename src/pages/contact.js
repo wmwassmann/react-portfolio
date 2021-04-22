@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import './css/style.css';
 import { motion } from 'framer-motion'
+import { FaRegEnvelope } from "react-icons/fa";
+import { FaPhone } from "react-icons/fa";
+import { FaWpforms} from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 
 class Contact extends Component {
@@ -22,36 +27,68 @@ class Contact extends Component {
                 <div className="row">
                     <div className="col-md-10" id="aboutme">
 
-                        {/* <!-- Links to contact information --> */}
                         <h1>Contact Me</h1>
 
+                        <div className='contact-container container'>
 
+                            <div className='contact-selection'>
+                                <button className='contact-icon'>
+                                    <FaRegEnvelope/>
+                                </button>
+                                <div className='contact-content'>
+                                    <a>Email</a>
+                                </div>
+                            </div>
 
-                        {/* <!-- E-mail --> */}
-                        E-mail: <a href="mailto:wmwassmann@hotmail.com">wmwassmann@hotmail.com</a>
+                            <br>
+                            </br>
 
-                        <br>
-                        </br>
+                            <div className='contact-selection'>
+                                <button className='contact-icon'>
+                                    <FaPhone/>
+                                </button>
+                                <div className='contact-content'>
+                                    <a>Phone</a>
+                                </div>
+                            </div>
 
-                        {/* <!-- Phone --> */}
-                        Phone: 253-792-1330
+                            <br>
+                            </br>
 
-                        <br>
-                        </br>
-                        {/* Research what to put as far as job projection - ask Kevin Faan */}
-                        {/* <!-- Resume --> */}
-                        {/* change Portfolio to hyperlink and rework the routing to be more user friendly for laypeople like mom */}
-                        <a href="https://docs.google.com/document/d/1rbhomGlocMqPsgOYH5hrnwpNH8izUMxPxR_1-2Urt5U/edit">Resume</a>
-                        <br>
-                        </br>
-                        {/* <!-- LinkedIn --> */}
-                        <a href="https://www.linkedin.com/in/william-wassmann-287a14a4/">LinkedIn</a>
-                        <br>
-                        </br>
+                            <div className='contact-selection'>
+                                <button className='contact-icon'>
+                                    <FaWpforms/>
+                                </button>
+                                <div className='contact-content'>
+                                    <a>Resume</a>
+                                </div>
+                            </div>
 
-                        {/* <!-- Github --> */}
-                        <a href="https://github.com/wmwassmann">Github</a>
+                            <br>
+                            </br>
 
+                            <div className='contact-selection'>
+                                
+                                <button className='contact-icon'>
+                                    <FaLinkedin/>
+                                </button>
+                                <div className='contact-content'>
+                                    <a>LinkedIn</a>
+                                </div>
+                            </div>
+
+                            <br>
+                            </br>
+
+                            <div className='contact-selection'>
+                                <button className='contact-icon'>
+                                    <FaGithub/>
+                                </button>
+                                <div className='contact-content'>
+                                    <a>Github</a>
+                                </div>
+                            </div>
+                        </div>
 
 
 

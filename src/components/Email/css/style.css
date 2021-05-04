@@ -1,0 +1,17 @@
+.email-css {
+    font-family: 'fantasy';
+    /* padding: 10px; */
+    font-size: 40px;   
+   
+}
+
+
+
+.landing-container {
+    width: 100px;
+}
+
+.welcome-modal {
+    position: relative;
+    z-index: 1;
+}

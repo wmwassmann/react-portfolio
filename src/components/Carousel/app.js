@@ -23,6 +23,7 @@ class Selector extends React.Component {
   render() {
     return (
       <div className='carouselCSS'>
+        
         <Modal
             open={this.state.modalIsOpen}
             // closeModal={this.showPopup}

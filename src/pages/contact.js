@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './css/style.css';
 import { motion } from 'framer-motion'
-import { FaRegEnvelope } from "react-icons/fa";
+// import { FaRegEnvelope } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa";
 import { FaWpforms} from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import EmailModal from '../components/Email/App'
 
 
 class Contact extends Component {
@@ -28,13 +29,10 @@ class Contact extends Component {
                     <div className="col-md-10" id="aboutme">
 
                         <h1>Contact Me</h1>
-
                         <div className='contact-container container'>
 
                             <div className='contact-selection'>
-                                <button className='contact-icon'>
-                                    <FaRegEnvelope/>
-                                </button>
+                                <EmailModal/>                             
                                 <div className='contact-content'>
                                     <a>Email</a>
                                 </div>

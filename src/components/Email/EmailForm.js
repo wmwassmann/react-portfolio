@@ -1,4 +1,5 @@
 import React from 'react'
+import './css/style.css'
 
 export default function email() {
 
@@ -7,7 +8,7 @@ export default function email() {
     }
 
     return (
-        <div>
+        <div className='email-container'>
                  <form onSubmit={sendEmail}>
                     <div className='row pt-5 mx-auto'>
                         <div className='col-8 form-group mx-auto'>

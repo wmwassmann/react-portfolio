@@ -1,20 +1,14 @@
-import React from 'react'
-import Modal from 'react-modal'
-import Email from './Email'
-import './css/style.css'
-
-export default function app() {
+import React from 'react';
+import EmailModal from './EmailModal';
+import './css/style.css';
 
 
-
-
-
+function Email() {
     return (
-        <div className='email-container'>
-            <Modal>
-                <Email/>           
-            </Modal>
-            
+        <div>
+            <EmailModal />
         </div>
     )
 }
+
+export default Email;

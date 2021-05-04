@@ -19,6 +19,7 @@ import { AnimatePresence } from 'framer-motion'
 
 
 
+
 function App() {
   return (
     <Router>
@@ -39,6 +40,7 @@ function App() {
         <Route exact path='/3' component={TheTools} />
         <Route exact path='/4' component={WhatsNext} />
         <Route exact path='/profiles' component={DevProfiles} />
+    
  
       </div>
       <Footer />

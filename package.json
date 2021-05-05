@@ -12,6 +12,7 @@
     "@testing-library/react": "^11.2.0",
     "@testing-library/user-event": "^12.2.2",
     "create-react-app": "^4.0.0",
+    "emailjs": "^3.4.0",
     "emailjs-com": "^2.6.4",
     "framer-motion": "^4.0.3",
     "local-storage": "^2.0.0",

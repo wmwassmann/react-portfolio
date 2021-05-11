@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
-import { FaRegEnvelope } from "react-icons/fa";
-import Modal from '../Modal/EModal'
+import { FaPhone } from "react-icons/fa";
+import Modal from '../Modal/PModal'
 import './css/style.css'
 
 
-export default function EmailModal() {
+export default function PhoneModal() {
 
     const [isOpen, setIsOpen] = useState(false)
 
@@ -17,9 +17,9 @@ export default function EmailModal() {
 
 
                 <button className='contact-icon' onClick={() => setIsOpen(true)}>
-                    <FaRegEnvelope />
+                    <FaPhone/>
                 </button>
-
+                
                 <Modal
                     open={isOpen}
                     onClose={() => setIsOpen(false)}>

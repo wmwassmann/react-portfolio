@@ -17,6 +17,22 @@ class Contact extends Component {
         }
     }
 
+    handle_resume = (e) => {
+        e.preventDefault() 
+        window.location.href = "https://docs.google.com/document/d/1rbhomGlocMqPsgOYH5hrnwpNH8izUMxPxR_1-2Urt5U/edit"
+    }
+
+    handle_linkedIn = (e) => {
+        e.preventDefault() 
+        window.location.href = "https://www.linkedin.com/in/wmwassmann/"
+    }
+
+    
+    handle_gitHub = (e) => {
+        e.preventDefault() 
+        window.location.href = "https://github.com/wmwassmann"
+    }
+
     render() {
 
         return (
@@ -54,7 +70,7 @@ class Contact extends Component {
                             </br>
 
                             <div className='contact-selection'>
-                                <button className='contact-icon'>
+                                <button className='contact-icon' onClick={this.handle_resume}>
                                     <FaWpforms/>
                                 </button>
                                 <div className='contact-content'>
@@ -67,7 +83,7 @@ class Contact extends Component {
 
                             <div className='contact-selection'>
                                 
-                                <button className='contact-icon'>
+                                <button className='contact-icon' onClick={this.handle_linkedIn}>
                                     <FaLinkedin/>
                                 </button>
                                 <div className='contact-content'>
@@ -79,7 +95,7 @@ class Contact extends Component {
                             </br>
 
                             <div className='contact-selection'>
-                                <button className='contact-icon'>
+                                <button className='contact-icon' onClick={this.handle_gitHub}>
                                     <FaGithub/>
                                 </button>
                                 <div className='contact-content'>

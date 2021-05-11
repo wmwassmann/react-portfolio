@@ -5,7 +5,15 @@
    
 }
 
+.send-email {
+    display: flex;
+    justify-content: center;
+}
 
+.email-text {
+    color: rgb(59, 59, 59);
+    font-weight: 500;
+}
 
 .landing-container {
     width: 100px;

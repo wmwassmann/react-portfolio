@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 import { FaWpforms} from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import Email from '../components/Email/App.js';
+// import Email from '../components/Email/App.js';
 import Phone from '../components/Phone/App.js';
 
 
@@ -48,7 +48,7 @@ class Contact extends Component {
                         <div className='contact-container container'>
 
                             <div className='contact-selection'>
-                                <Email/>                             
+                                {/* <Email/>                              */}
                                 <div className='contact-content'>
                                     <p>Email</p>
                                 </div>

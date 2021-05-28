@@ -5,8 +5,8 @@ import { motion } from 'framer-motion'
 import { FaWpforms} from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-// import Email from '../components/Email/App.js';
-// import Phone from '../components/Phone/App.js';
+import Email from '../components/Email/App.js';
+import Phone from '../components/Phone/App.js';
 
 
 class Contact extends Component {
@@ -48,9 +48,9 @@ class Contact extends Component {
                         <div className='contact-container container'>
 
                             <div className='contact-selection'>
-                                {/* <Email/>                              */}
+                                <Email/>                             
                                 <div className='contact-content'>
-                                    <a>Email</a>
+                                    <p>Email</p>
                                 </div>
                             </div>
 
@@ -58,9 +58,9 @@ class Contact extends Component {
                             </br>
 
                             <div className='contact-selection'>
-                                {/* <Phone/>   */}
+                                <Phone/>  
                                 <div className='contact-content'>
-                                    <a>Phone</a>
+                                    <p>Phone</p>
                                 </div>
                             </div>
 
@@ -72,7 +72,7 @@ class Contact extends Component {
                                     <FaWpforms/>
                                 </button>
                                 <div className='contact-content'>
-                                    <a>Resume</a>
+                                    <p>Resume</p>
                                 </div>
                             </div>
 
@@ -85,7 +85,7 @@ class Contact extends Component {
                                     <FaLinkedin/>
                                 </button>
                                 <div className='contact-content'>
-                                    <a>LinkedIn</a>
+                                    <p>LinkedIn</p>
                                 </div>
                             </div>
 
@@ -97,7 +97,7 @@ class Contact extends Component {
                                     <FaGithub/>
                                 </button>
                                 <div className='contact-content'>
-                                    <a>Github</a>
+                                    <p>Github</p>
                                 </div>
                             </div>
                         </div>

@@ -4,7 +4,7 @@ import './css/modal-style.css'
 import EmailForm from '../Email/EmailForm'
 
 
-export default function WelcomeModal({ open, children }) {
+export default function WelcomeModal({ open }) {
     if (!open) return null
 
 

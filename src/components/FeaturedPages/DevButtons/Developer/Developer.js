@@ -23,7 +23,7 @@ export default class Developer extends Component {
     handle_selected = (e) => {
 
         e.preventDefault()
-        const developerName = (this.props.name)
+        // const developerName = (this.props.name)
         const developerInLocal = localStorage.getItem('devSelected')
         const anySelected = localStorage.getItem('anySelected')
 

@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import './css/style.css';
 import { motion } from 'framer-motion'
-// import { FaRegEnvelope } from "react-icons/fa";
 
 import { FaWpforms} from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import EmailModal from '../components/Email/App'
-import PhoneModal from '../components/Phone/App'
+import Email from '../components/Email/App'
+import Phone from '../components/Phone/App'
 
 
 class Contact extends Component {
@@ -49,7 +48,7 @@ class Contact extends Component {
                         <div className='contact-container container'>
 
                             <div className='contact-selection'>
-                                <EmailModal/>                             
+                                <Email/>                             
                                 <div className='contact-content'>
                                     <a>Email</a>
                                 </div>
@@ -59,7 +58,7 @@ class Contact extends Component {
                             </br>
 
                             <div className='contact-selection'>
-                                <PhoneModal/>  
+                                <Phone/>  
                                 <div className='contact-content'>
                                     <a>Phone</a>
                                 </div>

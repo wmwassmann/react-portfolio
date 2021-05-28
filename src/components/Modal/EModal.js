@@ -20,7 +20,7 @@ export default function WelcomeModal({ open }) {
                      
         
             <EmailForm />
-            Hello
+            
             </div>
         </>,
         document.getElementById('portal')

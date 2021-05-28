@@ -5,8 +5,8 @@ import { motion } from 'framer-motion'
 import { FaWpforms} from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import Email from '../components/Phone/App.js';
-import Phone from '../components/Phone/App.js';
+import Email from '../components/Email/EmailApp.js';
+import Phone from '../components/Phone/PhoneApp.js';
 
 
 class Contact extends Component {

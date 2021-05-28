@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import myphotosmall from './img/IMG_8410.jpg'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 
 
 class AboutMe extends Component {
@@ -10,6 +11,11 @@ class AboutMe extends Component {
 
     }
   }
+  handle_resume = (e) => {
+    e.preventDefault() 
+    window.location.href = "https://docs.google.com/document/d/1rbhomGlocMqPsgOYH5hrnwpNH8izUMxPxR_1-2Urt5U/edit"
+}
+
 
   render() {
 
@@ -20,8 +26,9 @@ class AboutMe extends Component {
           <div id="aboutme">
             <h1><strong>WILLIAM WASSMANN</strong></h1>
             <img src={myphotosmall} className="img-fluid float-left wmw-photo" alt='personalimage'></img>
-            <h3 className='about-me'><strong>About Me</strong></h3>            
+            <h4 className='about-me'><strong>About Me</strong></h4>            
           <article className='about-me-text'>
+            <h6>
             <p>I am a full-stack developer who recently graduated from the University of Washington's Web Development Bootcamp.</p>
             <p>
               Through this course I discovered that the coding world is a constantly evolving beast, and there will always be more to learn.  I am eager to improve my web-development skills.
@@ -31,15 +38,13 @@ class AboutMe extends Component {
               expectations.
               </p>
             <p>
-              Welcome to my portfolio, which I view as my playground and a space to showcase my skills.
-              </p>
+              Welcome to my portfolio, which I use to practice and improve my Reactjs and Native skills.  
+              </p>    
+            <p>
+              For a list of my skills, please visit my <Link onClick={this.handle_resume}>Resume</Link> as I am in the process of adding a dedicated skills section. 
+            </p>
+              </h6>
           </article>
-          </div>
-        </div>
-
-        {/* <!-- This empty row/column extends the white box size at the bottom --> */}
-        <div className="row">
-          <div className="col-md-8" style={{ margin: '0', paddingTop: '50px' }}>
           </div>
         </div>
 

@@ -11,8 +11,8 @@ export default function landingHub() {
     return (
         
         <div className='typed-intro'>
-            <Typography variant="h2">
-              <Typed strings={["Hello, and welcome to my playground!"]} typeSpeed={40} />
+            <Typography variant="h3">
+              <Typed strings={["Hello, and welcome to my playground!"]} typeSpeed={8} />
           </Typography>
         </div>
     )

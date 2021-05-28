@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import './css/modal-style.css'
+import { Typography } from '@material-ui/core';
+import Typed from "react-typed";
 import EmailForm from '../Email/EmailForm'
 
 
@@ -19,7 +21,11 @@ export default function WelcomeModal({ open, children }) {
             <div className='modal-container-phone'>
                      
         
-            <div className='phone'>253-792-1330</div>
+            <div className='phone'>
+            <Typography variant="h2">
+              <Typed strings={["253-792-1330<"]} typeSpeed={30} />
+          </Typography>
+          </div>
             </div>
         </>,
         document.getElementById('portal')

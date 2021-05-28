@@ -245,6 +245,13 @@ img {
     position: relative;
     top: 300px;
     color: white;
+    font-family: futura;
+    font-style: italic;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;        
 }
 
 .contact-container, .contact-selection {
@@ -282,3 +289,4 @@ img {
     max-width: 100px;
     font-family: cursive;
 }
+

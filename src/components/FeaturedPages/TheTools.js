@@ -78,7 +78,9 @@ class AboutMe extends Component {
                         </div>
                         <div className='tools-aside'>
                         <aside className='tools-text'>
+                            <h6>
                             Please visit our GitHub for a full README.md detailing how these tools were put to use.
+                            </h6>
                         </aside>
                         <button className='repository-button' onClick={this.handle_link}>
                             <img src={myphotosmall} className="img-fluid float-left github-repo" alt='personalimage'></img>

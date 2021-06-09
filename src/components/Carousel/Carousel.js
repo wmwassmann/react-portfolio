@@ -9,6 +9,7 @@ import workdayscheduler from './assets/img/planner.png'
 import dndbuddy from './assets/img/dndbuddy.png'
 import mobile from './assets/img/mobile-models.png'
 import teamy from './assets/img/teamy.png'
+import adventerersAcademy from './assets/img/advac.png'
 import notetaker from './assets/img/note-taker.png';
 
 
@@ -115,6 +116,9 @@ export class AuditCarousel extends Component {
     } else if (this.state.current_card === 8) {
         window.location.href='https://github.com/wmwassmann/homework-notes-09'
         e.preventDefault() 
+    } else if (this.state.current_card === 9) {
+        window.location.href='https://github.com/wmwassmann/RPG-Adventurers-Academy'
+        e.preventDefault() 
     } 
     }
 
@@ -145,6 +149,9 @@ export class AuditCarousel extends Component {
     } else if (this.state.current_card === 8) {
         window.location.href='https://homework-notetaker-09.herokuapp.com/'
         e.preventDefault() 
+    } else if (this.state.current_card === 9) {
+        window.location.href='https://adventurers-academy.herokuapp.com/'
+        e.preventDefault() 
     } 
     }
 
@@ -173,6 +180,9 @@ export class AuditCarousel extends Component {
             repoLink = 'Team Builder';
                    
         } else if (this.state.current_card === 8) {
+            repoLink = 'Adenturer\'s Academy'; 
+
+        } else if (this.state.current_card === 9) {
             repoLink = 'Note Taker'; 
           
             // to account for the zero index which is card 8 snaps too upon arrival for a split second to reset the loop
@@ -191,6 +201,7 @@ export class AuditCarousel extends Component {
                             < Card card_number={dndbuddy}/>
                             < Card card_number={mobile}/>   
                             < Card card_number={teamy}/>
+                            < Card card_number={adventerersAcademy}/>                                                   
                             < Card card_number={notetaker}/>                                                   
                         </div>
                     </div>    

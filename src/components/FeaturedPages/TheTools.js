@@ -38,38 +38,38 @@ class AboutMe extends Component {
                                 <div className='technology-list'>
                                     <ul>
 
-                                        <a href='https://www.javascript.com/'> Javascript</a>
+                                        <a className='link-style' href='https://www.javascript.com/'> Javascript</a>
                                         <br></br>
 
-                                        <a href='https://jquery.com/'> jQuery</a>
+                                        <a className='link-style' href='https://jquery.com/'> jQuery</a>
                                         <br></br>
 
-                                        <a href='https://reactjs.org/'> React</a>
+                                        <a className='link-style' href='https://reactjs.org/'> React</a>
                                         <br></br>
 
-                                        <a href='https://www.mongodb.com/cloud/atlas'> MongoDB</a>
+                                        <a className='link-style' href='https://www.mongodb.com/cloud/atlas'> MongoDB</a>
                                         <br></br>
 
-                                        <a href='https://www.mysql.com/'> MySQL</a>
+                                        <a className='link-style' href='https://www.mysql.com/'> MySQL</a>
                                         <br></br>
 
                                     </ul>
 
                                     <ul>
 
-                                        <a href='http://www.dnd5eapi.co/'> D&D 5e API</a>
+                                        <a className='link-style' href='http://www.dnd5eapi.co/'> D&D 5e API</a>
                                         <br></br>
 
-                                        <a href='https://get.foundation/sites/docs/'> Foundation 6</a>
+                                        <a className='link-style' href='https://get.foundation/sites/docs/'> Foundation 6</a>
                                         <br></br>
 
-                                        <a href='https://www.w3.org/Style/CSS/Overview.en.html'>CSS</a>
+                                        <a className='link-style' href='https://www.w3.org/Style/CSS/Overview.en.html'>CSS</a>
                                         <br></br>
 
-                                        <a href='https://fontawesome.com/'>Font Awesome</a>
+                                        <a className='link-style' href='https://fontawesome.com/'>Font Awesome</a>
                                         <br></br>
 
-                                        <a href='https://nodejs.org/en/'> Node.js</a>
+                                        <a className='link-style' href='https://nodejs.org/en/'> Node.js</a>
 
                                     </ul>
                                 </div>

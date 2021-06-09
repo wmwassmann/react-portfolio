@@ -41,7 +41,7 @@ class AboutMe extends Component {
               Welcome to my portfolio, which I use to practice and improve my Reactjs and Native skills.  
               </p>    
             <p>
-              For a list of my skills, please visit my <Link onClick={this.handle_resume}>Resume</Link> as I am in the process of adding a dedicated skills section. 
+              For a list of my skills, please visit my <Link className='link-style' onClick={this.handle_resume}>Resume</Link> as I am in the process of adding a dedicated skills section. 
             </p>
               </h6>
           </article>

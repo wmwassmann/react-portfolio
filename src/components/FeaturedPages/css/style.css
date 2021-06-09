@@ -117,6 +117,11 @@ h5 {
     cursor: pointer;   
 }
 
+.deployed-featured:hover {
+    background-color: rgb(95, 95, 95); 
+    border: 1px solid rgb(255, 255, 255); 
+}
+
 
 .mission-text {
     position: relative;
@@ -157,6 +162,13 @@ h4 {
     bottom: 5px;
 }
 
+.link-style {
+    color: rgb(68, 81, 255);
+}
+
+.link-style:hover {
+    color: rgb(2, 0, 102);
+}
 
 p4 {
     display: flex;
@@ -206,6 +218,11 @@ p4 {
     height: 210px;  
     cursor: pointer;
 }
+
+.repository-button:hover {
+    border: 1px solid rgb(255, 255, 255); 
+}
+
 
 .welcome-photo {
     position: relative;

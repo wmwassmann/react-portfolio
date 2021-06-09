@@ -30,9 +30,9 @@ class AboutMe extends Component {
                            </br>
                            <br>
                            </br>
-                           Our vision for v4.0 consists of optimizing our <a href='https://rpgacademy.herokuapp.com/create'>Character Creation Mode</a>, 
-                           reworking the CSS our <a href='https://rpgacademy.herokuapp.com/savedcharacters'>Saved Characters</a> section, and starting on our 
-                           <a href='https://rpgacademy.herokuapp.com/dungeonmaster'> Dungeon Master Mode</a>.
+                           Our vision for v4.0 consists of optimizing our <a className='link-style' href='https://rpgacademy.herokuapp.com/create'>Character Creation Mode</a>, 
+                           reworking the CSS our <a className='link-style' href='https://rpgacademy.herokuapp.com/savedcharacters'>Saved Characters</a> section, and starting on our 
+                           <a className='link-style' href='https://rpgacademy.herokuapp.com/dungeonmaster'> Dungeon Master Mode</a>.
                            <br>
                            </br>
                            <br>

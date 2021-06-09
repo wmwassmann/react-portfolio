@@ -4,7 +4,7 @@ import './css/modal-style.css'
 import EmailForm from '../Email/EmailForm'
 
 
-export default function WelcomeModal({ open }) {
+export default function WelcomeModal({ open, onClose }) {
     if (!open) return null
 
 
@@ -17,7 +17,7 @@ export default function WelcomeModal({ open }) {
         <>
             <div className='modal-overlay' />
             <div className='modal-container'>
-                     
+                <button className='close-button' onClick={onClose}>X</button>                    
         
             <EmailForm />
             

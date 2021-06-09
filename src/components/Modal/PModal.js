@@ -6,7 +6,7 @@ import Typed from "react-typed";
 
 
 
-export default function WelcomeModal({ open, children }) {
+export default function WelcomeModal({ open, children, onClose }) {
     if (!open) return null
 
 
@@ -20,7 +20,7 @@ export default function WelcomeModal({ open, children }) {
             <div className='modal-overlay' />
             <div className='modal-container-phone'>
                      
-        
+            <button className='close-button' onClick={onClose}>X</button>
             <div className='phone'>
             <Typography variant="h2">
               <Typed strings={["253-792-1330<"]} typeSpeed={30} />

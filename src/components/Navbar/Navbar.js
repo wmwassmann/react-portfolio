@@ -13,7 +13,7 @@ export class Navbar extends Component {
 render() {
     return(
     
-<nav className="navbar navbar-dark bg">
+<nav className="navbar navbar-dark navstyle">
   <a className="navbar-brand" href="about">William Wassmann</a>
     
     {/* <!-- Navbar links --> */}

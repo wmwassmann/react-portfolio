@@ -192,8 +192,8 @@ export class AuditCarousel extends Component {
         return (
             <div className='portfolio-window'>
                 <div className='repoDisplay' style={styles.repoDisplay}>{repoLink}</div> 
-                    <div className='view-port' style={styles.view_port}>
-                        <div ref={ref_id => this.card_container = ref_id} className='card-container portrait' style={styles.card_container}>
+                    <div className='view-port'>
+                        <div ref={ref_id => this.card_container = ref_id} className='card-container portrait'>
                             < Card card_number={javascriptquiz} />                                                    
                             < Card card_number={passwordgenerator} />
                             < Card card_number={weatherdashboard}/>
@@ -218,22 +218,7 @@ export class AuditCarousel extends Component {
 }
 
 const styles = {    
-    view_port: {
-        position: 'relative',             
-        top: '185px',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        width: '800px',
-        height: '490px',
-        overflow: 'hidden',  
-        borderRadius: '1%'                
-        
-    },
-    card_container: {
-        display: 'flex',
-        flexDirection: 'row',
-        width: 'fit-content'
-    },
+
     navBar: {
         display: 'flex',
         justifyContent: 'space-around',

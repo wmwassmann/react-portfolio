@@ -25,10 +25,13 @@ render() {
 
       {/* portfolio button */}
       <li className="nav-item">
-        <NavLink className="nav-link" to='/portfolio' exact>Portfolio</NavLink>
+        <NavLink className="nav-link" to='/0' onClick={this.setLocal} exact>RPG: Adventurer's Academy</NavLink>        
       </li>
       <li className="nav-item">
-        <NavLink className="nav-link" to='/0' onClick={this.setLocal} exact>RPG: Adventurer's Academy</NavLink>        
+        <NavLink className="nav-link" to='/inventory' onClick={this.setLocal} exact>Inventory Spreadsheet</NavLink>        
+      </li>
+      <li className="nav-item">
+        <NavLink className="nav-link" to='/portfolio' exact>Bootcamp Portfolio</NavLink>
       </li>
       <li className="nav-item">
         <NavLink className="nav-link" to='/contact' exact>Contact</NavLink>    

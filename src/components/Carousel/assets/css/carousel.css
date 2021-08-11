@@ -4,6 +4,29 @@
     font-size: 40px;    
 }
 
+.view-port {
+    position: relative;             
+    top: 185px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 490px;
+    overflow: hidden; 
+    border-radius: 1%;        
+}
+
+/* .view-port:hover {
+    
+} */
+
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+}
+
+
 
 
 .carousel-button.border-pop::before {

@@ -12,9 +12,9 @@ class AboutMe extends Component {
     }
   }
   handle_resume = (e) => {
-    e.preventDefault() 
+    e.preventDefault()
     window.location.href = "https://docs.google.com/document/d/1rbhomGlocMqPsgOYH5hrnwpNH8izUMxPxR_1-2Urt5U/edit"
-}
+  }
 
 
   render() {
@@ -25,26 +25,31 @@ class AboutMe extends Component {
         <div className="row">
           <div id="aboutme">
             <h1><strong>WILLIAM WASSMANN</strong></h1>
-            <img src={myphotosmall} className="img-fluid float-left wmw-photo" alt='personalimage'></img>
-            <h4 className='about-me'><strong>About Me</strong></h4>            
-          <article className='about-me-text'>
-            <h6>
-            <p>I am a full-stack developer who recently graduated from the University of Washington's Web Development Bootcamp.</p>
-            <p>
-              Through this course I discovered that the coding world is a constantly evolving beast, and there will always be more to learn.  I am eager to improve my web-development skills.
-            </p>
-            <p>
-              My passion in the coding world is to build applications to fit consumers' needs and
-              expectations.
-              </p>
-            <p>
-              Welcome to my portfolio, which I use to practice and improve my Reactjs and Native skills.  
-              </p>    
-            <p>
-              For a list of my skills, please visit my <Link className='link-style' onClick={this.handle_resume}>Resume</Link> as I am in the process of adding a dedicated skills section. 
-            </p>
+            
+              <img src={myphotosmall} className="img-fluid float-left wmw-photo" alt='personalimage'></img>
+          
+            <h4 className='about-me'><strong>About Me</strong></h4>
+
+            <article className='about-me-text'>
+              <h6>
+                <p>
+                  I am a full-stack developer who recently graduated from the University of Washington's Web Development Bootcamp.
+                </p>
+                <p>
+                  Through this course I discovered that the coding world is a constantly evolving beast, and there will always be more to learn.  I am eager to improve my web-development skills.
+                </p>
+                <p>
+                  My passion in the coding world is to build applications to fit consumers' needs and
+                  expectations.
+                </p>
+                <p>
+                  Welcome to my portfolio, which I use to practice and improve my Reactjs and Native skills.
+                </p>
+                <p>
+                  For a list of my skills, please visit my <Link className='link-style' onClick={this.handle_resume}>Resume</Link> as I am in the process of adding a dedicated skills section.
+                </p>
               </h6>
-          </article>
+            </article>
           </div>
         </div>
 

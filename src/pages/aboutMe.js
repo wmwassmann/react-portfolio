@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import myphotosmall from './img/IMG_8410.jpg'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import Skills from '../components/Skills/Skills';
 
 
 class AboutMe extends Component {
@@ -44,13 +45,14 @@ class AboutMe extends Component {
                 </p>
                 <p>
                   Welcome to my portfolio, which I use to practice and improve my Reactjs and Native skills.
-                </p>
-                <p>
-                  For a list of my skills, please visit my <Link className='link-style' onClick={this.handle_resume}>Resume</Link> as I am in the process of adding a dedicated skills section.
-                </p>
+                </p>               
               </h6>
             </article>
+            <div className='skills-container'>
+            <Skills /> 
           </div>
+          </div>
+
         </div>
 
       </motion.main>

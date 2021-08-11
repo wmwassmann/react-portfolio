@@ -152,6 +152,12 @@ a:hover {
     text-justify: inter-word;
 }
 
+.skills-container {
+    position: relative;
+    bottom: 40px;
+    left: 33px;
+}
+
 #featured-app {
     background-color: rgb(202, 202, 202);
     margin-top: 130px;

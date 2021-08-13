@@ -1,36 +1,78 @@
+import { set } from 'local-storage'
 import React, { useState, useEffect } from 'react'
 import './css/skills-style.css'
 
-const Skills = () => {
+const Skills = (e) => {
+    const [skill, setSkill] = useState('')
+    // const languages = ['Javascript ', 'HTML ', 'CSS3 ']
+    const databases = ['MongoDB ', 'MySQL ']
+    const frameworks = ['React ', 'Express ', 'jQuery ', 'NodeJS ', 'Bootstrap ', 'Mongoose ', 'React-Redux ']
+    const devTools = ['GitHub ', 'Postman ', 'Git Bash ', 'Heroku ', 'Firebase ', 'MongoDB Atlas ', 'Insomnia ']
 
-    const[skill, setSkill] = useState({ currentSkill: '' })
-
-    const handle_skills = (e) => {
-        setSkill(e.target.name)
+    const skillsTree = {
+        languages: ['Javascript ', 'HTML ', 'CSS3 ']
     }
 
-    useEffect(() => {
-        console.log(skill)
-    
-    }, [skill])
+
+
+    const handle_skills = (e) => {
+        let currentSkill = e.target.name
+        // console.log(skill)
+        const skillStatements = () => {
+            if (currentSkill === 'languages') {
+                let skill = skillsTree.languages
+
+                console.log(skill)
+                setSkill([...skill])
+
+            }
+            if (currentSkill === 'database') {
+                setSkill(databases)
+
+            }
+            if (currentSkill === 'framework') {
+                setSkill(frameworks)
+
+            }
+            if (currentSkill === 'tools') {
+                setSkill(devTools)
+            }
+        }
+
+        if (skill === '') {
+            skillStatements()
+        } else {
+            setSkill('')
+            skillStatements()
+        }
+    }
+
+
 
 
 
     return (
-        <div className='button-container'>
-            <button className='skills-button' id='languages' name='languages' onClick={handle_skills}>       
-                Languages         
-            </button>
-            <button className='skills-button' id='framework' name='framework' onClick={handle_skills}>                
-                Frameworks
-            </button>
-            <button className='skills-button' id='databases' name='databases' onClick={handle_skills}>      
-                Databases          
-            </button>
-            <button className='skills-button' id='dev-tools' name='dev-tools' onClick={handle_skills}>     
-                Development Tools           
-            </button>
-            
+        <div className='skills-comp-cont'>
+
+            <div className='button-container'>
+                <button className='skills-button' id='language' name='languages' onClick={handle_skills}>
+                    language
+                </button>
+                <button className='skills-button' id='database' name='database' onClick={handle_skills}>
+                    databases
+                </button>
+                <button className='skills-button' id='framework' name='framework' onClick={handle_skills}>
+                    frameworks
+                </button>
+                <button className='skills-button' id='tools' name='tools' onClick={handle_skills}>
+                    developer tools
+                </button>
+            </div>
+            <div className='display-container'>
+                {skill}
+            </div>
+
+
         </div>
     )
 }

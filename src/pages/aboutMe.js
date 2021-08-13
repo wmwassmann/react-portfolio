@@ -26,9 +26,9 @@ class AboutMe extends Component {
         <div className="row">
           <div id="aboutme">
             <h1><strong>WILLIAM WASSMANN</strong></h1>
-            
-              <img src={myphotosmall} className="img-fluid float-left wmw-photo" alt='personalimage'></img>
-          
+
+            <img src={myphotosmall} className="img-fluid float-left wmw-photo" alt='personalimage'></img>
+
             <h4 className='about-me'><strong>About Me</strong></h4>
 
             <article className='about-me-text'>
@@ -45,12 +45,12 @@ class AboutMe extends Component {
                 </p>
                 <p>
                   Welcome to my portfolio, which I use to practice and improve my Reactjs and Native skills.
-                </p>               
+                </p>
               </h6>
             </article>
             <div className='skills-container'>
-            <Skills /> 
-          </div>
+              <Skills />
+            </div>
           </div>
 
         </div>

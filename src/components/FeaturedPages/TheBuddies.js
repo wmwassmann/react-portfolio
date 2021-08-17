@@ -13,7 +13,7 @@ class AboutMe extends Component {
     render() {
 
         return (
-            <div className='featured-row'>
+            <div className='featured-row text-body'>
                 <div>
                     <CycleButtonLeft />
                 </div>

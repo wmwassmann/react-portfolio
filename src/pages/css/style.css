@@ -17,10 +17,9 @@ body {
     padding: 0;
     background-color: rgb(235, 235, 235);
     background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    box-shadow: 0 3px 16px 0 rgba(175, 175, 175, 0.37);
     backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border-radius: 10px;
+    -webkit-backdrop-filter: blur( 4px );   
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     z-index: 1;
 }
@@ -37,7 +36,7 @@ body {
 
 .navbar-dark {
     z-index: 4;
-    margin-top: 25px;
+    /* margin-top: 25px; */
     background-color: rgb(187, 187, 187);
 }
 
@@ -46,7 +45,7 @@ body {
 }
 .nav-link {
     color:white;
-    border-right: solid silver;
+    border-left: solid silver;
 }
 
 .row {
@@ -96,21 +95,23 @@ a:hover {
 }
 
 .wmw-photo {
-    margin: 10px 20px 50px;
-  
-    
+    margin: 10px 20px 50px;    
+}
+
+.text-body {
+    color:rgb(228, 228, 228);
 }
 
 #aboutme {
-    background-color: rgb(185, 185, 185);
+    background-color: transparent;
     position: relative;
     left: 100px;
     margin-top: 120px;    
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    box-shadow: 0 8px 32px 0 rgba(107, 107, 107, 0.37);
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 5px );
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba( 255, 255, 255);
     width: 960px;
     height: 550px;
     padding: 25px;
@@ -139,7 +140,7 @@ a:hover {
 
 #aboutme img.wmw-photo {
     height: 331px;
-    border: 0.3px solid rgb(66, 66, 66);
+    border: 2px solid rgb(255, 255, 255);
     border-radius: 5px;
     margin-bottom: 100px;
 }
@@ -218,34 +219,7 @@ a:hover {
 }
 
 
-.profile-group { 
-    display: flex;
-    flex-direction: column;  
-    width: 750px;  
-    height: 240px;  
-    background-color: rgb(100, 100, 100);      
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );    
-       
-}
 
-.profile-container {
-    
-    font-size: 30px;
-    padding: 10px;
-    background-color: rgb(100, 100, 100);      
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );    
-    width: 100px;
-    height: 100px;
-    margin: 30px;
-}
 
 #carousel-container {
     display: flex;
@@ -279,11 +253,11 @@ a:hover {
 }
 
 .contact-icon {    
-    background-color: rgb(156, 156, 156);
+    background-color: transparent;
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: none;
+    border: 1px solid white;
     outline: none;
 }
 

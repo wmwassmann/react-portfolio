@@ -23,7 +23,7 @@ class AboutMe extends Component {
     return (
       <motion.main className="container" id="aboutme-container" initial={{ x: -1500, opacity: 0 }} exit={{ x: 0, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
 
-        <div className="row">
+        <div className="row text-body">
           <div id="aboutme">
             <h1><strong>WILLIAM WASSMANN</strong></h1>
 

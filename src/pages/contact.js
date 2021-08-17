@@ -41,7 +41,7 @@ class Contact extends Component {
 
             <motion.main className="container" initial={{ x: -1500, opacity: 0 }} exit={{ x: 0, opacity: 0 }} animate={{ x: 0, opacity: 1 }}>
 
-                <div className="row">
+                <div className="row text-body">
                     <div className="col-md-10" id="aboutme">
 
                         <h1>Contact Me</h1>

@@ -1,21 +1,21 @@
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './css/skills-style.css'
 
 const Skills = (e) => {
     const [skill, setSkill] = useState('')
-  
+
 
     const skillsTree = {
         languages: {
-            skillOne: 'Javascript',
-            skillTwo: 'HTML',
-            skillThree: 'CSS3'
-          
+            skillThree: 'Javascript',
+            skillFour: 'HTML',
+            skillFive: 'CSS3'
+
         },
         databases: {
-            skillOne: 'MongoDB',
-            skillTwo: 'MySQL'
+            skillThree: 'MongoDB',
+            skillFive: 'MySQL'
         },
         frameworks: {
             skillOne: 'React',
@@ -35,30 +35,35 @@ const Skills = (e) => {
             skillSix: 'MongoDB Atlas',
             skillSeven: 'Insomnia'
         }
-}
+    }
 
 
 
     const handle_skills = (e) => {
         let currentSkill = e.target.name
+
+        const visibile = document.getElementById('display-container')
+
+        visibile.classList.add('reveal-skills')
+
         // console.log(skill)
         const skillStatements = (skill) => {
             if (currentSkill === 'languages') {
-            console.log(skillsTree[skill])
-            setSkill(skillsTree[skill])
-            
-      
-         
-            }
-            if (currentSkill === 'database') {
-               
+                console.log(skillsTree[skill])
+                setSkill(skillsTree[skill])
 
             }
-            if (currentSkill === 'framework') {
-             
+            if (currentSkill === 'databases') {
+                setSkill(skillsTree[skill])
+                console.log(skillsTree[skill])
+            }
+            if (currentSkill === 'frameworks') {
+                setSkill(skillsTree[skill])
+                console.log(skillsTree[skill])
             }
             if (currentSkill === 'tools') {
-                
+                setSkill(skillsTree[skill])
+                console.log(skillsTree[skill])
             }
         }
 
@@ -68,7 +73,7 @@ const Skills = (e) => {
             setSkill('')
             skillStatements(currentSkill)
         }
-        
+
     }
 
 
@@ -79,20 +84,40 @@ const Skills = (e) => {
 
             <div className='button-container'>
                 <button className='skills-button' id='language' name='languages' onClick={handle_skills}>
-                    language
+                    Languages
                 </button>
                 <button className='skills-button' id='database' name='databases' onClick={handle_skills}>
-                    databases
+                    Databases
                 </button>
                 <button className='skills-button' id='framework' name='frameworks' onClick={handle_skills}>
-                    frameworks
+                    Frameworks
                 </button>
                 <button className='skills-button' id='tools' name='tools' onClick={handle_skills}>
-                    developer tools
+                    Developer Tools
                 </button>
             </div>
-            <div className='display-container'>
-                
+            <div className='display-container' id='display-container'>
+                <div>
+                    {skill.skillOne}
+                </div>
+                <div>
+                    {skill.skillTwo}
+                </div>
+                <div>
+                    {skill.skillThree}
+                </div>
+                <div>
+                    {skill.skillFour}
+                </div>
+                <div>
+                    {skill.skillFive}
+                </div>
+                <div>
+                    {skill.skillSix}
+                </div>
+                <div>
+                    {skill.skillSeven}
+                </div>
             </div>
 
 

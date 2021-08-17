@@ -19,7 +19,7 @@ class AboutMe extends Component {
 
 
         return (
-            <div className='featured-row'>
+            <div className='featured-row text-body'>
 
                 <div>
                     <CycleButtonLeft />
@@ -30,7 +30,7 @@ class AboutMe extends Component {
                     <h1>An Introduction...</h1>
                 <div className='featured-content'> 
                     <img src={rpgaa} className="img-fluid float-left rpgaa-initial-photo" alt='personalimage'></img>
-                    <div className='text-body'>
+                    <div>
                         <h5>
                             The RPG: Adventurer's Academy was founded with a sole purpose in mind. 
                             Make learning to play role playing games fun, interactive, and user-friendly for beginners. 

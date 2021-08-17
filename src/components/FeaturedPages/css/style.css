@@ -19,12 +19,13 @@
 .featured-container {          
     z-index: 2;   
     margin-top: 140px;
-    background-color: rgb(185, 185, 185);       
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    /* background-color: rgb(185, 185, 185);        */
+    background-color: transparent;       
+    box-shadow: 0 8px 32px 0 rgba(75, 75, 75, 0.37);
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 5px );
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    border: 1px solid rgba( 255, 255, 255);
     width: 1000px;
     height: 530px;    
 }
@@ -70,8 +71,10 @@ h5 {
     font-size: 22.5px;
     text-align: justify;
     text-justify: inter-word;
-
+  
 }
+
+
 
 .developer-container {
     display: flex;
@@ -109,7 +112,7 @@ h5 {
     font-size: 30px;
     padding: 10px;
     background-color: rgb(100, 100, 100);      
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    box-shadow: 0 8px 32px 0 rgba(158, 158, 158, 0.37);
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 5px );
     border-radius: 10px;
@@ -343,19 +346,6 @@ h6 {
 
 
 
-.profile-group {    
-    display: flex;
-    flex-direction: row;   
-    width: 750px;  
-    height: 240px;  
-    background-color: rgb(100, 100, 100);      
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );    
-       
-}
 
 .profile-container {
     font-size: 30px;

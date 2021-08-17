@@ -9,7 +9,10 @@ import CycleButtonRight from './CycleButtons/CycleButtonRight';
 
 class AboutMe extends Component {
 
+    // JS has an api to push the browser.
+    // history
 
+    
     render() {
 
         return (

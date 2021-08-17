@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import './css/skills-style.css'
 
-const Skills = (e) => {
+const Skills = () => {
     const [skill, setSkill] = useState('')
 
 
@@ -45,25 +45,19 @@ const Skills = (e) => {
         const visibile = document.getElementById('display-container')
 
         visibile.classList.add('reveal-skills')
-
-        // console.log(skill)
+      
         const skillStatements = (skill) => {
-            if (currentSkill === 'languages') {
-                console.log(skillsTree[skill])
+            if (currentSkill === 'languages') {                
                 setSkill(skillsTree[skill])
-
             }
             if (currentSkill === 'databases') {
-                setSkill(skillsTree[skill])
-                console.log(skillsTree[skill])
+                setSkill(skillsTree[skill])                
             }
             if (currentSkill === 'frameworks') {
-                setSkill(skillsTree[skill])
-                console.log(skillsTree[skill])
+                setSkill(skillsTree[skill])               
             }
             if (currentSkill === 'tools') {
-                setSkill(skillsTree[skill])
-                console.log(skillsTree[skill])
+                setSkill(skillsTree[skill])                
             }
         }
 
@@ -82,7 +76,7 @@ const Skills = (e) => {
     return (
         <div className='skills-comp-cont'>
 
-            <div className='button-container'>
+            <div className='skills-button-container'>
                 <button className='skills-button' id='language' name='languages' onClick={handle_skills}>
                     Languages
                 </button>

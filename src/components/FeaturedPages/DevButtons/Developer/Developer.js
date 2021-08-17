@@ -48,26 +48,17 @@ export default class Developer extends Component {
             vanish.classList.add(`${developerInLocal}-hide-text`)
             developerReturn.classList.add('fade-out')
 
-            setTimeout(() => {
-
-                // const buttonLinks = document.querySelector('.button-links')
-                
-                // buttonLinks.classList.remove('button-linkedin')
-                // buttonLinks.classList.remove('button-github')
+            setTimeout(() => {               
 
                 const removeButtonLinks = document.getElementById('button-id')
                 removeButtonLinks.remove()
 
                 localStorage.setItem('devSelected', '')
 
-
-
-
                 developerReturn.classList.add(`${developerInLocal}-return`)
                 developerReturn.classList.remove(`${developerInLocal}-push-left`)
                 closeText.classList.remove('wrap')
-
-
+                
             }, 500)
 
             setTimeout(() => {

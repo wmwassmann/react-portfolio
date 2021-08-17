@@ -7,6 +7,7 @@ import AboutMe from './pages/aboutMe'
 import Portfolio from './pages/portfolio'
 import Contact from './pages/contact'
 import Inventory from './pages/inventory'
+import Rpgaa from './pages/rpgaa.js';
 // import Featured from './pages/featured'
 import landingHub from './pages/landingHub';
 import AnIntro from './components/FeaturedPages/AnIntro'
@@ -35,7 +36,8 @@ function App() {
         <Route exact path='/about' component={AboutMe} />
         <Route exact path='/portfolio' component={Portfolio} />
         <Route exact path='/contact' component={Contact} />     
-        <Route exact path='/inventory' component={Inventory} />     
+        <Route exact path='/inventory' component={Inventory} />    
+        <Route exact path='/rpgaa' component={Rpgaa} /> 
         <Route exact path='/0' component={AnIntro} />
         <Route exact path='/1' component={TheBuddies} />
         <Route exact path='/2' component={TheMission} />

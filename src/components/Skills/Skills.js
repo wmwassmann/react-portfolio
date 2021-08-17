@@ -77,16 +77,16 @@ const Skills = () => {
         <div className='skills-comp-cont'>
 
             <div className='skills-button-container'>
-                <button className='skills-button' id='language' name='languages' onClick={handle_skills}>
+                <button className='skills-button' id='language' name='languages' onMouseOver={handle_skills}>
                     Languages
                 </button>
-                <button className='skills-button' id='database' name='databases' onClick={handle_skills}>
+                <button className='skills-button' id='database' name='databases' onMouseOver={handle_skills}>
                     Databases
                 </button>
-                <button className='skills-button' id='framework' name='frameworks' onClick={handle_skills}>
+                <button className='skills-button' id='framework' name='frameworks' onMouseOver={handle_skills}>
                     Frameworks
                 </button>
-                <button className='skills-button' id='tools' name='tools' onClick={handle_skills}>
+                <button className='skills-button' id='tools' name='tools' onMouseOver={handle_skills}>
                     Developer Tools
                 </button>
             </div>

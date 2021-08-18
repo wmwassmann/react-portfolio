@@ -12,12 +12,16 @@
     height: 530px; 
 }
 
-.inventory-main {
+.inventory-side {
     float: right;
     position: relative;
-    bottom: 21px;
-    
+    bottom: 15px;
+    border: none;
+    background-color: transparent;
+}
 
+.inventory-side:focus {
+    outline: none;
 }
 
 .inventory-main-img {
@@ -26,13 +30,25 @@
     border: 1px white solid;
     border-radius: 10px;
     z-index: 1000;
+    
+}
+
+.inventory-secondary-img {
+    height: 55vh;
+    position: absolute;
+    top: -1.9px;
+    left: 700px;
+    border: 1px white solid;
+    border-radius: 10px;
+    visibility: hidden;
+
 }
 .inventory-main-img:hover {
     position: relative;
+    bottom: 7px;
     left: 80px;
     height: 55vh;
-    width: 60vw;  
-
+    width: 60vw;    
    
 }
 
@@ -44,6 +60,64 @@
     padding-bottom: 10px;
 }
 
-.inventory-text {
+.inventory-text {  
     position: absolute;
+    font-size: 1.11em;
 }
+
+.git-button {
+    width: 135px;
+    height: 135px;
+    cursor: pointer;
+    background-image: url('../../FeaturedPages/DevButtons/img/github.png');
+    background-size: 135px;
+    background-color: transparent;
+    border: transparent;
+    color: transparent;
+}
+
+
+
+.inventory-github {
+    background-color: transparent;
+    border: none;
+    position: relative;
+    left: 240px;
+    bottom: 65px;
+    width: 145px;
+    height: 135px;
+}
+
+.inventory-github:focus {
+    outline: none;
+}
+
+.hover-over {
+    position: relative;
+    bottom: 80px;
+    width: 300px;
+}
+
+
+.hover-over {
+    margin-left: 25px;
+}
+
+.reveal-mobile {
+    visibility: visible;
+    animation: slide-mobile 400ms ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes slide-mobile {
+    0% {
+        transform: translateX(0%)
+    }
+    100% {
+        transform: translateX(130%)
+    }
+}
+

@@ -40,7 +40,7 @@ class AboutMe extends Component {
                                 Click the mobile device to view our deployed page.   
                             </h4>
                             <button className='deployed-featured' onClick={this.handle_link}>
-                                <img src={myphotosmall} className="img-fluid float-left mobile-photo" alt='personalimage'></img>
+                                <img src={myphotosmall} className="img-fluid mobile-photo" alt='personalimage'></img>
                                 <FaDotCircle className='dot'/>
                             </button>
                         </div>

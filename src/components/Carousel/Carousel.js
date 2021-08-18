@@ -190,7 +190,7 @@ export class AuditCarousel extends Component {
             repoLink ='Note Taker';
         }
         return (
-            <div className='portfolio-window'>
+            <div className='portfolio-window text-body'>
                 <div className='repoDisplay' style={styles.repoDisplay}>{repoLink}</div> 
                     <div className='view-port'>
                         <div ref={ref_id => this.card_container = ref_id} className='card-container portrait'>
@@ -207,10 +207,10 @@ export class AuditCarousel extends Component {
                     </div>    
                      
                 <div className='modalbar' style={styles.navBar}>                
-                    <button className='button carousel-button border-pop' style={styles.buttonPrevious} onClick={this.handle_previous}>Prev</button>                         
-                    <button className='button carousel-button border-pop' style={styles.repoLink} onClick={this.handleRepoLink}>Repo Link</button>
-                    <button className='button carousel-button border-pop' style={styles.deployedLink} onClick={this.handleDeployLink}>Deployed Link</button>  
-                    <button className='button carousel-button border-pop' style={styles.buttonNext} onClick={this.handle_next}>Next</button>
+                    <button className='carousel-button' style={styles.buttonPrevious} onClick={this.handle_previous}>Prev</button>                         
+                    <button className='carousel-button' style={styles.repoLink} onClick={this.handleRepoLink}>Repo Link</button>
+                    <button className='carousel-button' style={styles.deployedLink} onClick={this.handleDeployLink}>Deployed Link</button>  
+                    <button className='carousel-button' style={styles.buttonNext} onClick={this.handle_next}>Next</button>
                 </div>            
             </div>
         )

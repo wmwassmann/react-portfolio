@@ -81,9 +81,10 @@ const inventory = () => {
                 </form>
 
             </Grid>
-            <button className='inventory-side' onClick={handle_deployed} onMouseOver={handle_hover} onMouseOut={handle_remove}>
-                <img src={myphotomain} className="inventory-main-img" alt='personalimage'></img>
-            </button>
+            <form className='inventory-side' action='https://inventorypersonalapp.herokuapp.com/' onClick={handle_deployed} onMouseOver={handle_hover} onMouseOut={handle_remove}>
+                <input type='submit' className='inventory-main-img' />
+                
+            </form>
             <img src={myphotosecondary} className="inventory-secondary-img" id='inventory-secondary-img' alt='personalimage'></img>
             {/* <img src={myphotosecondary} className="img-fluid float-left mobile-photo" alt='personalimage'></img> */}
         </motion.div>

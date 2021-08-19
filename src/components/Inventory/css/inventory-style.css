@@ -31,6 +31,9 @@
     border: 1px white solid;
     border-radius: 10px;
     z-index: 1000;
+    background-image: url('../img/inventoryMain.jpg');
+    background-size: 20vw;
+    color: transparent;
     
 }
 
@@ -51,7 +54,7 @@
     height: 55vh;
     width: 60vw;    
     cursor: pointer;
-
+    background-size: 60vw;
    
 }
 

@@ -8,9 +8,10 @@ const Skills = () => {
 
     const skillsTree = {
         languages: {
-            skillThree: 'Javascript',
-            skillFour: 'HTML',
-            skillFive: 'CSS3'
+            skillTwo: 'Javascript',
+            skillThree: 'HTML',
+            skillFive: 'CSS3',
+            skillSix: 'Python'
 
         },
         databases: {

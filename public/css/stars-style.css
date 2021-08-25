@@ -5,7 +5,7 @@ html {
     overflow: hidden;
     background: radial-gradient(ellipse at bottom, rgba(102, 102, 102, 0.88) 0%, #131313 100% )
 }
-
+/* 
 #stars {
 width: 1px;    
 height: 1px;
@@ -570,4 +570,4 @@ box-shadow: 779px 1331px #fff, 324px 42px #fff, 303px 586px #fff,
     to {
         transform: translateY(-2000px);
     }
-}
+} */

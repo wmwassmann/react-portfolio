@@ -28,7 +28,7 @@ export class CycleButtonRight extends Component {
         }
 
         else if (localStorage.getItem('featured-page') === '4') {
-            window.location.href = './0'
+            window.location.href = './rpgaa'
             localStorage.setItem('featured-page', '0')
         }
     }

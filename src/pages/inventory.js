@@ -3,7 +3,7 @@ import Inventory from '../components/Inventory/inventory'
 
 const inventory = () => {
     return (
-        <div>
+        <div className='inventory-main'>
             <Inventory />
         </div>
     )

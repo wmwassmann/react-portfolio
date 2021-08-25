@@ -1,22 +1,29 @@
 
 
-.nav-link {
+.nav-item, .about-link {
     color: white;
+    width: 12.5vw;
+    height: 5vh;
+    font-size: 1.6vh;
+    color:white;
+    border-left: solid silver;
+    display: flex;
+    justify-content: center;
+
+
 }
 
-.about-link {
-    color: white;
- 
-}
+
+
 
 .nav-about {
-    margin-left: 100px;
+    margin-left: 5vw;
     color: rgb(255, 255, 255);
-    padding: 10px 20px 10px 20px;
-    font-size: 1.1em;
-    font-weight: 600; 
     border-left: solid silver;
     border-right: solid silver;
+    width: 4.5vw;
+    height: 5vh;
+    font-size: 1.6vh;
 
 
 }
@@ -26,4 +33,20 @@
     /* background: linear-gradient(110deg, rgb(255, 255, 255) 0%, rgb(139, 139, 139) 65%, rgb(110, 110, 110) 100%); */
     opacity: .94;
     height:  6vh;
+    
 }
+
+@media only screen and (max-width: 1024px)  {
+
+    .nav-link { 
+        margin: 0vw 4vw 0vw 0vw;
+        padding:  0vw 0vw 0vw 2vw;   
+        width: 15vw; 
+    }
+}
+
+/* @media only screen and (max-width: 1024px)  {
+    .nav-about, .nav-items {  
+        padding: 0vw;    
+    }
+} */

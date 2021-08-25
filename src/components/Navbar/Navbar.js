@@ -16,7 +16,7 @@ export class Navbar extends Component {
       <nav className="navbar navbar-dark navstyle">
         <ul className='nav'>
           <li>
-            <NavLink className="nav-about border-pop" to='/about' exact>About</NavLink>
+            <NavLink className="nav-about nav-link nav-item border-pop" to='/about' exact>About</NavLink>
           </li>
         </ul>
         {/* <!-- Navbar links --> */}
@@ -25,17 +25,17 @@ export class Navbar extends Component {
          
 
           {/* portfolio button */}
-          <li className="nav-item">
-            <NavLink className="nav-link" to='/0' onClick={this.setLocal} exact>RPG: Adventurer's Academy</NavLink>
+          <li>
+            <NavLink className="nav-link nav-item" to='/rpgaa' onClick={this.setLocal} exact>RPG: Adventurer's Academy</NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to='/inventory' onClick={this.setLocal} exact>Inventory Spreadsheet</NavLink>
+          <li>
+            <NavLink className="nav-link nav-item" to='/inventory' onClick={this.setLocal} exact>Inventory Spreadsheet</NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to='/portfolio' exact>Bootcamp Portfolio</NavLink>
+          <li>
+            <NavLink className="nav-link nav-item" to='/portfolio' exact>Bootcamp Portfolio</NavLink>
           </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" to='/contact' exact>Contact</NavLink>
+          <li>
+            <NavLink className="nav-link nav-item" to='/contact' exact>Contact</NavLink>
           </li>
         </ul>
       </nav>

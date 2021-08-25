@@ -1022,4 +1022,18 @@ p2 {
         margin: auto;
     }
 }
+@media only screen and (max-width: 1024px)  {
+    .prev-button, .next-button {
+        position: relative;
+        top: 400px;
+    }
+
+    .prev-button {
+        left: 400px;
+    }
+    .next-button {
+        right: 400px;
+    }
+}
+
 

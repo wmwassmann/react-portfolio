@@ -40,10 +40,7 @@ body {
 .bg {
     background-color: rgb(175, 178, 185);
 }
-.nav-link {
-    color:white;
-    border-left: solid silver;
-}
+
 
 .row {
     display: flex;
@@ -263,3 +260,16 @@ a:hover {
     font-family: cursive;
 }
 
+@media only screen and (max-width: 1024px) {
+    #carousel-container, .inventory-main, .rpgaa-main {
+        position: relative;
+        bottom: 87px;
+    }
+
+    #aboutme-container {
+        position: relative;
+        bottom: 70px;
+        right: 100px;
+    }
+
+}

@@ -18,7 +18,7 @@ class AboutMe extends Component {
     render() {
 
         return (
-            <div className='featured-row text-body'>
+            <div className='featured-row text-body rpgaa-main'>
                 <div>
                     <CycleButtonLeft />
                 </div>

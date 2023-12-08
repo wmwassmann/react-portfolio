@@ -19,7 +19,7 @@ class Selector extends React.Component {
             modalIsOpen: status
         });
     }
- // comment
+ 
   render() {
     return (
       <div className='carouselCSS'>

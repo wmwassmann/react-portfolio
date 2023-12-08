@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { Grid } from '@material-ui/core';
+import { Grid } from '@mui/material';
 import myphotomain from './img/inventoryMain.jpg';
 import myphotosecondary from './img/kit.jpg';
 

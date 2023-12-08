@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import './pages/css/style.css';
 import Navbar from './components/Navbar/Navbar'
 import Footer from './components/Footer/Footer'
@@ -26,7 +26,7 @@ function App() {
   return (
     <Router>
       <AnimatePresence>
-    <Switch>
+    <Routes>
     <div>
       <Navbar className='nav-bar-main'/>
       <div className='featured-modules'>
@@ -49,7 +49,7 @@ function App() {
       </div>
       <Footer />
     </div>
-    </Switch>
+    </Routes>
     </AnimatePresence>
   </Router>
 

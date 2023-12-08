@@ -1,8 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 import './css/modal-style.css'
-import { Typography } from '@material-ui/core';
-import Typed from "react-typed";
 
 
 
@@ -22,9 +20,7 @@ export default function WelcomeModal({ open, children, onClose }) {
                      
             <button className='close-button' onClick={onClose}>X</button>
             <div className='phone'>
-            <Typography variant="h2">
-              <Typed strings={["253-792-1330<"]} typeSpeed={30} />
-          </Typography>
+                253-792-1330        
           </div>
             </div>
         </>,

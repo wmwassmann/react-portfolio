@@ -29,6 +29,9 @@ function App() {
     <Routes>
     <div>
       <Navbar className='nav-bar-main'/>
+      <div>
+        hi
+      </div>
       <div className='featured-modules'>
 
         {/* routes */}

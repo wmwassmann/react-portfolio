@@ -32,7 +32,7 @@ function App() {
       <div className='featured-modules'>
 
         {/* routes */}
-        <Route exact path='/' component={landingHub}/>        
+        <Route exact path='/react-portfolio' component={landingHub}/>        
         <Route exact path='/about' component={AboutMe} />
         <Route exact path='/portfolio' component={Portfolio} />
         <Route exact path='/contact' component={Contact} />     

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import myphotosmall from './img/IMG_8410.jpg'
 import { motion } from 'framer-motion'
-import { Link } from 'react-router-dom'
 import Skills from '../components/Skills/Skills';
 
 

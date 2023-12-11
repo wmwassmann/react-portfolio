@@ -26,14 +26,13 @@ function App() {
   return (
     <Router>
       <AnimatePresence>
-    <Routes>
     <div>
       <Navbar className='nav-bar-main'/>
       <div>
         hi
       </div>
       <div className='featured-modules'>
-
+    <Routes>
         {/* routes */}
         <Route exact path='/react-portfolio' component={landingHub}/>        
         <Route exact path='/about' component={AboutMe} />
@@ -47,12 +46,12 @@ function App() {
         <Route exact path='/3' component={TheTools} />
         <Route exact path='/4' component={WhatsNext} />
         <Route exact path='/profiles' component={DevProfiles} />
+    </Routes>
     
  
       </div>
       <Footer />
     </div>
-    </Routes>
     </AnimatePresence>
   </Router>
 
